@@ -51,6 +51,81 @@
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8">
                                 <div class="section-title">
+                                    
+                                    <?php 
+                                       include 'database.php';
+                                       $sql_thongbao="SELECT * FROM `pristontale` ORDER BY id DESC LIMIT 4";
+                                       mysql_query('SET CHARACTER SET utf8');
+                                       $media_thongbao=$pdo->query($sql_thongbao);
+                                    
+                                       function timeAgo($time_ago){
+                                        $cur_time 	= time();
+                                        $time_elapsed 	= $cur_time - $time_ago;
+                                        $seconds 	= $time_elapsed ;
+                                        $minutes 	= round($time_elapsed / 60 );
+                                        $hours 		= round($time_elapsed / 3600);
+                                        $days 		= round($time_elapsed / 86400 );
+                                        $weeks 		= round($time_elapsed / 604800);
+                                        $months 	= round($time_elapsed / 2600640 );
+                                        $years 		= round($time_elapsed / 31207680 );
+                                        // Seconds
+                                        if($seconds <= 60){
+                                            echo "$seconds seconds ago";
+                                        }
+                                        //Minutes
+                                        else if($minutes <=60){
+                                            if($minutes==1){
+                                                echo "one minute ago";
+                                            }
+                                            else{
+                                                echo "$minutes minutes ago";
+                                            }
+                                        }
+                                        //Hours
+                                        else if($hours <=24){
+                                            if($hours==1){
+                                                echo "an hour ago";
+                                            }else{
+                                                echo "$hours hours ago";
+                                            }
+                                        }
+                                        //Days
+                                        else if($days <= 7){
+                                            if($days==1){
+                                                echo "yesterday";
+                                            }else{
+                                                echo "$days days ago";
+                                            }
+                                        }
+                                        //Weeks
+                                        else if($weeks <= 4.3){
+                                            if($weeks==1){
+                                                echo "a week ago";
+                                            }else{
+                                                echo "$weeks weeks ago";
+                                            }
+                                        }
+                                        //Months
+                                        else if($months <=12){
+                                            if($months==1){
+                                                echo "a month ago";
+                                            }else{
+                                                echo "$months months ago";
+                                            }
+                                        }
+                                        //Years
+                                        else{
+                                            if($years==1){
+                                                echo "one year ago";
+                                            }else{
+                                                echo "$years years ago";
+                                            }
+                                        }
+                                    }
+                                    
+                                    
+                                    ?>
+
                                     <h4>THÔNG BÁO</h4>
                                 </div>
                             </div>
@@ -61,66 +136,45 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-6">
+                           
+
+                            <?php foreach($media_thongbao as $hienthimedia_thongbao) {
+
+
+                            
+                            $curenttime = $hienthimedia_thongbao['date'];
+                            $time_ago = strtotime($curenttime);
+                           echo ' <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-1.jpg">
-                                        <div class="ep">2 min ago</div>
-                                        <div class="comment"><i class="fa fa-clock"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li><br>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-2.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['hinhanh'].'">
+                                        <div class="ep">';echo timeAgo($time_ago);echo'</div>
+                                        <div class="comment"><i class="fa fa-clock-o"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> '.$hienthimedia_thongbao['viewer'].'</div>
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a href="#">Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien</a></h5>
+                                        <h5><a href="#">'.$hienthimedia_thongbao['tieude'].'</a></h5>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-3.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Shingeki no Kyojin Season 3 Part 2</a></h5>
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
+                            </div>';
+                              }
+                            ?>
+                        </div> 
                     </div>
+                    
                     <div class="popular__product">
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8">
                                 <div class="section-title">
-                                    <h4>Popular Shows</h4>
+                                    <h4>NHÂN VẬT</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="btn__all">
-                                    <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                    <a href="#" class="primary-btn"><!--+--> <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>

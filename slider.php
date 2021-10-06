@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="<?php echo $hienthimedia_baotri['hinhanh']; ?>">
+                <div class="hero__items set-bg" data-setbg="img/hero/hero-3.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
