@@ -54,7 +54,7 @@
                                     
                                     <?php 
                                        include 'database.php';
-                                       $sql_thongbao="SELECT * FROM `pristontale` ORDER BY id DESC LIMIT 4";
+                                       $sql_thongbao="SELECT * FROM `pristontale` ORDER BY id DESC LIMIT 6";
                                        mysql_query('SET CHARACTER SET utf8');
                                        $media_thongbao=$pdo->query($sql_thongbao);
                                     
@@ -70,55 +70,55 @@
                                         $years 		= round($time_elapsed / 31207680 );
                                         // Seconds
                                         if($seconds <= 60){
-                                            echo "$seconds seconds ago";
+                                            echo "$seconds vài giây";
                                         }
                                         //Minutes
                                         else if($minutes <=60){
                                             if($minutes==1){
-                                                echo "one minute ago";
+                                                echo "1 phút trước";
                                             }
                                             else{
-                                                echo "$minutes minutes ago";
+                                                echo "$minutes phút trước";
                                             }
                                         }
                                         //Hours
                                         else if($hours <=24){
                                             if($hours==1){
-                                                echo "an hour ago";
+                                                echo "1 giờ trước";
                                             }else{
-                                                echo "$hours hours ago";
+                                                echo "$hours giờ trước";
                                             }
                                         }
                                         //Days
                                         else if($days <= 7){
                                             if($days==1){
-                                                echo "yesterday";
+                                                echo "hôm qua";
                                             }else{
-                                                echo "$days days ago";
+                                                echo "$days ngày trước";
                                             }
                                         }
                                         //Weeks
                                         else if($weeks <= 4.3){
                                             if($weeks==1){
-                                                echo "a week ago";
+                                                echo "1 tuần trước";
                                             }else{
-                                                echo "$weeks weeks ago";
+                                                echo "$weeks tuần trước";
                                             }
                                         }
                                         //Months
                                         else if($months <=12){
                                             if($months==1){
-                                                echo "a month ago";
+                                                echo "1 tháng trước";
                                             }else{
-                                                echo "$months months ago";
+                                                echo "$months tháng trước";
                                             }
                                         }
                                         //Years
                                         else{
                                             if($years==1){
-                                                echo "one year ago";
+                                                echo "1 năm trước";
                                             }else{
-                                                echo "$years years ago";
+                                                echo "$years năm trước";
                                             }
                                         }
                                     }
@@ -146,9 +146,19 @@
                             $time_ago = strtotime($curenttime);
                            echo ' <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['hinhanh'].'">
-                                        <div class="ep">';echo timeAgo($time_ago);echo'</div>
-                                        <div class="comment"><i class="fa fa-clock-o"></i> 11</div>
+                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['hinhanh'].'">';
+                                        if ($hienthimedia_thongbao['idt'] == 5) {
+                                            echo'<div class="ep">TIN TỨC</div>';
+                                        } elseif ($hienthimedia_thongbao['idt'] == 10) {
+                                            echo'<div class="ep">SỰ KIỆN</div>';
+                                        } elseif ($hienthimedia_thongbao['idt'] == 15) {
+                                            echo'<div class="ep">BẢO TRÌ</div>';
+                                        } else {
+                                            echo'<div class="ep">System</div>';
+                                        }
+
+                                    
+                                      echo' <div class="comment"><i class="fa fa-clock-o"></i> ';echo timeAgo($time_ago);echo'</div>
                                         <div class="view"><i class="fa fa-eye"></i> '.$hienthimedia_thongbao['viewer'].'</div>
                                     </div>
                                     <div class="product__item__text">
