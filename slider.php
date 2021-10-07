@@ -15,7 +15,7 @@
                     <?php foreach($media_sukien as $hienthimedia_sukien) { ?>
                     <?php foreach($media_baotri as $hienthimedia_baotri) { ?>
                 
-                        <div class="hero__items set-bg" data-setbg="<?php echo $hienthimedia_tintuc['hinhanh']; ?>">
+                        <div class="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="<?php echo $hienthimedia_sukien['hinhanh']; ?>">
+                <div class="hero__items set-bg" data-setbg="img/hero/hero-2.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">

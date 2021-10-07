@@ -54,7 +54,7 @@
                                     
                                     <?php 
                                        include 'database.php';
-                                       $sql_thongbao="SELECT * FROM `pristontale` ORDER BY id DESC LIMIT 6";
+                                       $sql_thongbao="SELECT * FROM `pristontale` WHERE idt IN (5, 10, 15)  ORDER BY id DESC LIMIT 6";
                                        mysql_query('SET CHARACTER SET utf8');
                                        $media_thongbao=$pdo->query($sql_thongbao);
                                     
@@ -146,7 +146,7 @@
                             $time_ago = strtotime($curenttime);
                            echo ' <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['hinhanh'].'">';
+                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['pic184x325'].'">';
                                         if ($hienthimedia_thongbao['idt'] == 5) {
                                             echo'<div class="ep">TIN TỨC</div>';
                                         } elseif ($hienthimedia_thongbao['idt'] == 10) {
@@ -163,8 +163,8 @@
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
+                                            <li>free for fun !</li> <li>Priston tale</li>
+                                            
                                         </ul>
                                         <h5><a href="#">'.$hienthimedia_thongbao['tieude'].'</a></h5>
                                     </div>
@@ -174,6 +174,11 @@
                             ?>
                         </div> 
                     </div>
+                    
+                    
+                    
+                    
+                    
                     
                     <div class="popular__product">
                         <div class="row">
@@ -189,102 +194,29 @@
                             </div>
                         </div>
                         <div class="row">
+                        <?php 
+                                       include 'database.php';
+                                       $sql_selectcharacter="SELECT * FROM `pristontale` WHERE id IN (40,41,42,43,44,45,46,47,48,49) LIMIT 10";
+                                       mysql_query('SET CHARACTER SET utf8');
+                                       $media_selectcharacter=$pdo->query($sql_selectcharacter);
+                        ?>
+                        <?php foreach($media_selectcharacter as $hienthimedia_selectcharacter) { ?>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-1.jpg">
-                                        <div class="ep">18 / 18</div>
+                                    <div class="product__item__pic set-bg" data-setbg="img/character/<?php echo $hienthimedia_selectcharacter['pic184x325']?>.jpg">
+                                        <div class="ep"><?php echo $hienthimedia_selectcharacter['tieude']; ?></div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
+                                        <li>free for fun !</li> <li>Priston tale</li>
                                         </ul>
                                         <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-3.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-4.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-5.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-6.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                                    </div>
-                                </div>
-                            </div>
+                             <?php } ?>
                         </div>
                     </div>
                     <div class="recent__product">
