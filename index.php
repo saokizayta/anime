@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="US">
 
 
 <!-- Mirrored from technext.github.io/anime/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Oct 2021 11:58:32 GMT -->
