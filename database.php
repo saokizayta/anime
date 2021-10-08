@@ -8,7 +8,7 @@ try {
 		$pdo -> exec("set chracter_set_results='utf8'");
 		$pdo -> exec("set collation_connnection='utf8_general_ci'");
 		
-		error_reporting(E_All & ~E_NOTICE & ~E_DEPRECATED);
+		//error_reporting(E_All & ~E_NOTICE & ~E_DEPRECATED);
 		//End
 		
 		

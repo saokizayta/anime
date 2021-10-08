@@ -43,10 +43,7 @@
                                         <li><a href="categories.html">Đăng kí</a></li>
                                         <li><a href="anime-details.html">Đăng nhập</a></li>
                                         <li><a href="anime-watching.html">Tải về</a></li>
-                                        <li><a href="blog-details.html">Launcher</a></li>
-                                        <li><a href="signup.html">Sign Up</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                    </ul>
+                                        <li><a href="blog-details.html">Launcher</a></li></ul>
                                 </li>
 
                                 <li><a href="categories.html">Hệ thống <span class="arrow_carrot-down"></span></a>
@@ -56,19 +53,18 @@
                                         <li><a href="anime-watching.html">Mixing</a></li>
                                         <li><a href="blog-details.html">BlessCastle</a></li>
                                         <li><a href="signup.html">S.O.D</a></li>
-                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="login.html">MAP</a></li>
+                                        <li><a href="login.html">Monster</a></li>
+                                        <li><a href="login.html">Xếp hạng</a></li>
+                                        <li><a href="login.html">Nhân vật</a></li>
+                                        <li><a href="login.html">Nhiệm vụ</a></li>
                                     </ul>
                                 </li>
 
                                
                                 <li><a href="categories.html">Quy định <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="categories.html">Categories</a></li>
-                                        <li><a href="anime-details.html">Anime Details</a></li>
-                                        <li><a href="anime-watching.html">Anime Watching</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="signup.html">Sign Up</a></li>
-                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="categories.html">Quy định chung</a></li>
                                     </ul>
                                 </li>
                                
