@@ -4,7 +4,17 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="index-2.html">
-                            <img src="img/logo.png" alt="">
+                        <?php
+                         include 'database.php';
+                         $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo' ORDER BY id DESC LIMIT 1";
+                         
+                         mysql_query('SET CHARACTER SET utf8');
+                         $show_info=$pdo->query($sql_info);
+                         
+                    ?>                            
+                    <?php foreach($show_info as $showall_info) { ?>
+                            <img src="<?php echo $showall_info['img']; ?>" alt="">
+                    <?php } ?>
                         </a>
                     </div>
                 </div>
@@ -13,17 +23,20 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <!--<li class="active"><a href="index-2.html">Trang Chủ</a></li>-->
-
-                                <li><a href="categories.html">Giới thiệu <span class="arrow_carrot-down"></span></a>
+                                                <?php
+                                        include 'database.php';
+                                        $sql_menu1="SELECT * FROM `pristontale` WHERE id IN (112, 114, 115, 137, 138, 139) ";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_menu1=$pdo->query($sql_menu1);
+                                                ?>
+                                <li><a href="#">Giới thiệu <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="categories.html">Tổng quát</a></li>
-                                        <li><a href="anime-details.html">Tính năng</a></li>
-                                        <li><a href="anime-watching.html">Chế độ chơi</a></li>
-                                        <li><a href="anime-watching.html">Sự kiện</a></li>
-                                        <li><a href="anime-watching.html">Tin tức</a></li>
-                                        <li><a href="anime-watching.html">Bảo trì</a></li>
-
-                                    </ul>
+                                                <?php
+                                       foreach($show_menu1 as $showall_menu1) 
+                                                { 
+                                   echo'<li><a href="'.$showall_menu1['sort_link'].'.html"> '.$showall_menu1['tieude'].'</a></li>';
+                                                } ?>
+                                     </ul>
                                 </li>
 
                                 <li><a href="categories.html">Mới biết chơi <span class="arrow_carrot-down"></span></a>

@@ -70,7 +70,7 @@
                                         $years 		= round($time_elapsed / 31207680 );
                                         // Seconds
                                         if($seconds <= 60){
-                                            echo "$seconds vài giây";
+                                            echo "Vài giây trước";
                                         }
                                         //Minutes
                                         else if($minutes <=60){
@@ -146,7 +146,7 @@
                             $time_ago = strtotime($curenttime);
                            echo ' <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['pic184x325'].'">';
+                                    <div class="product__item__pic set-bg" data-setbg="'.$hienthimedia_thongbao['img_230x325'].'">';
                                         if ($hienthimedia_thongbao['idt'] == 5) {
                                             echo'<div class="ep">TIN TỨC</div>';
                                         } elseif ($hienthimedia_thongbao['idt'] == 10) {
