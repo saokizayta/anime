@@ -38,46 +38,66 @@
                                                 } ?>
                                      </ul>
                                 </li>
-
+                                                <?php
+                                        include 'database.php';
+                                        $sql_menu2="SELECT * FROM `pristontale` WHERE id IN (116, 117, 118, 119, 120, 121, 122) ";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_menu2=$pdo->query($sql_menu2);
+                                                ?>
                                 <li><a href="categories.html">Mới biết chơi <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="categories.html">Bắt đầu chơi</a></li>
-                                        <li><a href="anime-details.html">Nhân vật</a></li>
-                                        <li><a href="anime-watching.html">Party</a></li>
-                                        <li><a href="blog-details.html">Mua bán/Trao đổi</a></li>
-                                        <li><a href="signup.html">Kết bạn</a></li>
-                                        <li><a href="login.html">Warehouse</a></li>
-                                        <li><a href="login.html">Giao diện trò chơi</a></li>
+                                                <?php
+                                       foreach($show_menu2 as $showall_menu2) 
+                                                { 
+                                   echo'<li><a href="'.$showall_menu2['sort_link'].'.html"> '.$showall_menu2['tieude'].'</a></li>';
+                                                } ?>
                                     </ul>
                                 </li>
-
+                                                <?php
+                                        include 'database.php';
+                                        $sql_menu3="SELECT * FROM `pristontale` WHERE id IN (19, 20, 124) ";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_menu3=$pdo->query($sql_menu3);
+                                                ?>
                                 <li><a href="categories.html">Chuyên nghiệp <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="categories.html">Đăng kí</a></li>
-                                        <li><a href="anime-details.html">Đăng nhập</a></li>
-                                        <li><a href="anime-watching.html">Tải về</a></li>
-                                        <li><a href="blog-details.html">Launcher</a></li></ul>
-                                </li>
-
-                                <li><a href="categories.html">Hệ thống <span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a href="categories.html">Clan</a></li>
-                                        <li><a href="anime-details.html">Aging</a></li>
-                                        <li><a href="anime-watching.html">Mixing</a></li>
-                                        <li><a href="blog-details.html">BlessCastle</a></li>
-                                        <li><a href="signup.html">S.O.D</a></li>
-                                        <li><a href="login.html">MAP</a></li>
-                                        <li><a href="login.html">Monster</a></li>
-                                        <li><a href="login.html">Xếp hạng</a></li>
-                                        <li><a href="login.html">Nhân vật</a></li>
-                                        <li><a href="login.html">Nhiệm vụ</a></li>
+                                    <?php
+                                       foreach($show_menu3 as $showall_menu3) 
+                                                { 
+                                   echo'<li><a href="'.$showall_menu3['sort_link'].'.html"> '.$showall_menu3['tieude'].'</a></li>';
+                                                } ?>
+                                    
                                     </ul>
                                 </li>
-
-                               
+                                                <?php
+                                        include 'database.php';
+                                        $sql_menu4="SELECT * FROM `pristontale` WHERE id IN (126, 127, 33, 128, 129, 130, 131, 132, 133, 134) ";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_menu4=$pdo->query($sql_menu4);
+                                                ?>
+                                 <li><a href="categories.html">Hệ thống <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                    <?php
+                                    foreach($show_menu4 as $showall_menu4) 
+                                                { 
+                                   echo'<li><a href="'.$showall_menu4['sort_link'].'.html"> '.$showall_menu4['tieude'].'</a></li>';
+                                                } ?>
+                                        
+                                    </ul>
+                                </li>
+                                            <?php
+                                        include 'database.php';
+                                        $sql_menu5="SELECT * FROM `pristontale` WHERE id IN (135) ";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_menu5=$pdo->query($sql_menu5);
+                                                ?>
                                 <li><a href="categories.html">Quy định <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="categories.html">Quy định chung</a></li>
+                                    <?php
+                                    foreach($show_menu5 as $showall_menu5) 
+                                                { 
+                                   echo'<li><a href="'.$showall_menu5['sort_link'].'.html"> '.$showall_menu5['tieude'].'</a></li>';
+                                                } ?>
                                     </ul>
                                 </li>
                                

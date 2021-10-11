@@ -179,46 +179,74 @@
                     
                     
                     
+                  
+                           
+                            
+                        
                     
-                    <div class="popular__product">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-8">
-                                <div class="section-title">
-                                    <h4>NHÂN VẬT</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="btn__all">
-                                    <a href="#" class="primary-btn"><!--+--> <span class="arrow_right"></span></a>
+
+      <section class="blog spad">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog__item set-bg" data-setbg="img/blog/morion.jpg" style="background-image: url(&quot;img/blog/blog-1.jpg&quot;);">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
+                                    <h4><a href="#">Yuri Kuma Arashi Viverra Tortor Pharetra</a></h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                        <?php 
-                                       include 'database.php';
-                                       $sql_selectcharacter="SELECT * FROM `pristontale` WHERE id IN (40,41,42,43,44,45,46,47,48,49) LIMIT 10";
-                                       mysql_query('SET CHARACTER SET utf8');
-                                       $media_selectcharacter=$pdo->query($sql_selectcharacter);
-                        ?>
-                        <?php foreach($media_selectcharacter as $hienthimedia_selectcharacter) { ?>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/character/<?php echo $hienthimedia_selectcharacter['pic184x325']?>.jpg">
-                                        <div class="ep"><?php echo $hienthimedia_selectcharacter['tieude']; ?></div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                        <li>free for fun !</li> <li>Priston tale</li>
-                                        </ul>
-                                        <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
-                                    </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-4.jpg" style="background-image: url(&quot;img/blog/blog-4.jpg&quot;);">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
+                                    <h4><a href="#">Bok no Hero Academia Season 4 – 18</a></h4>
                                 </div>
                             </div>
-                             <?php } ?>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-5.jpg" style="background-image: url(&quot;img/blog/blog-5.jpg&quot;);">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
+                                    <h4><a href="#">Fate/Stay Night: Untimated Blade World</a></h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-2.jpg" style="background-image: url(&quot;img/blog/blog-2.jpg&quot;);">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
+                                    <h4><a href="#">Fate/Stay Night: Untimated Blade World</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-3.jpg" style="background-image: url(&quot;img/blog/blog-3.jpg&quot;);">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
+                                    <h4><a href="#">Building a Better LiA Drilling Down</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="blog__item set-bg" data-setbg="img/blog/blog-6.jpg" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
+                                    <h4><a href="#">Yuri Kuma Arashi Viverra Tortor Pharetra</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
                     <div class="recent__product">
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8">

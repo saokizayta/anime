@@ -1,9 +1,77 @@
 image Post body = 230 x 325 px (fliedname )
 image Post Banned = 1172 x 564 (fliedname )
 
+0b0c2a back
+
 <li><a href="categories.html">Tổng quát</a></li> 112
 <li><a href="anime-details.html">Tính năng</a></li> 114
 <li><a href="anime-watching.html">Chế độ chơi</a></li> 115
 <li><a href="anime-watching.html">Sự kiện</a></li> 137
 <li><a href="anime-watching.html">Tin tức</a></li>  138
 <li><a href="anime-watching.html">Bảo trì</a></li>  139
+
+<li><a href="categories.html">Bắt đầu chơi</a></li>   116
+<li><a href="anime-details.html">Nhân vật</a></li> 117
+<li><a href="anime-watching.html">Party</a></li> 118
+<li><a href="blog-details.html">Mua bán/Trao đổi</a></li> 119
+<li><a href="signup.html">Kết bạn</a></li> 120
+<li><a href="login.html">Warehouse</a></li> 121
+<li><a href="login.html">Giao diện trò chơi</a></li> 122
+
+<li><a href="categories.html">Đăng kí</a></li> 19
+<li><a href="anime-details.html">Đăng nhập</a></li> 19
+<li><a href="anime-watching.html">Tải về</a></li> 20
+<li><a href="blog-details.html">Launcher</a></li></ul> 124
+
+<li><a href="categories.html">Clan</a></li> 126
+<li><a href="anime-details.html">Aging</a></li> 127
+<li><a href="anime-watching.html">Mixing</a></li> 33
+<li><a href="blog-details.html">BlessCastle</a></li> 128
+<li><a href="signup.html">S.O.D</a></li> 129
+<li><a href="login.html">MAP</a></li> 130
+<li><a href="login.html">Monster</a></li> 131
+<li><a href="login.html">Xếp hạng</a></li> 132
+<li><a href="login.html">Nhân vật</a></li> 133
+<li><a href="login.html">Nhiệm vụ</a></li> 134
+
+<li><a href="categories.html">Quy định chung</a></li> 135
+
+<div class="popular__product">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="section-title">
+                <h4>NHÂN VẬT</h4>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="btn__all">
+                <a href="#" class="primary-btn"><!--+--> <span class="arrow_right"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    <?php 
+                   include 'database.php';
+                   $sql_selectcharacter="SELECT * FROM `pristontale` WHERE id IN (40,41,42,43,44,45,46,47,48,49) LIMIT 10";
+                   mysql_query('SET CHARACTER SET utf8');
+                   $media_selectcharacter=$pdo->query($sql_selectcharacter);
+    ?>
+    <?php foreach($media_selectcharacter as $hienthimedia_selectcharacter) { ?>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+                <div class="product__item__pic set-bg" data-setbg="img/character/<?php echo $hienthimedia_selectcharacter['img_230x325']?>.jpg">
+                    <div class="ep"><?php echo $hienthimedia_selectcharacter['tieude']; ?></div>
+                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                </div>
+                <div class="product__item__text">
+                    <ul>
+                    <li>free for fun !</li> <li>Priston tale</li>
+                    </ul>
+                    <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
+                </div>
+            </div>
+        </div>
+         <?php } ?>
+    </div>
+</div>
