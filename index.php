@@ -174,70 +174,68 @@
                             ?>
                         </div> 
                     </div>
-                    
-                    
-                    
-                    
-                    
-                  
-                           
-                            
-                        
-                    
-
-      <section class="blog spad">
+        <section class="blog spad">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="blog__item set-bg" data-setbg="img/blog/morion.jpg" style="background-image: url(&quot;img/blog/blog-1.jpg&quot;);">
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
-                                    <h4><a href="#">Yuri Kuma Arashi Viverra Tortor Pharetra</a></h4>
+                                   
+                                    <h4><a href="#">Morion</a></h4></p>
+                                    <font style="color: white"> Soul and magic </font>
                                 </div>
                             </div>
                         </div>
+                                                <?php
+                                        include 'database.php';
+                                        $sql_char_morion="SELECT * FROM `pristontale` WHERE id IN (40, 41, 42, 43, 49) ORDER BY RAND() LIMIT 2";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_char_morion=$pdo->query($sql_char_morion);
+                                                ?>
+                                                <?php
+                                    foreach($show_char_morion as $showall_char_morion_randoms) 
+                                                {
+                        echo '<a href="'.$showall_char_morion_randoms['sort_link'].'">
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-4.jpg" style="background-image: url(&quot;img/blog/blog-4.jpg&quot;);">
+                        <div class="blog__item small__item set-bg" data-setbg="img/character/png/'.$showall_char_morion_randoms['img_230x325'].'.png" style="background-image: url();">
+                            </a>
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
-                                    <h4><a href="#">Bok no Hero Academia Season 4 – 18</a></h4>
+                                    <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
+                                    <h4><a href="'.$showall_char_morion_randoms['sort_link'].'">'.$showall_char_morion_randoms['tieude'].'</a></h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-5.jpg" style="background-image: url(&quot;img/blog/blog-5.jpg&quot;);">
-                                <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
-                                    <h4><a href="#">Fate/Stay Night: Untimated Blade World</a></h4>
-                                </div>
-                            </div>
-                        </div>
+                        </div>';
+                                                }?>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-2.jpg" style="background-image: url(&quot;img/blog/blog-2.jpg&quot;);">
+                                                <?php
+                                        include 'database.php';
+                                        $sql_char_tempskron="SELECT * FROM `pristontale` WHERE id IN (44, 45, 46, 47, 48) ORDER BY RAND() LIMIT 2";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_char_tempskron=$pdo->query($sql_char_tempskron);
+                                                ?>
+                                                <?php
+                                    foreach($show_char_tempskron as $showall_char_tempskron_randoms) 
+                                                {
+                        echo '<div class="col-lg-6 col-md-6 col-sm-6">
+                        <a href="'.$showall_char_tempskron_randoms['sort_link'].'"><div class="blog__item small__item set-bg" data-setbg="img/character/png/'.$showall_char_tempskron_randoms['img_230x325'].'.png" style="background-image: url(&quot;img/blog/blog-4.jpg&quot;);"></a>
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
-                                    <h4><a href="#">Fate/Stay Night: Untimated Blade World</a></h4>
+                                    <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
+                                    <h4><a href="'.$showall_char_tempskron_randoms['sort_link'].'">'.$showall_char_tempskron_randoms['tieude'].'</a></h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="img/blog/blog-3.jpg" style="background-image: url(&quot;img/blog/blog-3.jpg&quot;);">
-                                <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
-                                    <h4><a href="#">Building a Better LiA Drilling Down</a></h4>
-                                </div>
-                            </div>
-                        </div>
+                        </div>';
+                                                }?>
                         <div class="col-lg-12">
-                            <div class="blog__item set-bg" data-setbg="img/blog/blog-6.jpg" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
+                            <div class="blog__item set-bg" data-setbg="img/blog/tempskron.jpg" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> 01 March 2020</p>
-                                    <h4><a href="#">Yuri Kuma Arashi Viverra Tortor Pharetra</a></h4>
+                                    <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
+                                    <h4><a href="#">Tempskron</a></h4> </p>
+                                    <font style="color: white"> Power and technology </font>
                                 </div>
                             </div>
                         </div>
@@ -245,18 +243,16 @@
                 </div>
             </div>
         </section>
-
-
-                    <div class="recent__product">
+        <div class="recent__product">
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8">
                                 <div class="section-title">
-                                    <h4>Recently Added Shows</h4>
+                                    <h4>DỊCH VỤ - MÁY CHỦ</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="btn__all">
-                                    <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                    <a href="#" class="primary-btn">Xem tất cả <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -277,93 +273,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-2.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Fate/stay night Movie: Heaven's Feel - II. Lost</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-3.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-4.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Fate/Zero 2nd Season</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-5.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Kizumonogatari II: Nekket su-hen</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-6.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="live__product">
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8">
                                 <div class="section-title">
-                                    <h4>Live Action</h4>
+                                    <h4>DỊCH VỤ MÃ NGUỒN</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
@@ -389,90 +305,44 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-2.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-3.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-4.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-5.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Fate/stay night Movie: Heaven's Feel - II. Lost</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-6.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Kizumonogatari II: Nekketsu-hen</a></h5>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+
+                
+                   
+                
+
                 <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="anime__details__sidebar">
+                            <div class="section-title">
+                               <h5> <img src="img/character/png/topserver.png" alt="" hieght="45px" width="329px"> </h5>
+                                
+                            </div>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_morion_top.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                            </div>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_tempskron_top.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                            </div>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-3.jpg" style="background-image: url(&quot;img/sidebar/tv-3.jpg&quot;);">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                            </div>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-4.jpg" style="background-image: url(&quot;img/sidebar/tv-4.jpg&quot;);">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
+                            </div>
+                        </div>
+
+
+
                     <div class="product__sidebar">
                         <div class="product__sidebar__view">
                             <div class="section-title">

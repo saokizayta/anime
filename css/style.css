@@ -639,7 +639,7 @@ ol {
 }
 
 .trending__product {
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 
 .popular__product {
@@ -1362,7 +1362,7 @@ ol {
 -----------------------*/
 
 .blog {
-	padding-top: 70px;
+	padding-top: 10px;
 	padding-bottom: 90px;
 }
 
