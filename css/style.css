@@ -655,7 +655,8 @@ ol {
 }
 
 .product__item__pic {
-	height: 325px;
+	/*height: 325px;*/
+	height: 125px;
 	position: relative;
 	border-radius: 5px;
 }
@@ -1367,7 +1368,8 @@ ol {
 }
 
 .blog__item {
-	height: 580px;
+	/*height: 580px;*/
+	height: 280px;
 	position: relative;
 	margin-left: -10px;
 	margin-right: -10px;

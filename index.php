@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/css_pristontale.css" type="text/css">
 </head>
 
 <body>
@@ -163,7 +164,7 @@
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>free for fun !</li> <li>Priston tale</li>
+                                           <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                             
                                         </ul>
                                         <h5><a href="#">'.$hienthimedia_thongbao['tieude'].'</a></h5>
@@ -179,7 +180,7 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="blog__item set-bg" data-setbg="img/blog/morion.jpg" style="background-image: url(&quot;img/blog/blog-1.jpg&quot;);">
+                            <div class="blog__item set-bg" data-setbg="img/character/png/blog_morion.png" style="background-image: url(&quot;img/blog/blog-1.jpg&quot;);">
                                 <div class="blog__item__text">
                                    
                                     <h4><a href="#">Morion</a></h4></p>
@@ -231,7 +232,7 @@
                         </div>';
                                                 }?>
                         <div class="col-lg-12">
-                            <div class="blog__item set-bg" data-setbg="img/blog/tempskron.jpg" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
+                            <div class="blog__item set-bg" data-setbg="img/character/png/blog_tempskron.png" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
                                 <div class="blog__item__text">
                                     <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
                                     <h4><a href="#">Tempskron</a></h4> </p>
@@ -317,29 +318,32 @@
                 <div class="anime__details__sidebar">
                             <div class="section-title">
                                <h5> <img src="img/character/png/topserver.png" alt="" hieght="45px" width="329px"> </h5>
-                                
                             </div>
-                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_morion_top.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
+                            <div class="product__sidebar__view__topserver__item set-bg" data-setbg="img/character/png/360x190_morion_top.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
                                 <div class="ep">18 / ?</div>
                                 <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                 <h5><a href="#">Boruto: Naruto next generations</a></h5>
                             </div>
-                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_tempskron_top.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
+                            <div class="product__sidebar__view__topserver__item set-bg" data-setbg="img/character/png/360x190_tempskron_top.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
                                 <div class="ep">18 / ?</div>
                                 <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                 <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
                             </div>
-                            <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-3.jpg" style="background-image: url(&quot;img/sidebar/tv-3.jpg&quot;);">
-                                <div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">Sword art online alicization war of underworld</a></h5>
-                            </div>
-                            <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-4.jpg" style="background-image: url(&quot;img/sidebar/tv-4.jpg&quot;);">
-                                <div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
-                            </div>
                         </div>
+                        <div class="section-title">
+                               <h5> <img src="img/character/png/bc_sod.png" alt="" hieght="45px" width="329px"> </h5>
+                               </div>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_bc.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                            </div>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_sod.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                            </div>
+                        
 
 
 
