@@ -639,7 +639,7 @@ ol {
 }
 
 .trending__product {
-	/*margin-bottom: 50px;*/
+	/* margin-bottom: 50px;*/
 }
 
 .popular__product {
@@ -771,6 +771,7 @@ ol {
 }
 
 .product__sidebar__view__item {
+	/*height: 190px;*/
 	height: 190px;
 	position: relative;
 	border-radius: 5px;
@@ -789,6 +790,171 @@ ol {
 	top: 10px;
 }
 
+/***********TOP VIEW***********/
+.product__sidebar__view__item__topview {
+	/*height: 190px;*/
+	height: 125px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.product__sidebar__view__item__topview .ep {
+	font-size: 9px;
+	color: #ffffff;
+	background: #0b0c2a;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 1px;
+}
+
+
+/*start top*/
+
+.product__sidebar__view__item .view_char_1 {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 25px;
+}
+
+.product__sidebar__view__item .view_char_2 {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 55px;
+}
+
+.product__sidebar__view__item .view_char_3 {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 85px;
+}
+
+.product__sidebar__view__item .view_char_4 {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 115px;
+}
+
+.product__sidebar__view__item .view_char_5 {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 145px;
+}
+
+/*end top*/
+/*start BC*/
+
+.product__sidebar__view__item .view_clan_bc_icon {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 65px;
+}
+
+.product__sidebar__view__item .view_clan_bc_name {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 75px;
+}
+
+.product__sidebar__view__item .view_clan_bc_leader {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	font-display: center;
+	left: 215px;
+	top: 145px;
+}
+
+/*start BC*/
+/*start SOD*/
+
+.product__sidebar__view__item .view_clan_sod_gold {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	top: 35px;
+}
+
+.product__sidebar__view__item .view_clan_sod_silver {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	top: 80px;
+}
+
+.product__sidebar__view__item .view_clan_sod_bronze {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 35px;
+}
+
+/*start SOD*/
+
 .product__sidebar__view__item .view {
 	font-size: 13px;
 	color: #ffffff;
@@ -802,6 +968,14 @@ ol {
 }
 
 .product__sidebar__view__item h5 {
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	width: 100%;
+	padding: 0 30px 0 20px;
+}
+
+.product__sidebar__view__servertop__item h5 {
 	position: absolute;
 	left: 0;
 	bottom: 25px;
@@ -1374,6 +1548,7 @@ ol {
 	margin-left: -10px;
 	margin-right: -10px;
 	margin-bottom: 10px;
+	border-radius: 8px;
 }
 
 .blog__item.small__item {

@@ -315,80 +315,163 @@
                 
 
                 <div class="col-lg-4 col-md-6 col-sm-8">
+
+                <div class="product__sidebar">
+                        <div class="product__sidebar__view">
+                            <div class="section-title">
+                                <h5>M</h5>
+                            </div>
+                            <ul class="filter__controls">
+                            <li class="active" data-filter=".day"></li>
+                                <li data-filter=".day"><img src="img/character/png/70x32_system.png" alt=""></li>
+                                <li data-filter=".week"><img src="img/character/png/70x32_characer.png" alt=""></li>
+                                <li data-filter=".month"><img src="img/character/png/70x32_quest.png" alt=""></li>
+                                <li data-filter=".years"><img src="img/character/png/70x32_services.png" alt=""></li>
+                            </ul>
+                            
+                                                <?php
+                                        include 'database.php';
+                                        $sql_system="SELECT * FROM `pristontale` WHERE id IN (20)";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_system=$pdo->query($sql_system);
+                                                ?>
+                                                <?php
+                                    foreach($show_system as $showall_system) 
+                                                {echo'
+                            <div class="filter__gallery">
+                            <div class="product__sidebar__view__item__topview set-bg mix day"
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
+                            </div>
+                                               '; }
+                                                ?>
+                                                <?php
+                                        include 'database.php';
+                                        $sql_system="SELECT * FROM `pristontale` WHERE id IN (19)";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_system=$pdo->query($sql_system);
+                                                ?>
+                                                <?php
+                                    foreach($show_system as $showall_system) 
+                                                {echo'
+                            <div class="filter__gallery">
+                           <div class="product__sidebar__view__item__topview set-bg mix day"
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
+                            </div>
+                                               '; }
+                                                ?>
+                                                <?php
+                                        include 'database.php';
+                                        $sql_system="SELECT * FROM `pristontale` WHERE id IN (31)";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_system=$pdo->query($sql_system);
+                                                ?>
+                                                <?php
+                                    foreach($show_system as $showall_system) 
+                                                {echo'
+                            <div class="filter__gallery">
+                            <div class="product__sidebar__view__item__topview set-bg mix day"
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
+                            </div>
+                                               '; }
+                                                ?>
+                                                <?php
+                                        include 'database.php';
+                                        $sql_system="SELECT * FROM `pristontale` WHERE id IN (24)";
+                                        mysql_query('SET CHARACTER SET utf8');
+                                        $show_system=$pdo->query($sql_system);
+                                                ?>
+                                                <?php
+                                    foreach($show_system as $showall_system) 
+                                                {echo'
+                            <div class="filter__gallery">
+                            <div class="product__sidebar__view__item__topview set-bg mix day"
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
+                            </div>
+                                               '; }
+                                                ?>
+
+                        <div class="product__sidebar__view__item set-bg mix week"
+                            data-setbg="img/sidebar/tv-2.jpg">
+                            <div class="ep">Year</div>
+                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                        </div>
+                        
+                        <div class="product__sidebar__view__item set-bg mix month"
+                            data-setbg="img/sidebar/tv-3.jpg">
+                            <div class="ep">Year</div>
+                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                            <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                        </div>
+
+                        <div class="product__sidebar__view__item set-bg mix years"
+                            data-setbg="img/sidebar/tv-4.jpg">
+                            <div class="ep">18 / ?</div>
+                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                            <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
+                        </div>
+
+                        <div class="product__sidebar__view__item set-bg mix years"
+                            data-setbg="img/sidebar/tv-5.jpg">
+                            <div class="ep">18 / ?</div>
+                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                            <h5><a href="#">Fate stay night unlimited blade works</a></h5>
+                        </div>
+
+
                 <div class="anime__details__sidebar">
                             <div class="section-title">
                                <h5> <img src="img/character/png/topserver.png" alt="" hieght="45px" width="329px"> </h5>
                             </div>
-                            <div class="product__sidebar__view__topserver__item set-bg" data-setbg="img/character/png/360x190_morion_top.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
-                                <div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_morion_top.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
+                                <!--<div class="ep">18 / ?</div>-->
+                                <div class="view_char_1"><img src="img/character/newpngchar/1.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_2"><img src="img/character/newpngchar/2.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_3"><img src="img/character/newpngchar/3.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_4"><img src="img/character/newpngchar/4.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_5"><img src="img/character/newpngchar/5.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <!--<div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">Boruto: Naruto next generations</a></h5>-->
                             </div>
-                            <div class="product__sidebar__view__topserver__item set-bg" data-setbg="img/character/png/360x190_tempskron_top.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
-                                <div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                            <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_tempskron_top.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
+                                <!--<div class="ep">18 / ?</div>-->
+                                <div class="view_char_1"><img src="img/character/newpngchar/6.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_2"><img src="img/character/newpngchar/7.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_3"><img src="img/character/newpngchar/8.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_4"><img src="img/character/newpngchar/9.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <div class="view_char_5"><img src="img/character/newpngchar/10.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                                <!--<div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>-->
                             </div>
                         </div>
                         <div class="section-title">
                                <h5> <img src="img/character/png/bc_sod.png" alt="" hieght="45px" width="329px"> </h5>
                                </div>
                             <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_bc.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
-                                <div class="ep">18 / ?</div>
+                            <div class="view_clan_bc_icon"><img src="img/character/newpngchar/bc1.png" alt="" height="64px" width="64px"> Pristontale - </div>
+                            
+                            <!--<div class="ep">18 / ?</div>
                                 <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                                <h5><a href="#">Boruto: Naruto next generations</a></h5>-->
                             </div>
                             <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_sod.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
-                                <div class="ep">18 / ?</div>
+                            <div class="view_clan_sod_gold"><img src="img/character/newpngchar/sod1.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                            <div class="view_clan_sod_silver"><img src="img/character/newpngchar/sod2.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                            <div class="view_clan_sod_bronze"><img src="img/character/newpngchar/sod3.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                            
+                            <!--<div class="ep">18 / ?</div>
                                 <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>-->
                             </div>
                         
 
 
 
-                    <div class="product__sidebar">
-                        <div class="product__sidebar__view">
-                            <div class="section-title">
-                                <h5>Top Views</h5>
-                            </div>
-                            <ul class="filter__controls">
-                                <li class="active" data-filter="*">Day</li>
-                                <li data-filter=".week">Week</li>
-                                <li data-filter=".month">Month</li>
-                                <li data-filter=".years">Years</li>
-                            </ul>
-                            <div class="filter__gallery">
-                                <div class="product__sidebar__view__item set-bg mix day years"
-                                data-setbg="img/sidebar/tv-1.jpg">
-                                <div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
-                            </div>
-                            <div class="product__sidebar__view__item set-bg mix month week"
-                            data-setbg="img/sidebar/tv-2.jpg">
-                            <div class="ep">18 / ?</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                        </div>
-                        <div class="product__sidebar__view__item set-bg mix week years"
-                        data-setbg="img/sidebar/tv-3.jpg">
-                        <div class="ep">18 / ?</div>
-                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                        <h5><a href="#">Sword art online alicization war of underworld</a></h5>
-                    </div>
-                    <div class="product__sidebar__view__item set-bg mix years month"
-                    data-setbg="img/sidebar/tv-4.jpg">
-                    <div class="ep">18 / ?</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                    <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
-                </div>
-                <div class="product__sidebar__view__item set-bg mix day"
-                data-setbg="img/sidebar/tv-5.jpg">
-                <div class="ep">18 / ?</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <h5><a href="#">Fate stay night unlimited blade works</a></h5>
-            </div>
+             
         </div>
     </div>
     <div class="product__sidebar__comment">
