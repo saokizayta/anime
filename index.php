@@ -322,7 +322,7 @@
                                 <h5>M</h5>
                             </div>
                             <ul class="filter__controls">
-                            <li class="active" data-filter=".day"></li>
+                            <li class="active" data-filter="*"></li>
                                 <li data-filter=".day"><img src="img/character/png/70x32_system.png" alt=""></li>
                                 <li data-filter=".week"><img src="img/character/png/70x32_characer.png" alt=""></li>
                                 <li data-filter=".month"><img src="img/character/png/70x32_quest.png" alt=""></li>
@@ -422,7 +422,13 @@
                             <h5><a href="#">Fate stay night unlimited blade works</a></h5>
                         </div>
 
-
+                        <div class="product__sidebar__view__item set-bg mix years"
+                            data-setbg="img/sidebar/tv-5.jpg">
+                            <div class="ep">18 / ?</div>
+                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                            <h5><a href="#">No Control</a></h5>
+                        </div>
+                       
                 <div class="anime__details__sidebar">
                             <div class="section-title">
                                <h5> <img src="img/character/png/topserver.png" alt="" hieght="45px" width="329px"> </h5>
