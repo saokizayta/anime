@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/css_pristontale.css" type="text/css">
+    <link rel="stylesheet" href="img/character/png/style.css" type="text/css">
 </head>
 
 <body>
@@ -328,6 +329,7 @@
                                 <li data-filter=".month"><img src="img/character/png/70x32_quest.png" alt=""></li>
                                 <li data-filter=".years"><img src="img/character/png/70x32_services.png" alt=""></li>
                             </ul>
+                            <div class="filter__gallery">
                             
                                                 <?php
                                         include 'database.php';
@@ -338,7 +340,7 @@
                                                 <?php
                                     foreach($show_system as $showall_system) 
                                                 {echo'
-                            <div class="filter__gallery">
+                           
                             <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
@@ -354,7 +356,7 @@
                                                 <?php
                                     foreach($show_system as $showall_system) 
                                                 {echo'
-                            <div class="filter__gallery">
+                          
                            <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
@@ -370,7 +372,7 @@
                                                 <?php
                                     foreach($show_system as $showall_system) 
                                                 {echo'
-                            <div class="filter__gallery">
+                           
                             <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
@@ -386,20 +388,67 @@
                                                 <?php
                                     foreach($show_system as $showall_system) 
                                                 {echo'
-                            <div class="filter__gallery">
+                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'"></a>
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
+                           
                             </div>
+                           
                                                '; }
                                                 ?>
+                                    
+                                    
+                            <div class="product__sidebar__view__item__char set-bg mix week"
+                                data-setbg="img/character/png/blog_tempskron1.png"></a>
+                                
+                                <div class="blog__item__text__char">
+                                    <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
+                                    <h4><a href="#">Tempskron</a></h4>
+                                    <font style="color: white"> Power and technology </font>
+                                    <!-- <div class="sparks">
 
-                        <div class="product__sidebar__view__item set-bg mix week"
-                            data-setbg="img/sidebar/tv-2.jpg">
-                            <div class="ep">Year</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                        </div>
+				<div class="spark_1"></div>
+
+				<div class="spark_2"></div>
+
+				<div class="spark_3"></div>
+
+				<!-- <div class="spark_4 spark-big"></div>
+
+				<div class="spark_5 spark-big"></div>
+
+				<div class="spark_1"></div>
+
+				<div class="spark_2"></div>
+
+				<div class="spark_3"></div>
+
+				<div class="spark_4 spark-big"></div>
+
+				<div class="spark_5 spark-big"></div>
+
+			</div> -->
+            
+                                </div>
+                            </div>
+                            <!-- <div class="animation-wrapper">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+        </div> -->
+                            <div class="product__sidebar__view__item__char set-bg mix week"
+                                data-setbg="img/character/png/blog_morion1.png"></a>
+                                <div class="blog__item__text__char">
+                                    <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
+                                    <h4><a href="#">Tempskron</a></h4>
+                                    <font style="color: white"> Power and technology </font>
+                                    
+                                </div>
+                            </div>
+                            
+                    
                         
                         <div class="product__sidebar__view__item set-bg mix month"
                             data-setbg="img/sidebar/tv-3.jpg">
@@ -428,6 +477,8 @@
                             <div class="view"><i class="fa fa-eye"></i> 9141</div>
                             <h5><a href="#">No Control</a></h5>
                         </div>
+                       
+                   </div>
                        
                 <div class="anime__details__sidebar">
                             <div class="section-title">

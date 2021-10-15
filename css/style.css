@@ -811,6 +811,25 @@ ol {
 	bottom: 1px;
 }
 
+.product__sidebar__view__item__char {
+	/*height: 190px;*/
+	height: 200px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.product__sidebar__view__item__char .ep {
+	font-size: 9px;
+	color: #ffffff;
+	background: #0b0c2a;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 1px;
+}
 
 /*start top*/
 
@@ -1590,6 +1609,21 @@ ol {
 .blog__item__text h4 a {
 	color: #ffffff;
 	line-height: 34px;
+}
+
+
+.blog__item__text__char {
+	position: absolute;
+	left: 0;
+	top: 130px;
+	text-align: center;
+	width: 100%;
+	padding: 0 0;
+}
+
+.blog__item__text__char h4 a {
+	color: #ffffff;
+	line-height: 20px;
 }
 
 /*---------------------
