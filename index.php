@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/css_pristontale.css" type="text/css">
     <link rel="stylesheet" href="img/character/png/style.css" type="text/css">
 </head>
 
@@ -450,11 +449,17 @@
                             
                     
                         
-                        <div class="product__sidebar__view__item set-bg mix month"
-                            data-setbg="img/sidebar/tv-3.jpg">
-                            <div class="ep">Year</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                        <div class="product__sidebar__view__item__quest set-bg mix month"
+                            data-setbg="img/character/png/quest_solo_quests.png">
+                        </div>
+                        <div class="product__sidebar__view__item__quest set-bg mix month"
+                            data-setbg="img/character/png/quest_beginner_quests.png">
+                        </div>
+                        <div class="product__sidebar__view__item__quest set-bg mix month"
+                            data-setbg="img/character/png/quest_exp_quests.png">
+                        </div>
+                        <div class="product__sidebar__view__item__quest set-bg mix month"
+                            data-setbg="img/character/png/quest_daily_quests.png">
                         </div>
 
                         <div class="product__sidebar__view__item set-bg mix years"

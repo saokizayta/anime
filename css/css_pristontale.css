@@ -1,0 +1,61 @@
+.line {
+    position: relative;
+    width: 93px;
+    padding: 0px;
+    top: -13px;
+  }
+  .line:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #acce15;
+    -webkit-animation: load 1.5s cubic-bezier(0, 0, 0.58, 1) infinite;
+            animation: load 2.5s cubic-bezier(0, 0, 0.58, 1) infinite;
+  }
+  
+  @-webkit-keyframes load {
+    0% {
+      left: 0;
+      right: 90%;
+    }
+    25% {
+      left: 0;
+      right: 0;
+    }
+    50% {
+      left: 90%;
+      right: 0;
+    }
+    75% {
+      left: 0;
+      right: 0;
+    }
+    100% {
+      left: 0;
+      right: 90%;
+    }
+  }
+  
+  @keyframes load {
+    0% {
+      left: 0;
+      right: 90%;
+    }
+    25% {
+      left: 0;
+      right: 0;
+    }
+    50% {
+      left: 90%;
+      right: 0;
+    }
+    75% {
+      left: 0;
+      right: 0;
+    }
+    100% {
+      left: 0;
+      right: 90%;
+    }
+  }

@@ -1,9 +1,10 @@
+<link rel="stylesheet" href="css/css_pristontale.css" type="text/css">
 <header class="header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="index-2.html">
+                       <a href="index-2.html">
                         <?php
                          include 'database.php';
                          $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo' ORDER BY id DESC LIMIT 1";
@@ -17,6 +18,10 @@
                     <?php } ?>
                         </a>
                     </div>
+                    <!-- line run -->
+                    <div class="line"></div>
+                    <!-- end line run -->
+                    
                 </div>
                 <div class="col-lg-8">
                     <div class="header__nav">
