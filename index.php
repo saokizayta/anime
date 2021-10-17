@@ -244,70 +244,73 @@
                 </div>
             </div>
         </section>
+        <div class="anime__details__review">
+                            <div class="section-title">
+                                <h5>Reviews</h5>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="img/anime/review-1.jpg" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
+                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
+                                    "demons" LOL</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="img/anime/review-2.jpg" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
+                                    <p>Finally it came out ages ago</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="img/anime/review-3.jpg" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
+                                    <p>Where is the episode 15 ? Slow update! Tch</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="img/anime/review-4.jpg" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
+                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
+                                    "demons" LOL</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="img/anime/review-5.jpg" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
+                                    <p>Finally it came out ages ago</p>
+                                </div>
+                            </div>
+                            <div class="anime__review__item">
+                                <div class="anime__review__item__pic">
+                                    <img src="img/anime/review-6.jpg" alt="">
+                                </div>
+                                <div class="anime__review__item__text">
+                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
+                                    <p>Where is the episode 15 ? Slow update! Tch</p>
+                                </div>
+                            </div>
+                        </div>
         <div class="recent__product">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-8">
-                                <div class="section-title">
-                                    <h4>DỊCH VỤ - MÁY CHỦ</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="btn__all">
-                                    <a href="#" class="primary-btn">Xem tất cả <span class="arrow_right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-1.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Great Teacher Onizuka</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
+                        
                     </div>
-                    <div class="live__product">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-8">
-                                <div class="section-title">
-                                    <h4>DỊCH VỤ MÃ NGUỒN</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="btn__all">
-                                    <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-1.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Shouwa Genroku Rakugo Shinjuu</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 
@@ -315,8 +318,7 @@
                 
 
                 <div class="col-lg-4 col-md-6 col-sm-8">
-
-                <div class="product__sidebar">
+                    <div class="product__sidebar">
                         <div class="product__sidebar__view">
                             <div class="section-title">
                                 <h5>M</h5>
@@ -391,8 +393,7 @@
                             <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'"></a>
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
-                           
-                            </div>
+                           </div>
                            
                                                '; }
                                                 ?>
@@ -400,55 +401,19 @@
                                     
                             <div class="product__sidebar__view__item__char set-bg mix week"
                                 data-setbg="img/character/png/blog_tempskron1.png"></a>
-                                
                                 <div class="blog__item__text__char">
-                                    <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
-                                    <h4><a href="#">Tempskron</a></h4>
+                                  <h4><a href="#">Tempskron</a></h4>
                                     <font style="color: white"> Power and technology </font>
-                                    <!-- <div class="sparks">
-
-				<div class="spark_1"></div>
-
-				<div class="spark_2"></div>
-
-				<div class="spark_3"></div>
-
-				<!-- <div class="spark_4 spark-big"></div>
-
-				<div class="spark_5 spark-big"></div>
-
-				<div class="spark_1"></div>
-
-				<div class="spark_2"></div>
-
-				<div class="spark_3"></div>
-
-				<div class="spark_4 spark-big"></div>
-
-				<div class="spark_5 spark-big"></div>
-
-			</div> -->
-            
                                 </div>
                             </div>
-                            <!-- <div class="animation-wrapper">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-            <div class="particle particle-4"></div>
-        </div> -->
                             <div class="product__sidebar__view__item__char set-bg mix week"
                                 data-setbg="img/character/png/blog_morion1.png"></a>
                                 <div class="blog__item__text__char">
                                     <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
                                     <h4><a href="#">Tempskron</a></h4>
                                     <font style="color: white"> Power and technology </font>
-                                    
                                 </div>
                             </div>
-                            
-                    
-                        
                         <div class="product__sidebar__view__item__quest set-bg mix month"
                             data-setbg="img/character/png/quest_solo_quests.png">
                         </div>
@@ -462,30 +427,16 @@
                             data-setbg="img/character/png/quest_daily_quests.png">
                         </div>
 
-                        <div class="product__sidebar__view__item set-bg mix years"
-                            data-setbg="img/sidebar/tv-4.jpg">
-                            <div class="ep">18 / ?</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
+                        <div class="product__sidebar__view__item__services set-bg mix years"
+                            data-setbg="img/character/png/services_1.png">
+                            <div class="ep">Dịch vụ máy chủ Tier 4 (Classical)</div>
                         </div>
-
-                        <div class="product__sidebar__view__item set-bg mix years"
-                            data-setbg="img/sidebar/tv-5.jpg">
-                            <div class="ep">18 / ?</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">Fate stay night unlimited blade works</a></h5>
+                        <div class="product__sidebar__view__item__services set-bg mix years"
+                            data-setbg="img/character/png/services_2.png">
+                            <div class="ep">Dịch vụ máy chủ Tier 5 (New UI)</div>
                         </div>
-
-                        <div class="product__sidebar__view__item set-bg mix years"
-                            data-setbg="img/sidebar/tv-5.jpg">
-                            <div class="ep">18 / ?</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                            <h5><a href="#">No Control</a></h5>
-                        </div>
-                       
-                   </div>
-                       
-                <div class="anime__details__sidebar">
+                       </div>
+                       <div class="anime__details__sidebar">
                             <div class="section-title">
                                <h5> <img src="img/character/png/topserver.png" alt="" hieght="45px" width="329px"> </h5>
                             </div>
@@ -524,18 +475,9 @@
                             <div class="view_clan_sod_gold"><img src="img/character/newpngchar/sod1.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
                             <div class="view_clan_sod_silver"><img src="img/character/newpngchar/sod2.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
                             <div class="view_clan_sod_bronze"><img src="img/character/newpngchar/sod3.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                            
-                            <!--<div class="ep">18 / ?</div>
-                                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>-->
                             </div>
-                        
-
-
-
-             
-        </div>
-    </div>
+                        </div>
+                     </div>
     <div class="product__sidebar__comment">
         <div class="section-title">
             <h5>New Comment</h5>
@@ -593,11 +535,7 @@
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-</div>
-</section>
+    </section>
 <!-- Product Section End -->
 
   <!-- Footer Section Begin -->

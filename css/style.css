@@ -851,6 +851,25 @@ ol {
 	bottom: 1px;
 }
 
+.product__sidebar__view__item__services {
+	/*height: 190px;*/
+	height: 200px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.product__sidebar__view__item__services .ep {
+	font-size: 12px;
+	color: #ffffff;
+	background: #0b0c2a;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 2px;
+}
 /*start top*/
 
 .product__sidebar__view__item .view_char_1 {
