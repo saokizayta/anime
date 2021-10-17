@@ -20,6 +20,7 @@
                     </div>
                     <!-- line run -->
                     <div class="line"></div>
+                    <div class="rainbow"></div>
                     <!-- end line run -->
                     
                 </div>

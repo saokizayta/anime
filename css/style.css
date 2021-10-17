@@ -936,7 +936,7 @@ ol {
 /*start BC*/
 
 .product__sidebar__view__item .view_clan_bc_icon {
-	font-size: 13px;
+	font-size: 16px;
 	color: #ffffff;
 	/*background: #e53637;*/
 	display: inline-block;
@@ -1360,9 +1360,9 @@ ol {
 }
 
 .anime__review__item__pic img {
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border-radius: 30%;
 }
 
 .anime__review__item__text {

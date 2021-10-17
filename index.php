@@ -246,16 +246,15 @@
         </section>
         <div class="anime__details__review">
                             <div class="section-title">
-                                <h5>Reviews</h5>
+                                <h5>Funny <!DOCTYPE html></h5>
                             </div>
                             <div class="anime__review__item">
                                 <div class="anime__review__item__pic">
-                                    <img src="img/anime/review-1.jpg" alt="">
+                                    <img src="img/character/png/1.png" alt="">
                                 </div>
                                 <div class="anime__review__item__text">
-                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
-                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
-                                    "demons" LOL</p>
+                                    <h6>Pikeman - <span>1 Hour ago</span></h6>
+                                    <p>Drop 1 images =></p>
                                 </div>
                             </div>
                             <div class="anime__review__item">
@@ -304,7 +303,58 @@
                                     <p>Where is the episode 15 ? Slow update! Tch</p>
                                 </div>
                             </div>
-                        </div>
+            </div>
+
+            <?php
+	$connect['host'] = "ptvui.ddns.net";
+	$connect['user'] = "sb";
+	$connect['pass'] = "123456";
+	$connect['db'] = "userdb";
+
+	$connect['string'] = "DRIVER={SQL Server};";
+	$connect['string'] .= "SERVER=".$connect['host'].";";
+	$connect['string'] .= "DATABASE=".$connect['db'];
+
+	try{
+		$connect['connection'] = @odbc_connect($connect['string'],$connect['user'],$connect['pass']);
+	} catch(Exception $e){
+		$connect['connection'] = FALSE;
+		echo('Não foi possivel conectar com o SQL!<br>');
+		echo('Error: '.$e);
+	}
+
+	$query = "SELECT TOP 10 * FROM [userdb].[dbo].[CharacterInfo] WHERE 
+	(
+	Name NOT LIKE 'HoChiMinh' and 
+	Name!='BacHo' and 
+	Name!='[GM]Skull' and 
+	Name!='MG' and 
+	Name!='Knight' and 
+	Name!='HelloWorld' and 
+	Name!='GM' and 
+	Name!='NewSupport' and
+  Name!='3DVungQue' and
+  Name!='ADMAtalanta' and
+  Name!='GMAssasin'
+	) ORDER BY Level DESC";
+	
+		$q = odbc_do($connect['connection'],$query);
+	$i = 0;
+	while(odbc_fetch_row($q)){
+	$i++;
+	    echo '<td width="14%">'.$i.'</td>';
+    //echo '<td align="center" width="50" bgcolor="#996633">'.odbc_result ($q,"UserID").'</td>';
+    echo '<td align="left" width="10" height="24"><img id="imgtop" src="classe/'.odbc_result($q,"JobCode").'.png" width="20" height="18" /></td>';
+	echo '<td align="left" width="10">'.odbc_result($q,"Name").'</td>';
+	echo '<td width="6%">'.odbc_result($q,"Level").'</td>';
+      
+echo '</tr>';
+	}
+	if(!$i>0)
+	   echo "<center>Chưa cập nhật";
+
+?>
+
         <div class="recent__product">
                         
                         
@@ -465,7 +515,45 @@
                                <h5> <img src="img/character/png/bc_sod.png" alt="" hieght="45px" width="329px"> </h5>
                                </div>
                             <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_bc.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
-                            <div class="view_clan_bc_icon"><img src="img/character/newpngchar/bc1.png" alt="" height="64px" width="64px"> Pristontale - </div>
+                            <div class="view_clan_bc_icon"><img src="img/character/newpngchar/bc1.png" alt="" height="64px" width="64px">
+    <?php
+                    include_once "incluir/configura.php";
+                    
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+
+                    $query = "SELECT TOP 1 * FROM [serverdb].[dbo].[BlessCastleSettings] ";
+
+                    $q = odbc_exec($connection, $query);
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $ClanID = odbc_result($qt,1);
+                    }
+                   
+                    $IP = "http://ptvui.ddns.net:8/anImage/";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query2 = "SELECT TOP 1 * FROM [ClanDB].[dbo].[CL] WHERE MIconCnt = $ClanID";
+                    $q2 = odbc_exec($connection, $query2);
+                    $qt2 = odbc_do($connection, $query2);
+                    while(odbc_fetch_row($qt2)){
+                    $i = 0;
+                    $ClanName = odbc_result($qt2,2);
+                    $ClanZang = odbc_result($qt2,6);
+                    }
+                   
+    if ( $ClanZang = "") {
+
+     echo 'Chưa cập nhật';
+     # code...
+        } else  { 
+           
+      echo $ClanName;
+
+       } 
+?>
+
+                            
+                            </div>
                             
                             <!--<div class="ep">18 / ?</div>
                                 <div class="view"><i class="fa fa-eye"></i> 9141</div>
