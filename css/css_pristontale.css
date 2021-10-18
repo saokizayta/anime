@@ -127,20 +127,24 @@
   }
 
   .rainbow{
-    width:60px;
-    height:1px;
-    background: -webkit-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet);
-    background: -moz-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
-    background: -o-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
-    background: -ms-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+    position: relative;
+    width: 65px;
+    padding: 1px;
+    margin: center;
+    left: 15px;
+    top: -12px;
+    background: -webkit-linear-gradient(right, red,orange,yellow,green,blue,indigo,violet);
+    background: -moz-linear-gradient(right, red,orange,yellow,green,blue,indigo,violet,red);
+    background: -o-linear-gradient(right, red,orange,yellow,green,blue,indigo,violet,red);
+    background: -ms-linear-gradient(right, red,orange,yellow,green,blue,indigo,violet,red);
     background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
     background-repeat:repeat-x;
     
-    -webkit-animation:go 2s linear infinite;
-    -moz-animation:go 3s linear infinite;
-    -o-animation:go 4s linear infinite;
-    -ms-animation:go 5s linear infinite;
-    animation:go 6s linear infinite;
+    -webkit-animation:go 1s linear infinite;
+    -moz-animation:go 1s linear infinite;
+    -o-animation:go 1s linear infinite;
+    -ms-animation:go 1s linear infinite;
+    animation:go 1s linear infinite;
   }
   
   @-webkit-keyframes go{
@@ -165,7 +169,37 @@
   
   }
   @keyframes go{
+    
     0%{background-position:0;}
     100%{background-position:200px 0;}
   
   }
+
+  @-webkit-keyframes ribbon{from{background-position:0 bottom}to{background-position:3131px bottom}}
+@-moz-keyframes ribbon{from{background-position:0 bottom}to{background-position:3131px bottom}}
+@-ms-keyframes ribbon{from{background-position:0 bottom}to{background-position:3131px bottom}}
+@-o-keyframes ribbon{from{background-position:0 bottom}to{background-position:3131px bottom}}
+@keyframes ribbon{from{background-position:0 bottom}to{background-position:3131px bottom}}
+
+.ribon{
+	position: relative;
+    width: 65px;
+    padding: 1px;
+    margin: center;
+    left: 15px;
+    top: -12px;
+	background-color:#ccc;
+	background-color:rgba(221,60,77,0.95);
+	background-image:-webkit-gradient(linear,0 50%,100% 50%,color-stop(0,#e75239),color-stop(12.5%,#e75239),color-stop(12.5%,#ff961c),color-stop(25%,#ff961c),color-stop(25%,#ffcc27),color-stop(37.5%,#ffcc27),color-stop(37.5%,#fce62f),color-stop(50%,#fce62f),color-stop(50%,#cde35b),color-stop(62.5%,#cde35b),color-stop(62.5%,#82cc33),color-stop(75%,#82cc33),color-stop(75%,#41bece),color-stop(87.5%,#41bece),color-stop(87.5%,#049cdb),color-stop(100%,#049cdb));
+	background-image:-webkit-linear-gradient(left,#e75239 0,#e75239 12.5%,#ff961c 12.5%,#ff961c 25%,#ffcc27 25%,#ffcc27 37.5%,#fce62f 37.5%,#fce62f 50%,#cde35b 50%,#cde35b 62.5%,#82cc33 62.5%,#82cc33 75%,#41bece 75%,#41bece 87.5%,#049cdb 87.5%,#049cdb 100%);
+	background-image:-moz-linear-gradient(left,#e75239 0,#e75239 12.5%,#ff961c 12.5%,#ff961c 25%,#ffcc27 25%,#ffcc27 37.5%,#fce62f 37.5%,#fce62f 50%,#cde35b 50%,#cde35b 62.5%,#82cc33 62.5%,#82cc33 75%,#41bece 75%,#41bece 87.5%,#049cdb 87.5%,#049cdb 100%);
+	background-image:-o-linear-gradient(left,#e75239 0,#e75239 12.5%,#ff961c 12.5%,#ff961c 25%,#ffcc27 25%,#ffcc27 37.5%,#fce62f 37.5%,#fce62f 50%,#cde35b 50%,#cde35b 62.5%,#82cc33 62.5%,#82cc33 75%,#41bece 75%,#41bece 87.5%,#049cdb 87.5%,#049cdb 100%);
+	background-image:-ms-linear-gradient(left,#e75239 0,#e75239 12.5%,#ff961c 12.5%,#ff961c 25%,#ffcc27 25%,#ffcc27 37.5%,#fce62f 37.5%,#fce62f 50%,#cde35b 50%,#cde35b 62.5%,#82cc33 62.5%,#82cc33 75%,#41bece 75%,#41bece 87.5%,#049cdb 87.5%,#049cdb 100%);
+	background-image:linear-gradient(left,#e75239 0,#e75239 12.5%,#ff961c 12.5%,#ff961c 25%,#ffcc27 25%,#ffcc27 37.5%,#fce62f 37.5%,#fce62f 50%,#cde35b 50%,#cde35b 62.5%,#82cc33 62.5%,#82cc33 75%,#41bece 75%,#41bece 87.5%,#049cdb 87.5%,#049cdb 100%);
+	background-position:0 0;
+	-webkit-animation: ribbon 20s linear infinite;
+	-moz-animation: ribbon 20s linear infinite;
+	-ms-animation: ribbon 20s linear infinite;
+	-o-animation: ribbon 20s linear infinite;
+	animation: ribbon 20s linear infinite;
+}

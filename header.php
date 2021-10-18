@@ -19,8 +19,8 @@
                         </a>
                     </div>
                     <!-- line run -->
-                    <div class="line"></div>
-                    <div class="rainbow"></div>
+                    <!-- <div class="line"></div> -->
+                    <div class="ribon"></div>
                     <!-- end line run -->
                     
                 </div>

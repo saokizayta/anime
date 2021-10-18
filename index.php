@@ -6,7 +6,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="priston tale, pristontale, ptvui">
+    <meta name="description" content="ptvui, priston tale, pristontale">
     <meta name="keywords" content="ptvui, pristontale, priston tale, priston">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -244,118 +244,13 @@
                 </div>
             </div>
         </section>
-        <div class="anime__details__review">
-                            <div class="section-title">
-                                <h5>Funny <!DOCTYPE html></h5>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="img/character/png/1.png" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Pikeman - <span>1 Hour ago</span></h6>
-                                    <p>Drop 1 images =></p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="img/anime/review-2.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
-                                    <p>Finally it came out ages ago</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="img/anime/review-3.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
-                                    <p>Where is the episode 15 ? Slow update! Tch</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="img/anime/review-4.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
-                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
-                                    "demons" LOL</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="img/anime/review-5.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
-                                    <p>Finally it came out ages ago</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="img/anime/review-6.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
-                                    <p>Where is the episode 15 ? Slow update! Tch</p>
-                                </div>
-                            </div>
-            </div>
+<!-- fetch funny -->
+<?php //include 'fetch-funny.php'; ?>
+    <div id="link_funnydata">
 
-            <?php
-	$connect['host'] = "ptvui.ddns.net";
-	$connect['user'] = "sb";
-	$connect['pass'] = "123456";
-	$connect['db'] = "userdb";
-
-	$connect['string'] = "DRIVER={SQL Server};";
-	$connect['string'] .= "SERVER=".$connect['host'].";";
-	$connect['string'] .= "DATABASE=".$connect['db'];
-
-	try{
-		$connect['connection'] = @odbc_connect($connect['string'],$connect['user'],$connect['pass']);
-	} catch(Exception $e){
-		$connect['connection'] = FALSE;
-		echo('Não foi possivel conectar com o SQL!<br>');
-		echo('Error: '.$e);
-	}
-
-	$query = "SELECT TOP 10 * FROM [userdb].[dbo].[CharacterInfo] WHERE 
-	(
-	Name NOT LIKE 'HoChiMinh' and 
-	Name!='BacHo' and 
-	Name!='[GM]Skull' and 
-	Name!='MG' and 
-	Name!='Knight' and 
-	Name!='HelloWorld' and 
-	Name!='GM' and 
-	Name!='NewSupport' and
-  Name!='3DVungQue' and
-  Name!='ADMAtalanta' and
-  Name!='GMAssasin'
-	) ORDER BY Level DESC";
-	
-		$q = odbc_do($connect['connection'],$query);
-	$i = 0;
-	while(odbc_fetch_row($q)){
-	$i++;
-	    echo '<td width="14%">'.$i.'</td>';
-    //echo '<td align="center" width="50" bgcolor="#996633">'.odbc_result ($q,"UserID").'</td>';
-    echo '<td align="left" width="10" height="24"><img id="imgtop" src="classe/'.odbc_result($q,"JobCode").'.png" width="20" height="18" /></td>';
-	echo '<td align="left" width="10">'.odbc_result($q,"Name").'</td>';
-	echo '<td width="6%">'.odbc_result($q,"Level").'</td>';
-      
-echo '</tr>';
-	}
-	if(!$i>0)
-	   echo "<center>Chưa cập nhật";
-
-?>
-
-        <div class="recent__product">
+    </div>
+<!-- fetch funny -->
+ <div class="recent__product">
                         
                         
                         
@@ -657,3 +552,20 @@ echo '</tr>';
 
 <!-- Mirrored from technext.github.io/anime/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Oct 2021 11:58:49 GMT -->
 </html>
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("link_funnydata").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "fetch-funny.php", true);
+  xhttp.send();
+}
+setInterval(function(){
+    loadXMLDoc();
+},2000)
+window.onload = loadXMLDoc();
+</script>
