@@ -55,7 +55,7 @@
                                     
                                     <?php 
                                        include 'database.php';
-                                       $sql_thongbao="SELECT * FROM `pristontale` WHERE idt IN (5, 10, 15)  ORDER BY id DESC LIMIT 6";
+                                       $sql_thongbao="SELECT * FROM `pristontale` WHERE idt IN (5, 10, 15)  ORDER BY id DESC LIMIT 3";
                                        mysql_query('SET CHARACTER SET utf8');
                                        $media_thongbao=$pdo->query($sql_thongbao);
                                     

@@ -881,7 +881,7 @@ ol {
 	border-radius: 4px;
 	position: absolute;
 	left: 150px;
-	top: 25px;
+	top: 5px;
 }
 
 .product__sidebar__view__item .view_char_2 {
@@ -893,7 +893,7 @@ ol {
 	border-radius: 4px;
 	position: absolute;
 	left: 150px;
-	top: 55px;
+	top: 41px;
 }
 
 .product__sidebar__view__item .view_char_3 {
@@ -905,7 +905,7 @@ ol {
 	border-radius: 4px;
 	position: absolute;
 	left: 150px;
-	top: 85px;
+	top: 78px;
 }
 
 .product__sidebar__view__item .view_char_4 {
@@ -917,7 +917,7 @@ ol {
 	border-radius: 4px;
 	position: absolute;
 	left: 150px;
-	top: 115px;
+	bottom: 41px;
 }
 
 .product__sidebar__view__item .view_char_5 {
@@ -929,7 +929,7 @@ ol {
 	border-radius: 4px;
 	position: absolute;
 	left: 150px;
-	top: 145px;
+	bottom: 5px;
 }
 
 /*end top*/
@@ -1596,7 +1596,7 @@ ol {
 
 .blog {
 	padding-top: 10px;
-	padding-bottom: 90px;
+	padding-bottom: 9px;
 }
 
 .blog__item {
