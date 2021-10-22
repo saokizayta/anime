@@ -1368,6 +1368,7 @@ ol {
 .anime__review__item__text {
 	overflow: hidden;
 	background: #1d1e39;
+	/* background: #1d1e39; */
 	padding: 18px 30px 16px 20px;
 	border-radius: 10px;
 }

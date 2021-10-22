@@ -174,6 +174,7 @@ else{
     // $curenttime = odbc_result($q,"Date");
     // $time_ago = strtotime($curenttime);
 	while(odbc_fetch_row($q_getcharjob)){
+        date_default_timezone_set('Etc/GMT+7');
         $curenttime=odbc_result($q,"Date");
         $time_ago =strtotime($curenttime);
         $timenow = time();
@@ -266,8 +267,9 @@ include_once 'conn/connection-fetch-funny.php';
                         
                             <div class="anime__details__review">
                             <div class="section-title">
-                                <h5>SỰ KIỆN ĐANG DIỂN RA <!DOCTYPE html></h5>
+                                <h5>SỰ KIỆN TRONG GAME ĐANG DIỂN RA <!DOCTYPE html></h5>
                             </div>
+                            <div class="row">
 <?php
 // $query = "SELECT TOP 10 * FROM [logdb].[dbo].[OnlineRewardLog] WHERE 
 // 	(
@@ -283,49 +285,71 @@ include_once 'conn/connection-fetch-funny.php';
 //   Name!='ADMAtalanta' and
 //   Name!='GMAssasin'
 // 	) ORDER BY Date DESC";
-    $query = " SELECT TOP 4 * FROM [logdb].[dbo].[OnlineRewardLog] Order by Date desc ";
+    $query_ev = " SELECT TOP 3 * FROM [EventDB].[dbo].[Event] Order by Start_date desc ";
 	
-	$q = odbc_do($connect['connection'],$query);
-	$i = 0;
+	$q_ev = odbc_do($connect['connection'],$query_ev);
+	$i_ev = 0;
     // $curenttime = odbc_result($q,"Date");
     // $time_ago = strtotime($curenttime);
-	while(odbc_fetch_row($q)){
+    
+	while(odbc_fetch_row($q_ev)){
         // $curenttime=odbc_result($q,"Date");
         // $time_ago =strtotime($curenttime);
         // $timenow = time();
       
-	$i++;
+	$i_ev++;
     // date_default_timezone_set("Asia/Ho_Chi_Minh");
 	// echo $time_ago;echo'<br>';
     //echo $i;
     // ////////////////////////////////////
-    $name = odbc_result($q,"Name");
-    $query_getcharjob = " SELECT TOP 4 * FROM [userdb].[dbo].[CharacterInfo] where Name = '$name' ";
-	
-	$q_getcharjob = odbc_do($connect['connection'],$query_getcharjob);
-	$i_getcharjob = 0;
-    // $curenttime = odbc_result($q,"Date");
-    // $time_ago = strtotime($curenttime);
-	while(odbc_fetch_row($q_getcharjob)){
-        $curenttime=odbc_result($q,"Date");
-        $time_ago =strtotime($curenttime);
-        $timenow = time();
+    date_default_timezone_set('Etc/GMT+7'); // get GMT+7
+    $getStart_time = odbc_result($q_ev,"Start_time");
+    $getEnd_time = odbc_result($q_ev,"End_time");
+    $getStart_date = odbc_result($q_ev,"Start_date");
+    $getEnd_date = odbc_result($q_ev,"End_date");
+    
+    $caltime = odbc_result($q_ev,"End_time") - odbc_result($q_ev,"Start_time");
+    
+    $today_date = date('Y-m-d');
+    $today_time = date('H:m:s');
+
+  
+
+
+    
+    
+    if (strtotime($getEnd_date) >= strtotime($today_date) && $today_time >= odbc_result($q_ev,"Start_time") ) {
+       echo $today_date . "<br>";
+       echo $today_time . "<br>";
+       echo $caltime;
+       
+        echo' <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="product__item">
+            <div class="product__item__pic set-bg" data-setbg="https://i.pinimg.com/originals/81/ac/f2/81acf2056041f53ab459ed6c68cc630d.jpg" style="background-image: url(&quot;https://i.pinimg.com/originals/81/ac/f2/81acf2056041f53ab459ed6c68cc630d.jpg&quot;);">
+            <div class="ep">';echo (strtotime($getEnd_time)-strtotime($getStart_time));echo'</div>
+           
+            <div class="comment"><i class="fa fa-clock-o"></i> 6 tháng trước</div>
+                <div class="view"><i class="fa fa-eye"></i> 0</div>
+            </div>
+            <div class="product__item__text">
+                <ul>
+                <!-- <li>free for fun !</li> <li>Priston tale</li> -->
+                    
+                </ul>
+                <h5><a href="#">'.odbc_result($q_ev,"Name_ev").'</a></h5>
+            </div>
+        </div>
+    </div>';
+    } else {
+        
+       //Echo 'Hiện tại chưa có Event đang diển ra';
       
-	$i_getcharjob++;
-echo'
-    <div class="anime__review__item">
-    <div class="anime__review__item__pic">
-        <img src="img/character/png/';echo odbc_result($q_getcharjob,"JobCode");echo'.png" alt="">
-    </div>
-    <div class="anime__review__item__text">
-        <h6>'.odbc_result($q,"Name").' - ';echo timeAgo($time_ago);echo'<span>';echo'</span></h6>
-        <p>Tham gia trò chơi nhận được [ '.odbc_result($q,"ItemName").' ] - '.odbc_result($q,"Quantity").' ea</p>
-    </div>
-</div>
-';
-	}
+        
+    }
+	
 }
-	if(!$i>0)
+echo'</div>';
+	if(!$i_ev>0)
 	   echo "<center>Website đang nâng cấp hoặc chưa có thông tin.";
     //    echo .odbc_result($q,"Name").
  
