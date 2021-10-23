@@ -673,6 +673,45 @@ ol {
 	top: 10px;
 }
 
+.product__item__pic .ep_pending {
+	font-size: 13px;
+	font-weight: bold;
+	color: #2c0606;
+	background: #bdee0c;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.product__item__pic .ep_progress {
+	font-size: 13px;
+	font-weight: bold;
+	color: #2c0606;
+	background: #0cee0c;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.product__item__pic .ep_complete {
+	font-size: 13px;
+	font-weight: bold;
+	color: #f5dbdb;
+	background: #16091b;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
 .product__item__pic .comment {
 	font-size: 13px;
 	color: #ffffff;

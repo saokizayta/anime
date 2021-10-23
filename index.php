@@ -57,6 +57,7 @@
                                        include 'database.php';
                                        $sql_thongbao="SELECT * FROM `pristontale` WHERE idt IN (5, 10, 15)  ORDER BY id DESC LIMIT 3";
                                        mysql_query('SET CHARACTER SET utf8');
+                                       date_default_timezone_set('Etc/GMT+7');
                                        $media_thongbao=$pdo->query($sql_thongbao);
                                     
                                        function timeAgo($time_ago){
@@ -566,6 +567,6 @@ function loadXMLDoc() {
 }
 setInterval(function(){
     loadXMLDoc();
-},1000000)
+},100000)
 window.onload = loadXMLDoc();
 </script>
