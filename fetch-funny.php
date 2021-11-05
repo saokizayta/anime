@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <?php 
 include_once 'conn/connection-fetch-funny.php';
 ?>
@@ -61,8 +62,9 @@ include_once 'conn/connection-fetch-funny.php';
                                 </div>
                             </div> -->
                             <?php
-                        
+                       
 function timeAgo($time_ago){
+    date_default_timezone_set('Etc/GMT+7'); 
 //$format = "%H:%M:%S %d-%B-%Y";
 $cur_time 	= time();
 $time_elapsed 	= $cur_time - $time_ago;
@@ -263,7 +265,7 @@ include_once 'conn/connection-fetch-funny.php';
                                 </div>
                             </div> -->
                             <?php
-                        
+                        date_default_timezone_set('Etc/GMT+7');
                         function timeAfter($time_ago){
                         //$format = "%H:%M:%S %d-%B-%Y";
                         $cur_time 	= time();
@@ -332,7 +334,7 @@ include_once 'conn/connection-fetch-funny.php';
                         
                         ?>
                         <?php
-                        
+                        date_default_timezone_set('Etc/GMT+7');
                         function timeProgress($time_progress){
                             //$format = "%H:%M:%S %d-%B-%Y";
                             
@@ -405,7 +407,7 @@ include_once 'conn/connection-fetch-funny.php';
                         
                             <div class="anime__details__review">
                             <div class="section-title">
-                                <h5>SỰ KIỆN TRONG GAME<!DOCTYPE html></h5>
+                                <h5>SỰ KIỆN TRONG GAME</h5>
                             </div>
                             <div class="row">
 <?php
@@ -424,8 +426,7 @@ include_once 'conn/connection-fetch-funny.php';
 //   Name!='GMAssasin'
 // 	) ORDER BY Date DESC";
     $query_ev = " SELECT TOP 3 * FROM [EventDB].[dbo].[Event] Order by Start_date desc ";
-	
-	$q_ev = odbc_do($connect['connection'],$query_ev);
+    $q_ev = odbc_do($connect['connection'],$query_ev);
 	$i_ev = 0;
     // $curenttime = odbc_result($q,"Date");
     // $time_ago = strtotime($curenttime);
@@ -465,15 +466,20 @@ include_once 'conn/connection-fetch-funny.php';
        
     //$progress_time = (odbc_result($q_ev,"End_time") - odbc_result($q_ev,"Start_time"));
     //$time_progress = strtotime($progress_time);
-    
+    date_default_timezone_set('Etc/GMT+7');
     $caltime = odbc_result($q_ev,"End_time") - odbc_result($q_ev,"Start_time");
     date_default_timezone_set('Etc/GMT+7');
-    
-        
-   // $time_ago =strtotime($curenttime);
+    // $time_ago =strtotime($curenttime);
     $today_date = date('Y-m-d H:i:s');
+    // get utf8
+    //$colName_ev = utf8_decode(odbc_result($q_ev,"Name_ev"));
+    //$valueName_ev = iconv("UTF-8", "CP1258", $colName_ev);
+    //$valueName_ev = iconv("UTF-8", "Windows-1252", $colName_ev);
+    //
+    //echo $valueName_ev;
     
-
+ echo strtotime($today_date). '<br>';
+ echo strtotime($getStart_time);
   
 
 
@@ -532,7 +538,7 @@ include_once 'conn/connection-fetch-funny.php';
             <div class="product__item__pic set-bg" data-setbg="https://i.pinimg.com/originals/81/ac/f2/81acf2056041f53ab459ed6c68cc630d.jpg" style="background-image: url(&quot;https://i.pinimg.com/originals/81/ac/f2/81acf2056041f53ab459ed6c68cc630d.jpg&quot;);">
             <div class="ep_complete">Đã kết thúc</div>
            
-            <div class="comment"><i class="fa fa-clock-o"></i> 6 tháng trước</div>
+            <div class="comment"><i class="fa fa-clock-o"></i> ';echo timeAgo($time_ago);echo'</div>
                 <div class="view"><i class="fa fa-eye"></i> 0</div>
             </div>
             <div class="product__item__text">

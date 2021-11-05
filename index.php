@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="US">
+<html lang="uft-8">
 
-
-<!-- Mirrored from technext.github.io/anime/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Oct 2021 11:58:32 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta charset="UTF-8">
     <meta name="description" content="ptvui, priston tale, pristontale">
     <meta name="keywords" content="ptvui, pristontale, priston tale, priston">
