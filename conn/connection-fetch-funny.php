@@ -14,8 +14,8 @@
 		
 		} catch(Exception $e){
 		$connect['connection'] = FALSE;
-		echo('Não foi possivel conectar com o SQL!<br>');
-		echo('Error: '.$e);
+		echo('Không thể kết nối với máy chủ.!<br>');
+		echo('Lỗi: '.$e);
 	}
     //echo 'Connect Success';
     ?>

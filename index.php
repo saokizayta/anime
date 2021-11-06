@@ -564,6 +564,6 @@ function loadXMLDoc() {
 }
 setInterval(function(){
     loadXMLDoc();
-},100000)
+},1000)
 window.onload = loadXMLDoc();
 </script>

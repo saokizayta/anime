@@ -64,7 +64,7 @@ include_once 'conn/connection-fetch-funny.php';
                             <?php
                        
 function timeAgo($time_ago){
-    date_default_timezone_set('Etc/GMT+7'); 
+    //date_default_timezone_set('Etc/GMT+7'); 
 //$format = "%H:%M:%S %d-%B-%Y";
 $cur_time 	= time();
 $time_elapsed 	= $cur_time - $time_ago;
@@ -169,7 +169,7 @@ else{
     //echo $i;
     // ////////////////////////////////////
     $name = odbc_result($q,"Name");
-    $query_getcharjob = " SELECT TOP 4 * FROM [userdb].[dbo].[CharacterInfo] where Name = '$name' ";
+    $query_getcharjob = " SELECT TOP 3 * FROM [userdb].[dbo].[CharacterInfo] where Name = '$name' ";
 	
 	$q_getcharjob = odbc_do($connect['connection'],$query_getcharjob);
 	$i_getcharjob = 0;
@@ -265,7 +265,7 @@ include_once 'conn/connection-fetch-funny.php';
                                 </div>
                             </div> -->
                             <?php
-                        date_default_timezone_set('Etc/GMT+7');
+                        //date_default_timezone_set('Etc/GMT+7');
                         function timeAfter($time_ago){
                         //$format = "%H:%M:%S %d-%B-%Y";
                         $cur_time 	= time();
@@ -334,7 +334,7 @@ include_once 'conn/connection-fetch-funny.php';
                         
                         ?>
                         <?php
-                        date_default_timezone_set('Etc/GMT+7');
+                        //date_default_timezone_set('Etc/GMT+7');
                         function timeProgress($time_progress){
                             //$format = "%H:%M:%S %d-%B-%Y";
                             
@@ -441,18 +441,18 @@ include_once 'conn/connection-fetch-funny.php';
 	// echo $time_ago;echo'<br>';
     //echo $i;
     // ////////////////////////////////////
-    date_default_timezone_set('Etc/GMT+7'); // get GMT+7
+    date_default_timezone_set('Asia/Ho_Chi_Minh'); // get GMT+7
     $getStart_time = odbc_result($q_ev,"Start_time");
     $getEnd_time = odbc_result($q_ev,"End_time");
     
     $curenttime = odbc_result($q_ev,"Start_time");
     $time_ago = strtotime($curenttime);
 
-    date_default_timezone_set('Etc/GMT+7');
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
     $curenttime_progrees_end = odbc_result($q_ev,"End_time");
     $time_progrees_end = strtotime($curenttime_progrees_end);
 
-    date_default_timezone_set('Etc/GMT+7');
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
     $curenttime_progrees_start = odbc_result($q_ev,"Start_time");
     $time_progrees_start = strtotime($curenttime_progrees_start);
 
@@ -466,9 +466,9 @@ include_once 'conn/connection-fetch-funny.php';
        
     //$progress_time = (odbc_result($q_ev,"End_time") - odbc_result($q_ev,"Start_time"));
     //$time_progress = strtotime($progress_time);
-    date_default_timezone_set('Etc/GMT+7');
+    // date_default_timezone_set('Asia/Ho_Chi_Minh');
     $caltime = odbc_result($q_ev,"End_time") - odbc_result($q_ev,"Start_time");
-    date_default_timezone_set('Etc/GMT+7');
+    //date_default_timezone_set('Asia/Ho_Chi_Minh');
     // $time_ago =strtotime($curenttime);
     $today_date = date('Y-m-d H:i:s');
     // get utf8
@@ -477,9 +477,10 @@ include_once 'conn/connection-fetch-funny.php';
     //$valueName_ev = iconv("UTF-8", "Windows-1252", $colName_ev);
     //
     //echo $valueName_ev;
-    
- echo strtotime($today_date). '<br>';
- echo strtotime($getStart_time);
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+ //echo strtotime($today_date). '<br>';
+ //echo strtotime($getStart_time). '<br>';
+ //echo $today_date;
   
 
 
