@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php 
 include_once 'conn/connection-fetch-funny.php';
 ?>
@@ -427,7 +427,8 @@ include_once 'conn/connection-fetch-funny.php';
 // 	) ORDER BY Date DESC";
     $query_ev = " SELECT TOP 3 * FROM [EventDB].[dbo].[Event] Order by Start_date desc ";
     $q_ev = odbc_do($connect['connection'],$query_ev);
-	$i_ev = 0;
+    
+    $i_ev = 0;
     // $curenttime = odbc_result($q,"Date");
     // $time_ago = strtotime($curenttime);
     
@@ -505,7 +506,7 @@ include_once 'conn/connection-fetch-funny.php';
                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                     
                 </ul>
-                <h5><a href="#">'.odbc_result($q_ev,"Name_ev").'</a></h5>
+                <h5><a href="#">'.utf8_encode(odbc_result($q_ev,"Name_ev")).'</a></h5>
             </div>
         </div>
     </div>';
@@ -526,7 +527,7 @@ include_once 'conn/connection-fetch-funny.php';
                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                     
                 </ul>
-                <h5><a href="#">'.odbc_result($q_ev,"Name_ev").'</a></h5>
+                <h5><a href="#">'.utf8_encode(odbc_result($q_ev,"Name_ev")).'</a></h5>
             </div>
         </div>
     </div>';
@@ -547,7 +548,7 @@ include_once 'conn/connection-fetch-funny.php';
                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                     
                 </ul>
-                <h5><a href="#">'.odbc_result($q_ev,"Name_ev").'</a></h5>
+                <h5><a href="#">'.utf8_decode(odbc_result($q_ev,"Name_ev")).'</a></h5>
             </div>
         </div>
     </div>';
@@ -562,4 +563,6 @@ echo'</div>';
     //    echo .odbc_result($q,"Name").
  
 ?>
+
 </div>
+
