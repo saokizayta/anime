@@ -1,5 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php 
+header("Content-type: text/html; charset=utf-8");
 include_once 'conn/connection-fetch-funny.php';
 ?>
 <!--                      
@@ -566,3 +567,36 @@ echo'</div>';
 
 </div>
 
+<?php
+require "inc/config.inc.php";
+?>
+<?php echo'<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
+			$dbhost = 'DRIVER={SQL Server};SERVER='.$sqlserver.';DATABASE=Vietnames;';
+			$connection = odbc_connect($dbhost, $account, $password);
+			$verifica = "SELECT TOP 100 * FROM [dbo].[Mgs] ORDER BY id DESC";
+            //ini_set('mssql.charset', 'UTF-8');
+			
+			$rank = odbc_exec($connection, $verifica);
+			
+			while($dados = odbc_fetch_array($rank))
+			{
+				
+				$nome = $dados['msg'];
+               $getnome = mb_convert_encoding($nome, "HTML-ENTITIES", "UTF-8");
+				
+			
+			$id=$i+1;
+			echo ($i % 2) ? "<tr>" : "<tr>";
+			//echo '<td><center><span class="conteudo">'.$getnome.'</span></center></td>';
+            //echo mb_convert_encoding($getnome, "HTML-ENTITIES", "UTF-8");
+            
+            $text = $nome;
+            echo mb_convert_encoding($text, "UTF-8");
+            echo "<br/><br/>";
+            //echo iconv(mb_detect_encoding($text), "UTF-8", $text);
+            
+			echo '</tr>';
+			$i++;
+			}
+			echo '';
+			?>
