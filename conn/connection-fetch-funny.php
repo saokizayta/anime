@@ -7,7 +7,7 @@
 
 	$connect['string'] = "DRIVER={SQL Server};";
 	$connect['string'] .= "SERVER=".$connect['host'].";";
-	$connect['string'] .= "DATABASE=".$connect['db'];
+	//$connect['string'] .= "DATABASE=".$connect['EventDB'];
 	
 	try {
 		$connect['connection'] = @odbc_connect($connect['string'],$connect['user'],$connect['pass']);

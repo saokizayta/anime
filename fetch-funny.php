@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php 
-header("Content-type: text/html; charset=utf-8");
+//header("Content-type: text/html; charset=utf-8");
 include_once 'conn/connection-fetch-funny.php';
 ?>
 <!--                      
@@ -567,36 +567,38 @@ echo'</div>';
 
 </div>
 
+
 <?php
-require "inc/config.inc.php";
+                        //                 include 'inc/database.inc.php';
+                        //                 $sql_char_morion="SELECT * FROM `dbo.Mgs`";
+                        //                 mysql_query('SET CHARACTER SET utf8');
+                        //                 $show_char_morion=$pdo->query($sql_char_morion);
+                                                 ?>
+                                                <?php
+                        //             foreach($show_char_morion as $showall_char_morion_randoms) 
+                        //                         {
+                        // echo $showall_char_morion_randoms['msg'];
+                        //                         }
+                        ?>
+
+<?php
+$serverName = "remote.myvnc.com";
+$connectionInfo = array( "Vietnames"=>"dbName", "UID"=>"sb", "PWD"=>"123456");
+$conn = sqlsrv_connect( $serverName, $connectionInfo );
+if( $conn === false ) {
+    die( print_r( sqlsrv_errors(), true));
+}
+
+$sql = "SELECT * FROM `dbo.Mgs`";
+$stmt = sqlsrv_query( $conn, $sql );
+if( $stmt === false) {
+    die( print_r( sqlsrv_errors(), true) );
+}
+
+while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+      echo $row[0].", ".$row[1]."<br />";
+}
+
+sqlsrv_free_stmt( $stmt);
 ?>
-<?php echo'<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
-			$dbhost = 'DRIVER={SQL Server};SERVER='.$sqlserver.';DATABASE=Vietnames;';
-			$connection = odbc_connect($dbhost, $account, $password);
-			$verifica = "SELECT TOP 100 * FROM [dbo].[Mgs] ORDER BY id DESC";
-            //ini_set('mssql.charset', 'UTF-8');
-			
-			$rank = odbc_exec($connection, $verifica);
-			
-			while($dados = odbc_fetch_array($rank))
-			{
-				
-				$nome = $dados['msg'];
-               $getnome = mb_convert_encoding($nome, "HTML-ENTITIES", "UTF-8");
-				
-			
-			$id=$i+1;
-			echo ($i % 2) ? "<tr>" : "<tr>";
-			//echo '<td><center><span class="conteudo">'.$getnome.'</span></center></td>';
-            //echo mb_convert_encoding($getnome, "HTML-ENTITIES", "UTF-8");
-            
-            $text = $nome;
-            echo mb_convert_encoding($text, "UTF-8");
-            echo "<br/><br/>";
-            //echo iconv(mb_detect_encoding($text), "UTF-8", $text);
-            
-			echo '</tr>';
-			$i++;
-			}
-			echo '';
-			?>
+
