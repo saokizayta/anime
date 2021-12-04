@@ -1,5 +1,5 @@
 ﻿<?php
-$hostname = "116.109.229.54";
+$hostname = "remote.myvnc.com";
 $dbname = "Vietnames";
 $username = "sb";
 $pw = "123456";

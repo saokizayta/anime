@@ -569,35 +569,35 @@ echo'</div>';
 
 
 <?php
-                        //                 include 'inc/database.inc.php';
-                        //                 $sql_char_morion="SELECT * FROM `dbo.Mgs`";
-                        //                 mysql_query('SET CHARACTER SET utf8');
-                        //                 $show_char_morion=$pdo->query($sql_char_morion);
+                                        //  include 'inc/database.inc.php';
+                                        //  $sql_char_morion="SELECT * FROM `dbo.Mgs`";
+                                        //  mysql_query('SET CHARACTER SET utf8');
+                                        //  $show_char_morion=$pdo->query($sql_char_morion);
                                                  ?>
                                                 <?php
-                        //             foreach($show_char_morion as $showall_char_morion_randoms) 
-                        //                         {
-                        // echo $showall_char_morion_randoms['msg'];
-                        //                         }
+                        //              foreach($show_char_morion as $showall_char_morion_randoms) 
+                        //                          {
+                        //  echo $showall_char_morion_randoms['msg'];
+                        //                          }
                         ?>
 
 <?php
-$hostname = "remote.myvnc.com";
-$username = "sb";
-$password = "123456";
-$dbName = "Vietnames";
+// $hostname = "remote.myvnc.com";
+// $username = "sb";
+// $password = "123456";
+// $dbName = "Vietnames";
 
-MSSQL_CONNECT($hostname,$username,$password) or DIE("DATABASE FAILED TO RESPOND.");
-mssql_select_db($dbName) or DIE("Database unavailable");
+// MSSQL_CONNECT($hostname,$username,$password) or DIE("DATABASE FAILED TO RESPOND.");
+// mssql_select_db($dbName) or DIE("Database unavailable");
 
-$query = "SELECT * FROM `dbo.Mgs`";
+// $query = "SELECT * FROM `dbo.Mgs`";
 
-$result = mssql_query( $query );
+// $result = mssql_query( $query );
 
-for ($i = 0; $i < mssql_num_rows( $result ); ++$i)
-     {
-         $line = mssql_fetch_row($result);
-         print( "$line[0] - $line[1]\n");
-     }
+// for ($i = 0; $i < mssql_num_rows( $result ); ++$i)
+//      {
+//          $line = mssql_fetch_row($result);
+//          print( "$line[0] - $line[1]\n");
+//      }
 ?>
 
