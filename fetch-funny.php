@@ -582,23 +582,22 @@ echo'</div>';
                         ?>
 
 <?php
-$serverName = "remote.myvnc.com";
-$connectionInfo = array( "Vietnames"=>"dbName", "UID"=>"sb", "PWD"=>"123456");
-$conn = sqlsrv_connect( $serverName, $connectionInfo );
-if( $conn === false ) {
-    die( print_r( sqlsrv_errors(), true));
-}
+$hostname = "remote.myvnc.com";
+$username = "sb";
+$password = "123456";
+$dbName = "Vietnames";
 
-$sql = "SELECT * FROM `dbo.Mgs`";
-$stmt = sqlsrv_query( $conn, $sql );
-if( $stmt === false) {
-    die( print_r( sqlsrv_errors(), true) );
-}
+MSSQL_CONNECT($hostname,$username,$password) or DIE("DATABASE FAILED TO RESPOND.");
+mssql_select_db($dbName) or DIE("Database unavailable");
 
-while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-      echo $row[0].", ".$row[1]."<br />";
-}
+$query = "SELECT * FROM `dbo.Mgs`";
 
-sqlsrv_free_stmt( $stmt);
+$result = mssql_query( $query );
+
+for ($i = 0; $i < mssql_num_rows( $result ); ++$i)
+     {
+         $line = mssql_fetch_row($result);
+         print( "$line[0] - $line[1]\n");
+     }
 ?>
 
