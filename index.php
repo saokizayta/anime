@@ -548,7 +548,7 @@
 </body>
 
 
-<!-- Mirrored from technext.github.io/anime/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Oct 2021 11:58:49 GMT -->
+
 </html>
 <script>
 function loadXMLDoc() {
@@ -560,6 +560,7 @@ function loadXMLDoc() {
     }
   };
   xhttp.open("GET", "fetch-funny.php", true);
+  xhttp.overrideMimeType('text/xml; charset=UTF-8');
   xhttp.send();
 }
 setInterval(function(){
