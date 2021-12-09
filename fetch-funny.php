@@ -301,7 +301,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                     // img Condition
                                                     $getimg_ev = $showall_event['img_ev'];
                                                     if ($getimg_ev == null) {
-                                                       $getimg = 'img/noimg_.png';
+                                                       $getimg = 'img/SPRK_default_preset_name_custom.png';
                                                     } else {
                                                        $getimg = $getimg_ev;
                                                     }

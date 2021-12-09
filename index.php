@@ -264,7 +264,7 @@
                     <div class="product__sidebar">
                         <div class="product__sidebar__view">
                             <div class="section-title">
-                                <h5>M</h5>
+                                <h5>C</h5>
                             </div>
                             <ul class="filter__controls">
                             <li class="active" data-filter="*"></li>
