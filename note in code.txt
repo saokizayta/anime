@@ -1,0 +1,12 @@
+.product__item__pic .event {
+	font-size: 10px;
+	color: #ffffff;
+	background: #0e2e1c;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+
