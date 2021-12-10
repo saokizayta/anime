@@ -283,13 +283,16 @@
                                                 ?>
                                                 <?php
                                     foreach($show_system as $showall_system) 
-                                                {echo'
+                                                {
+                                                    echo'
                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                data-setbg="">
+                                <a href="download"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
-                                               '; }
+                                               '; 
+                                                }
                                                 ?>
                                                 <?php
                                         include 'database.php';
@@ -299,13 +302,16 @@
                                                 ?>
                                                 <?php
                                     foreach($show_system as $showall_system) 
-                                                {echo'
+                                                {
+                                                    echo'
                           
                            <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                data-setbg="">
+                                <a href="register"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
-                                               '; }
+                                               '; 
+                                                }
                                                 ?>
                                                 <?php
                                         include 'database.php';
@@ -315,13 +321,16 @@
                                                 ?>
                                                 <?php
                                     foreach($show_system as $showall_system) 
-                                                {echo'
+                                                {
+                                                    echo'
                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                data-setbg="">
+                                <a href="quest"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
-                                               '; }
+                                               ';
+                                                }
                                                 ?>
                                                 <?php
                                         include 'database.php';
@@ -331,14 +340,17 @@
                                                 ?>
                                                 <?php
                                     foreach($show_system as $showall_system) 
-                                                {echo'
+                                                {
+                                                    echo'
                             
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'"></a>
+                                data-setbg="">
+                                <a href="donate"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                            </div>
                            
-                                               '; }
+                                               '; 
+                                                }
                                                 ?>
                                     
                                     
@@ -353,8 +365,8 @@
                                 data-setbg="img/character/png/blog_morion1.png"></a>
                                 <div class="blog__item__text__char">
                                     <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
-                                    <h4><a href="#">Tempskron</a></h4>
-                                    <font style="color: white"> Power and technology </font>
+                                    <h4><a href="#">Morion</a></h4>
+                                    <font style="color: white"> Soul and magic </font>
                                 </div>
                             </div>
                         <div class="product__sidebar__view__item__quest set-bg mix month"
@@ -385,21 +397,143 @@
                             </div>
                             <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_morion_top.png" style="background-image: url(&quot;img/sidebar/tv-1.jpg&quot;);">
                                 <!--<div class="ep">18 / ?</div>-->
-                                <div class="view_char_1"><img src="img/character/newpngchar/1.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_2"><img src="img/character/newpngchar/2.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_3"><img src="img/character/newpngchar/3.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_4"><img src="img/character/newpngchar/4.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_5"><img src="img/character/newpngchar/5.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                <?php
+                //char 1
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 1 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_1"><img src="img/character/newpngchar/1.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 2
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 2 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_2"><img src="img/character/newpngchar/2.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 3
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 3 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_3"><img src="img/character/newpngchar/3.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 4
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 4 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_4"><img src="img/character/newpngchar/4.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 5
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 5 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_5"><img src="img/character/newpngchar/5.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+
                                 <!--<div class="view"><i class="fa fa-eye"></i> 9141</div>
                                 <h5><a href="#">Boruto: Naruto next generations</a></h5>-->
                             </div>
                             <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_tempskron_top.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
                                 <!--<div class="ep">18 / ?</div>-->
-                                <div class="view_char_1"><img src="img/character/newpngchar/6.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_2"><img src="img/character/newpngchar/7.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_3"><img src="img/character/newpngchar/8.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_4"><img src="img/character/newpngchar/9.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                                <div class="view_char_5"><img src="img/character/newpngchar/10.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                <?php
+                //char 6
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 6 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_1"><img src="img/character/newpngchar/6.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 7
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 7 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_2"><img src="img/character/newpngchar/7.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 8
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 8 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_3"><img src="img/character/newpngchar/8.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 9
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 9 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_4"><img src="img/character/newpngchar/9.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                <?php
+                //char 10
+                    include_once "incluir/configura.php";
+                    $connection = odbc_connect( $connection_string, $user, $pass );
+                    $query = "SELECT TOP 1 * FROM [userdb].[dbo].[CharacterInfo] where JobCode = 10 ORDER BY Level DESC";
+                    $qt = odbc_do($connection, $query);
+                    $i = 0;
+                    while(odbc_fetch_row($qt)){
+                    $get_JobCode = odbc_result($qt,8);
+                    $get_Name = odbc_result($qt,3);
+                    }
+                         echo '<div class="view_char_5"><img src="img/character/newpngchar/10.png" alt="" height="28px" width="28px"> '.$get_Name.'</div>';
+                ?>
+                              
                                 <!--<div class="view"><i class="fa fa-eye"></i> 9141</div>
                                 <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>-->
                             </div>
@@ -453,9 +587,47 @@
                                 <h5><a href="#">Boruto: Naruto next generations</a></h5>-->
                             </div>
                             <div class="product__sidebar__view__item set-bg" data-setbg="img/character/png/360x190_sod.png" style="background-image: url(&quot;img/sidebar/tv-2.jpg&quot;);">
-                            <div class="view_clan_sod_gold"><img src="img/character/newpngchar/sod1.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                            <div class="view_clan_sod_silver"><img src="img/character/newpngchar/sod2.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
-                            <div class="view_clan_sod_bronze"><img src="img/character/newpngchar/sod3.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>
+                            <?php
+	$connect['host'] = "remote.myvnc.com";
+	$connect['user'] = "sb";
+	$connect['pass'] = "123456";
+	$connect['db'] = "ClanDB";
+
+	$connect['string'] = "DRIVER={SQL Server};";
+	$connect['string'] .= "SERVER=".$connect['host'].";";
+	$connect['string'] .= "DATABASE=".$connect['db'];
+
+	try{
+		$connect['connection'] = @odbc_connect($connect['string'],$connect['user'],$connect['pass']);
+	} catch(Exception $e){
+		$connect['connection'] = FALSE;
+		echo('Không thể kết nối đến máy chủ.<br>');
+		echo('Error: '.$e);
+	}
+
+	$query = "SELECT TOP 3 * FROM [ClanDB].[dbo].[BellatraTeamScore] ORDER BY TotalPoint DESC";
+	
+		$q = odbc_do($connect['connection'],$query);
+	$i = 0;
+	while(odbc_fetch_row($q)){
+	$i++;
+
+    if ($i == 1) {
+        echo' <div class="view_clan_sod_gold"><img src="img/character/newpngchar/sod1.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>';
+    } elseif ($i == 2) {
+        echo' <div class="view_clan_sod_silver"><img src="img/character/newpngchar/sod2.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>';
+    } elseif ($i == 3) {
+        echo' <div class="view_clan_sod_bronze"><img src="img/character/newpngchar/sod3.png" alt="" height="28px" width="28px"> CHARNAME LEVEL</div>';
+    }
+        }
+	
+        if(!$i>0)
+	   echo '<div class="view_clan_sod_silver">Chưa có dữ liệu</div>';
+
+?>
+
+
+                            
                             </div>
                         </div>
                      </div>
@@ -551,20 +723,20 @@
 
 </html>
 <script>
-function loadXMLDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("link_funnydata").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "fetch-funny.php", true);
-  xhttp.overrideMimeType('text/xml; charset=UTF-8');
-  xhttp.send();
-}
-setInterval(function(){
-    loadXMLDoc();
-},1000)
-window.onload = loadXMLDoc();
+        function loadXMLDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("link_funnydata").innerHTML =
+            this.responseText;
+            }
+        };
+        xhttp.open("GET", "fetch-funny.php", true);
+        xhttp.overrideMimeType('text/xml; charset=UTF-8');
+        xhttp.send();
+        }
+        setInterval(function(){
+            loadXMLDoc();
+        },100000)
+        window.onload = loadXMLDoc();
 </script>

@@ -661,6 +661,62 @@ ol {
 	border-radius: 5px;
 }
 
+/*	add timeago in event table */
+.product__item__event {
+	/*height: 325px;*/
+	height: 250px;
+	position: relative;
+	border-radius: 5px;
+}
+
+.product__item__event .event_comment {
+	font-size: 10px;
+	color: #ffffff;
+	background: #0e2e1c;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+
+.product__item__event .event_view {
+	font-size: 10px;
+	color: #ffffff;
+	background: #0e2e1c;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.product__item__event .event_begin_at {
+	font-size: 11px;
+	color: #ffffff;
+	background: #4207e4;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.product__item__event .event_end_at {
+	font-size: 11px;
+	color: #ffffff;
+	background: #d80404;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+/*	end timeago in event table */
 .product__item__pic .ep {
 	font-size: 13px;
 	color: #ffffff;
@@ -673,12 +729,12 @@ ol {
 	top: 10px;
 }
 
-.product__item__pic .ep_pending {
+.product__item__event .ep_pending {
 	font-family: Tahoma;
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: normal;
-	color: #2c0606;
-	background: #aa9416;
+	color: #ffffff;
+	background: orangered;
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
@@ -687,12 +743,12 @@ ol {
 	top: 10px;
 }
 
-.product__item__pic .ep_progress {
+.product__item__event .ep_progress {
 	font-family: Tahoma;
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: normal;
-	color: #2c0606;
-	background: #0ab80a;
+	color: #ffffff;
+	background: green;
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
@@ -701,9 +757,9 @@ ol {
 	top: 10px;
 }
 
-.product__item__pic .ep_complete {
+.product__item__event .ep_complete {
 	font-family: Tahoma;
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: normal;
 	color: #f5dbdb;
 	background: #797243;
@@ -726,31 +782,6 @@ ol {
 	left: 10px;
 	bottom: 10px;
 }
-/*	add timeago in event table */
-.product__item__pic .event_comment {
-	font-size: 10px;
-	color: #ffffff;
-	background: #0e2e1c;
-	display: inline-block;
-	padding: 2px 10px;
-	border-radius: 4px;
-	position: absolute;
-	left: 10px;
-	bottom: 10px;
-}
-
-.product__item__pic .event_view {
-	font-size: 10px;
-	color: #ffffff;
-	background: #0e2e1c;
-	display: inline-block;
-	padding: 2px 10px;
-	border-radius: 4px;
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-/*	end timeago in event table */
 
 .product__item__pic .view {
 	font-size: 13px;
@@ -765,7 +796,7 @@ ol {
 }
 
 .product__item__text {
-	padding-top: 20px;
+	padding-top: 0px;
 }
 
 .product__item__text ul {

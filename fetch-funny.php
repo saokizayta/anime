@@ -327,6 +327,11 @@ include_once 'conn/connection-fetch-funny.php';
                                     
                                         $time_progress = $time_progrees_end - $time_progrees_start;
                                                 //End Time ago
+                                                $time_begin = strtotime($showall_event['begin_time']);
+                                                $time_beginView = date(" g:i A", $time_begin);
+
+                                                $time_end = strtotime($showall_event['end_time']);
+                                                $time_endView = date(" g:i A", $time_end);
                                                     if ( strtotime($today_date) <= strtotime($getStart_time)  ) {
                                                         // echo strtotime($today_date) . "<br>";
                                                         // echo strtotime($getEnd_time) . "<br>";
@@ -335,10 +340,11 @@ include_once 'conn/connection-fetch-funny.php';
                                                        
                                                         echo' <div class="col-lg-4 col-md-6 col-sm-6">
                                                         <div class="product__item">
-                                                            <div class="product__item__pic set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url('; echo $getimg; echo');">
+                                                            <div class="product__item__event set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url('; echo $getimg; echo');">
                                                             <div class="ep_pending">Sắp diễn ra</div>
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeAfter($time_ago);echo'</div>
+                                                            <div class="event_begin_at"><i class="fa fa-clock-o"></i> ';echo 'Bắt đầu: '.$time_beginView.' ';echo'</div>
                                                                 <div class="event_view"><i class="fa fa-eye"></i> 0</div>
                                                             </div>
                                                             <div class="product__item__text">
@@ -359,11 +365,12 @@ include_once 'conn/connection-fetch-funny.php';
                                                         
                                                         echo' <div class="col-lg-4 col-md-6 col-sm-6">
                                                         <div class="product__item">
-                                                            <div class="product__item__pic set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url(&quot;';echo $getimg; echo'&quot;);">
+                                                            <div class="product__item__event set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url(&quot;';echo $getimg; echo'&quot;);">
                                                             <div class="ep_progress">Đang diễn ra</div>
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeProgress($time_progress);echo'</div>
-                                                                <div class="event_view"><i class="fa fa-eye"></i> 0</div>
+                                                            <div class="event_end_at"><i class="fa fa-clock-o"></i> ';echo 'kết thúc: '.$time_endView.' ';echo'</div>  
+                                                            <div class="event_view"><i class="fa fa-eye"></i> 0</div>
                                                             </div>
                                                             <div class="product__item__text">
                                                                 <ul>
@@ -380,7 +387,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                         
                                                         echo' <div class="col-lg-4 col-md-6 col-sm-6">
                                                         <div class="product__item">
-                                                            <div class="product__item__pic set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url(&quot;';echo $getimg; echo'&quot;);">
+                                                            <div class="product__item__event set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url(&quot;';echo $getimg; echo'&quot;);">
                                                             <div class="ep_complete">Đã kết thúc</div>
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeAgo($time_ago);echo'</div>
