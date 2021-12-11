@@ -1,0 +1,122 @@
+RewriteEngine On
+Rewritecond %{HTTP_HOST} ^localhost\.com
+RewriteRule ^/thu-ngo-([a-zA-Z0-9_-]+)$ Detail.php?idmenu=$1[L]
+
+RewriteRule ^danh-muc-san-pham/([a-zA-Z0-9_-]+)$ MenuDetail.php?idmenu=$1 [L]
+
+RewriteRule ^san-pham/mua-san-pham/([a-zA-Z0-9_-]+)$ Buy.php?idao=$1 [L]
+
+#RewriteRule ^san-pham/([0-9]+)/([a-zA-Z_-]+)/([0-9]+)/$ xem.php?product=$1&type=$3
+
+RewriteRule ^sub-([0-9]+).chn$ Detail.php?idmenu=$1[L]
+
+RewriteRule ^products-([0-9]+)$ products.php?idproducts=$1[L]
+
+RewriteRule ^news-([0-9]+)$ news.php?newsid=$1[L]
+#-------------------------------------------
+RewriteRule ^tin-tuc tin-tuc.php?idt=5
+RewriteRule ^su-kien su-kien.php?idt=10
+RewriteRule ^cap-nhat cap-nhat.php?idt=15
+RewriteRule ^bao-tri cap-nhat.php?idt=15
+#-------------------------------------------
+
+RewriteRule ^([0-9]+).ZeroPT.ga$ ViewDetail.php?id=$1[L]
+
+#-------------------------------------------------------------
+
+RewriteRule ^cot-truyen ViewDetail.php?id=12
+RewriteRule ^dac-sac ViewDetail.php?id=13
+RewriteRule ^thong-tin ViewDetail.php?id=15
+RewriteRule ^he-thong ViewDetail.php?id=16
+RewriteRule ^nguoi-moi ViewDetail.php?id=17
+RewriteRule ^sieu-thi ViewDetail.php?id=18
+RewriteRule ^dang-ki ViewDetail.php?id=19
+RewriteRule ^tai-ve ViewDetail.php?id=20
+RewriteRule ^all4u ViewDetail.php?id=21
+RewriteRule ^gop-y ViewDetail.php?id=22
+RewriteRule ^quy-dinh ViewDetail.php?id=23
+RewriteRule ^nap-the ViewDetail.php?id=24
+RewriteRule ^nap-the/ ViewDetail.php?id=24
+RewriteRule ^huong-dan-tan-thu ViewDetail.php?id=25
+RewriteRule ^cac-cau-hoi-thuong-gap ViewDetail.php?id=26
+RewriteRule ^huong-dan-cai-dat ViewDetail.php?id=27
+RewriteRule ^huong-dan ViewDetail.php?id=27
+
+RewriteRule ^thay-doi-mat-khau ViewDetail.php?id=101
+RewriteRule ^dang-nhap ViewDetail.php?id=102
+
+RewriteRule ^huongdan-nap-the ViewDetail.php?id=28
+RewriteRule ^ho-tro ViewDetail.php?id=29
+RewriteRule ^gioi-thieu-so-luoc ViewDetail.php?id=50
+RewriteRule ^tao-tai-khoan ViewDetail.php?id=82
+#RewriteRule ^huong-dan-tan-thu ViewDetail.php?id=25
+RewriteRule ^@4rum index.php
+
+#quest
+RewriteRule ^quest30.asp ViewDetail.php?id=84
+RewriteRule ^quest55.asp ViewDetail.php?id=85
+RewriteRule ^quest70.asp ViewDetail.php?id=86
+RewriteRule ^quest80.asp ViewDetail.php?id=87
+RewriteRule ^quest85.asp ViewDetail.php?id=88
+
+RewriteRule ^guide_inter_specitem.asp ViewDetail.php?id=96
+RewriteRule ^guide_items.asp ViewDetail.php?id=96
+
+#Bellatra
+RewriteRule ^npc.asp ViewDetail.php?id=97
+RewriteRule ^stage.asp ViewDetail.php?id=98
+RewriteRule ^items.asp ViewDetail.php?id=99
+RewriteRule ^gamerules.asp ViewDetail.php?id=100
+
+#---------------------------------------------------------------
+RewriteRule ^kinh-nghiem ViewDetail.php?id=30
+RewriteRule ^nhiem-vu ViewDetail.php?id=31
+
+RewriteRule ^vu-khi ViewDetail.php?id=32
+RewriteRule ^cat=claws.asp ViewDetail.php?id=89
+RewriteRule ^cat=maces.asp ViewDetail.php?id=90
+RewriteRule ^cat=pike.asp ViewDetail.php?id=91
+RewriteRule ^cat=bows.asp ViewDetail.php?id=92
+RewriteRule ^cat=swords.asp ViewDetail.php?id=93
+RewriteRule ^cat=javelins.asp ViewDetail.php?id=94
+RewriteRule ^cat=wands-staffs.asp ViewDetail.php?id=95
+
+RewriteRule ^mix ViewDetail.php?id=33
+RewriteRule ^aging ViewDetail.php?id=34
+RewriteRule ^quai-vat ViewDetail.php?id=35
+RewriteRule ^blesscastle ViewDetail.php?id=36
+RewriteRule ^bellatra ViewDetail.php?id=37
+RewriteRule ^npc ViewDetail.php?id=38
+RewriteRule ^ranks ViewDetail.php?id=39
+RewriteRule ^Archer ViewDetail.php?id=40
+RewriteRule ^Fighter ViewDetail.php?id=41
+RewriteRule ^Mechanician ViewDetail.php?id=42
+RewriteRule ^Pikeman ViewDetail.php?id=43
+RewriteRule ^Atalanta ViewDetail.php?id=44
+RewriteRule ^Knight ViewDetail.php?id=45
+RewriteRule ^Magician ViewDetail.php?id=46
+RewriteRule ^Priestess ViewDetail.php?id=47
+RewriteRule ^Shaman ViewDetail.php?id=48
+RewriteRule ^Assassin ViewDetail.php?id=49
+
+#---------------------------------------------------------------
+
+RewriteRule ^guide_party.asp ViewDetail.php?id=103
+RewriteRule ^guide_inter_monstercrystal.asp ViewDetail.php?id=103
+RewriteRule ^guide_warehouse.asp ViewDetail.php?id=103
+RewriteRule ^guide_trade.asp ViewDetail.php?id=103
+RewriteRule ^guide_inter_mix.asp ViewDetail.php?id=103
+RewriteRule ^guide_inter_age.asp ViewDetail.php?id=103
+RewriteRule ^guide_inter_wrapgate.asp ViewDetail.php?id=103
+RewriteRule ^guide_inter_rankup.asp ViewDetail.php?id=103
+
+
+
+ErrorDocument 401 /error/401.php
+
+ErrorDocument 403 /error/403.php
+
+ErrorDocument 404 /error/404.php
+
+ErrorDocument 500 /error/500.php
+

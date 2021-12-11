@@ -6,23 +6,35 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="index-2.html"><img src="img/logo.png" alt=""></a>
+                    <a href="trang_chu">
+                    <?php
+                         include 'database.php';
+                         $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo' ORDER BY id DESC LIMIT 1";
+                         
+                         mysql_query('SET CHARACTER SET utf8');
+                         $show_info=$pdo->query($sql_info);
+                         
+                    ?>                            
+                    <?php foreach($show_info as $showall_info) { ?>
+                            <img src="<?php echo $showall_info['img']; ?>" alt="">
+                    <?php } ?>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="index-2.html">Homepage</a></li>
-                        <li><a href="categories.html">Categories</a></li>
-                        <li><a href="blog.html">Our Blog</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li class="active"><a href="trang_chu">Trang chủ</a></li>
+                        <li><a href="dang_ki">Đăng kí</a></li>
+                        <li><a href="tai_ve">Tải về</a></li>
+                        <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3">
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                <p>
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a> And BE <a href="http://ptvui.com" target="_blank">PTvui Managerment</a> 
+                </p>
 
               </div>
           </div>

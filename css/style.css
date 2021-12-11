@@ -897,6 +897,50 @@ ol {
 	margin-bottom: 20px;
 }
 
+.product__sidebar__view__item__topview .download {
+	font-size: 35px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 5px;
+	bottom: 30px;
+}
+
+.product__sidebar__view__item__topview .register {
+	font-size: 35px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 5px;
+	bottom: 30px;
+}
+
+.product__sidebar__view__item__topview .quest {
+	font-size: 35px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 5px;
+	bottom: 30px;
+}
+
+.product__sidebar__view__item__topview .donate {
+	font-size: 35px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 5px;
+	bottom: 30px;
+}
+
 .product__sidebar__view__item__topview .ep {
 	font-size: 9px;
 	color: #ffffff;
@@ -937,6 +981,50 @@ ol {
 	margin-bottom: 20px;
 }
 
+.product__sidebar__view__item__quest .solo_quests {
+	font-size: 30px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 6px;
+}
+
+.product__sidebar__view__item__quest .beginner {
+	font-size: 30px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	right: 20px;
+	bottom: 6px;
+}
+
+.product__sidebar__view__item__quest .exp_quests {
+	font-size: 30px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 6px;
+}
+
+.product__sidebar__view__item__quest .daily_quests {
+	font-size: 30px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	right: 20px;
+	bottom: 6px;
+}
+
 .product__sidebar__view__item__quest .ep {
 	font-size: 9px;
 	color: #ffffff;
@@ -967,6 +1055,28 @@ ol {
 	position: absolute;
 	left: 20px;
 	bottom: 2px;
+}
+
+.product__sidebar__view__item__services .tier4 {
+	font-size: 20px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+
+.product__sidebar__view__item__services .tier5 {
+	font-size: 20px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
 }
 /*start top*/
 

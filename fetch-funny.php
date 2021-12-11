@@ -289,22 +289,67 @@ include_once 'conn/connection-fetch-funny.php';
 
 
                      <?php
-                                        include 'database.php';
-                                        $sql_get_ev="SELECT * FROM `event`";
-                                        mysql_query('SET CHARACTER SET utf8');
-                                        $show_event=$pdo->query($sql_get_ev);
+                     
+                         include 'database.php';
+                        $sql_get_ev="SELECT * FROM `event`";
+                        mysql_query('SET CHARACTER SET utf8');
+                        $show_event=$pdo->query($sql_get_ev);
                                              
-                                                ?>
-                                                <?php
-                                    foreach($show_event as $showall_event) 
-                                                {
-                                                    // img Condition
-                                                    $getimg_ev = $showall_event['img_ev'];
-                                                    if ($getimg_ev == null) {
-                                                       $getimg = 'img/SPRK_default_preset_name_custom.png';
-                                                    } else {
-                                                       $getimg = $getimg_ev;
-                                                    }
+                        ?>
+                                    <?php
+                                   
+                                   if (!function_exists('create_slug')) {
+                                       function create_slug($string)
+                                       {
+                                           $search = array(
+                                               '#(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)#',
+                                               '#(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)#',
+                                               '#(ì|í|ị|ỉ|ĩ)#',
+                                               '#(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)#',
+                                               '#(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)#',
+                                               '#(ỳ|ý|ỵ|ỷ|ỹ)#',
+                                               '#(đ)#',
+                                               '#(À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ)#',
+                                               '#(È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ)#',
+                                               '#(Ì|Í|Ị|Ỉ|Ĩ)#',
+                                               '#(Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ)#',
+                                               '#(Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ)#',
+                                               '#(Ỳ|Ý|Ỵ|Ỷ|Ỹ)#',
+                                               '#(Đ)#',
+                                               "/[^a-zA-Z0-9\-\_.]/",
+                                           );
+                                           $replace = array(
+                                               'a',
+                                               'e',
+                                               'i',
+                                               'o',
+                                               'u',
+                                               'y',
+                                               'd',
+                                               'A',
+                                               'E',
+                                               'I',
+                                               'O',
+                                               'U',
+                                               'Y',
+                                               'D',
+                                               '-',
+                                           );
+                                           $string = preg_replace($search, $replace, $string);
+                                           $string = preg_replace('/(-)+/', '-', $string);
+                                           $string = strtolower($string);
+                                           return $string;
+                                       }
+                                   }
+                        foreach($show_event as $showall_event) 
+                                    {
+                                        // img Condition
+                                        $getimg_ev = $showall_event['img_ev'];
+                                        if ($getimg_ev == null) {
+                                                $getimg = 'img/SPRK_default_preset_name_custom.png';
+                                        } else {
+                                                $getimg = $getimg_ev;
+                                            }
                                                     // end Condition
                                                     //add Timeago   
                                         date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -352,10 +397,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="#">'.$showall_event['name_ev'].'</a></h5>
-                                                                '.$today_date.'<br>
-                                                                '.$getStart_time.'
-
+                                                                <h5><a href="'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
@@ -377,7 +419,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="#">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
@@ -398,7 +440,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="#">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';

@@ -51,6 +51,55 @@
                                 <div class="section-title">
                                     
                                     <?php 
+                                    /**
+ * Chuyển đổi chuỗi kí tự thành dạng slug dùng cho việc tạo friendly url.
+ * @access    public
+ * @param string
+ * @return    string
+ */
+if (!function_exists('create_slug')) {
+    function create_slug($string)
+    {
+        $search = array(
+            '#(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)#',
+            '#(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)#',
+            '#(ì|í|ị|ỉ|ĩ)#',
+            '#(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)#',
+            '#(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)#',
+            '#(ỳ|ý|ỵ|ỷ|ỹ)#',
+            '#(đ)#',
+            '#(À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ)#',
+            '#(È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ)#',
+            '#(Ì|Í|Ị|Ỉ|Ĩ)#',
+            '#(Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ)#',
+            '#(Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ)#',
+            '#(Ỳ|Ý|Ỵ|Ỷ|Ỹ)#',
+            '#(Đ)#',
+            "/[^a-zA-Z0-9\-\_.]/",
+        );
+        $replace = array(
+            'a',
+            'e',
+            'i',
+            'o',
+            'u',
+            'y',
+            'd',
+            'A',
+            'E',
+            'I',
+            'O',
+            'U',
+            'Y',
+            'D',
+            '-',
+        );
+        $string = preg_replace($search, $replace, $string);
+        $string = preg_replace('/(-)+/', '-', $string);
+        $string = strtolower($string);
+        return $string;
+    }
+}
                                        include 'database.php';
                                        $sql_thongbao="SELECT * FROM `pristontale` WHERE idt IN (5, 10, 15)  ORDER BY id DESC LIMIT 3";
                                        mysql_query('SET CHARACTER SET utf8');
@@ -165,7 +214,7 @@
                                            <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                             
                                         </ul>
-                                        <h5><a href="#">'.$hienthimedia_thongbao['tieude'].'</a></h5>
+                                        <h5><a href="'.create_slug($hienthimedia_thongbao['tieude']).'">'.$hienthimedia_thongbao['tieude'].'</a></h5>
                                     </div>
                                 </div>
                             </div>';
@@ -181,7 +230,7 @@
                             <div class="blog__item set-bg" data-setbg="img/character/png/blog_morion.png" style="background-image: url(&quot;img/blog/blog-1.jpg&quot;);">
                                 <div class="blog__item__text">
                                    
-                                    <h4><a href="#">Morion</a></h4></p>
+                                    <h4><a href="morion">Morion</a></h4></p>
                                     <font style="color: white"> Soul and magic </font>
                                 </div>
                             </div>
@@ -233,7 +282,7 @@
                             <div class="blog__item set-bg" data-setbg="img/character/png/blog_tempskron.png" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
                                 <div class="blog__item__text">
                                     <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
-                                    <h4><a href="#">Tempskron</a></h4> </p>
+                                    <h4><a href="tempskron">Tempskron</a></h4> </p>
                                     <font style="color: white"> Power and technology </font>
                                 </div>
                             </div>
@@ -287,8 +336,9 @@
                                                     echo'
                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="">
-                                <a href="download"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <a href="'.$showall_system['sort_link'].'"><div class="download">TẢI GAME</div></a>
+                                <!--<a href="download"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
                                                '; 
@@ -306,8 +356,9 @@
                                                     echo'
                           
                            <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="">
-                                <a href="register"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <a href="'.$showall_system['sort_link'].'"><div class="register">ĐĂNG KÍ</div></a>
+                                <!--<a href="register"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
                                                '; 
@@ -325,8 +376,9 @@
                                                     echo'
                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="">
-                                <a href="quest"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <a href="'.$showall_system['sort_link'].'"><div class="quest">NHIỆM VỤ</div></a>
+                                <!--<a href="quest"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
                                                ';
@@ -344,8 +396,9 @@
                                                     echo'
                             
                             <div class="product__sidebar__view__item__topview set-bg mix day"
-                                data-setbg="">
-                                <a href="donate"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>
+                                data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
+                                <a href="'.$showall_system['sort_link'].'"><div class="donate">TÀI TRỢ</div></a>
+                                <!--<a href="donate"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                            </div>
                            
@@ -357,7 +410,7 @@
                             <div class="product__sidebar__view__item__char set-bg mix week"
                                 data-setbg="img/character/png/blog_tempskron1.png"></a>
                                 <div class="blog__item__text__char">
-                                  <h4><a href="#">Tempskron</a></h4>
+                                  <h4><a href="tempskron">Tempskron</a></h4>
                                     <font style="color: white"> Power and technology </font>
                                 </div>
                             </div>
@@ -365,30 +418,35 @@
                                 data-setbg="img/character/png/blog_morion1.png"></a>
                                 <div class="blog__item__text__char">
                                     <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
-                                    <h4><a href="#">Morion</a></h4>
+                                    <h4><a href="morion">Morion</a></h4>
                                     <font style="color: white"> Soul and magic </font>
                                 </div>
                             </div>
                         <div class="product__sidebar__view__item__quest set-bg mix month"
                             data-setbg="img/character/png/quest_solo_quests.png">
+                            <div class="solo_quests">Solo Quests</div>
                         </div>
+                       
                         <div class="product__sidebar__view__item__quest set-bg mix month"
                             data-setbg="img/character/png/quest_beginner_quests.png">
+                            <div class="beginner">Beginner's</div>
                         </div>
                         <div class="product__sidebar__view__item__quest set-bg mix month"
                             data-setbg="img/character/png/quest_exp_quests.png">
+                            <div class="exp_quests">EXP Quests</div>
                         </div>
                         <div class="product__sidebar__view__item__quest set-bg mix month"
                             data-setbg="img/character/png/quest_daily_quests.png">
+                            <div class="daily_quests">Daily Quests</div>
                         </div>
 
                         <div class="product__sidebar__view__item__services set-bg mix years"
                             data-setbg="img/character/png/services_1.png">
-                            <div class="ep">Dịch vụ máy chủ Tier 4 (Classical)</div>
+                            <div class="tier4">Dịch vụ máy chủ Tier 4 (Classical)</div>
                         </div>
                         <div class="product__sidebar__view__item__services set-bg mix years"
                             data-setbg="img/character/png/services_2.png">
-                            <div class="ep">Dịch vụ máy chủ Tier 5 (New UI)</div>
+                            <div class="tier5">Dịch vụ máy chủ Tier 5 (New UI)</div>
                         </div>
                        </div>
                        <div class="anime__details__sidebar">
@@ -631,63 +689,7 @@
                             </div>
                         </div>
                      </div>
-    <div class="product__sidebar__comment">
-        <div class="section-title">
-            <h5>New Comment</h5>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-1.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-2.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-3.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-        <div class="product__sidebar__comment__item">
-            <div class="product__sidebar__comment__item__pic">
-                <img src="img/sidebar/comment-4.jpg" alt="">
-            </div>
-            <div class="product__sidebar__comment__item__text">
-                <ul>
-                    <li>Active</li>
-                    <li>Movie</li>
-                </ul>
-                <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-            </div>
-        </div>
-    </div>
+    <?php //include('newcomment.php') ?>
     </section>
 <!-- Product Section End -->
 
