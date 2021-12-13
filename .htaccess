@@ -22,7 +22,7 @@ RewriteRule ^news-([0-9]+)$ news.php?newsid=$1[L]
 RewriteRule ^([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)$ ViewDetailt_Post.php?id=$2[L]
 #----------------------------------------------------------------------------
 #---------------------------------------------------------------------------
-RewriteRule ^event-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)$ ViewDetailt_Event.php?id=$1[L]
+RewriteRule ^([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+).html$ ViewDetailt_Event.php?id=$1[L]
 #----------------------------------------------------------------------------
 ############        Giới thiệu
 RewriteRule ^tong_quat.html$ ViewDetailt_Menu.php?id=112

@@ -9,7 +9,7 @@
                     <a href="trang_chu">
                     <?php
                          include 'database.php';
-                         $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo' ORDER BY id DESC LIMIT 1";
+                         $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo_footer' ORDER BY id DESC LIMIT 1";
                          
                          mysql_query('SET CHARACTER SET utf8');
                          $show_info=$pdo->query($sql_info);
@@ -33,7 +33,7 @@
             </div>
             <div class="col-lg-3">
                 <p>
-                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a> And BE <a href="http://ptvui.com" target="_blank">PTvui Managerment</a> 
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<br> made with <font style="color:white"><i class="fa fa-keyboard-o fa-lg" aria-hidden="true"></i></font> And <font style="color:red"><i class="fa fa-heart" aria-hidden="true"></i></font> <br>by <a href="http://ptvui.com" target="_blank">PTvui Managerment</a> 
                 </p>
 
               </div>

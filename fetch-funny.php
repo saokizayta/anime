@@ -349,7 +349,7 @@ include_once 'conn/connection-fetch-funny.php';
                                         // img Condition
                                         $getimg_ev = $showall_event['img_ev'];
                                         if ($getimg_ev == null) {
-                                                $getimg = 'img/SPRK_default_preset_name_custom.png';
+                                                $getimg = 'img/character/no_images.png';
                                         } else {
                                                 $getimg = $getimg_ev;
                                             }
@@ -400,7 +400,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="event-'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'.html">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
@@ -419,7 +419,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="event-'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'.html">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
@@ -440,7 +440,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="event-'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'.html">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
