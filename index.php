@@ -214,7 +214,7 @@ if (!function_exists('create_slug')) {
                                            <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                             
                                         </ul>
-                                        <h5><a href="'.create_slug($hienthimedia_thongbao['tieude']).'">'.$hienthimedia_thongbao['tieude'].'</a></h5>
+                                        <h5><a href="'.create_slug($hienthimedia_thongbao['tieude']).'-'.$hienthimedia_thongbao['id'].'">'.$hienthimedia_thongbao['tieude'].'</a></h5>
                                     </div>
                                 </div>
                             </div>';
@@ -337,7 +337,7 @@ if (!function_exists('create_slug')) {
                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
-                                <a href="'.$showall_system['sort_link'].'"><div class="download">TẢI GAME</div></a>
+                                <a href="'.$showall_system['sort_link'].'.html"><div class="download">TẢI GAME</div></a>
                                 <!--<a href="download"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
@@ -357,7 +357,7 @@ if (!function_exists('create_slug')) {
                           
                            <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
-                                <a href="'.$showall_system['sort_link'].'"><div class="register">ĐĂNG KÍ</div></a>
+                                <a href="'.$showall_system['sort_link'].'.html"><div class="register">ĐĂNG KÍ</div></a>
                                 <!--<a href="register"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
@@ -377,7 +377,7 @@ if (!function_exists('create_slug')) {
                            
                             <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
-                                <a href="'.$showall_system['sort_link'].'"><div class="quest">NHIỆM VỤ</div></a>
+                                <a href="'.$showall_system['sort_link'].'.html"><div class="quest">NHIỆM VỤ</div></a>
                                 <!--<a href="quest"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                             </div>
@@ -397,7 +397,7 @@ if (!function_exists('create_slug')) {
                             
                             <div class="product__sidebar__view__item__topview set-bg mix day"
                                 data-setbg="img/character/png/'.$showall_system['img_230x325'].'">
-                                <a href="'.$showall_system['sort_link'].'"><div class="donate">TÀI TRỢ</div></a>
+                                <a href="'.$showall_system['sort_link'].'.html"><div class="donate">TÀI TRỢ</div></a>
                                 <!--<a href="donate"><img src="img/character/png/'.$showall_system['img_230x325'].'" alt=""></a>-->
                                 <!--<div class="ep">'.$showall_system['tieude'].'</div>-->
                            </div>
@@ -739,6 +739,6 @@ if (!function_exists('create_slug')) {
         }
         setInterval(function(){
             loadXMLDoc();
-        },100000)
+        },1000)
         window.onload = loadXMLDoc();
 </script>

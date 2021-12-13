@@ -25,8 +25,8 @@
                 <div class="footer__nav">
                     <ul>
                         <li class="active"><a href="trang_chu">Trang chủ</a></li>
-                        <li><a href="dang_ki">Đăng kí</a></li>
-                        <li><a href="tai_ve">Tải về</a></li>
+                        <li><a href="dang_ki.html">Đăng kí</a></li>
+                        <li><a href="tai_ve.html">Tải về</a></li>
                         <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </div>

@@ -14,101 +14,135 @@ RewriteRule ^products-([0-9]+)$ products.php?idproducts=$1[L]
 
 RewriteRule ^news-([0-9]+)$ news.php?newsid=$1[L]
 #-------------------------------------------
-RewriteRule ^tin-tuc tin-tuc.php?idt=5
-RewriteRule ^su-kien su-kien.php?idt=10
-RewriteRule ^cap-nhat cap-nhat.php?idt=15
-RewriteRule ^bao-tri cap-nhat.php?idt=15
-#-------------------------------------------
-
-RewriteRule ^([0-9]+).ZeroPT.ga$ ViewDetail.php?id=$1[L]
-
+# RewriteRule ^tin-tuc tin-tuc.php?idt=5
+# RewriteRule ^su-kien su-kien.php?idt=10
+# RewriteRule ^cap-nhat cap-nhat.php?idt=15
+# RewriteRule ^bao-tri cap-nhat.php?idt=15
+#---------------------------------------------------------------------------
+RewriteRule ^([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)$ ViewDetailt_Post.php?id=$2[L]
+#----------------------------------------------------------------------------
+#---------------------------------------------------------------------------
+RewriteRule ^event-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_-]+)$ ViewDetailt_Event.php?id=$1[L]
+#----------------------------------------------------------------------------
+############        Giới thiệu
+RewriteRule ^tong_quat.html$ ViewDetailt_Menu.php?id=112
+RewriteRule ^tinh_nang.html ViewDetailt_Menu.php?id=114
+RewriteRule ^che_do_choi.html ViewDetailt_Menu.php?id=115
+RewriteRule ^su_kien.html ViewDetailt_Menu.php?id=137
+RewriteRule ^tin_tuc.html ViewDetailt_Menu.php?id=138
+RewriteRule ^bao_tri.html ViewDetailt_Menu.php?id=139
+############        Mới biết chơi
+RewriteRule ^bat_dau_choi.html ViewDetailt_Menu.php?id=116
+RewriteRule ^nhan_vat.html ViewDetailt_Menu.php?id=117
+RewriteRule ^party.html ViewDetailt_Menu.php?id=118
+RewriteRule ^mua_ban_trao_doi.html ViewDetailt_Menu.php?id=119
+RewriteRule ^ket_ban.html ViewDetailt_Menu.php?id=120
+RewriteRule ^nha_kho.html ViewDetailt_Menu.php?id=121
+RewriteRule ^giao_dien_tro_choi.html ViewDetailt_Menu.php?id=122
+############        Chuyên nghiệp
+RewriteRule ^dang_ki.html ViewDetailt_Menu.php?id=19
+RewriteRule ^tai_ve.html ViewDetailt_Menu.php?id=20
+RewriteRule ^launcher.html ViewDetailt_Menu.php?id=124
+############        Hệ thống
+RewriteRule ^mixxing.html ViewDetailt_Menu.php?id=33
+RewriteRule ^clan.html ViewDetailt_Menu.php?id=126
+RewriteRule ^aging.html ViewDetailt_Menu.php?id=127
+RewriteRule ^blessCastle.html ViewDetailt_Menu.php?id=128
+RewriteRule ^sod.html ViewDetailt_Menu.php?id=129
+RewriteRule ^map.html ViewDetailt_Menu.php?id=130
+RewriteRule ^monster.html ViewDetailt_Menu.php?id=131
+RewriteRule ^xep_hang.html ViewDetailt_Menu.php?id=132
+RewriteRule ^nhan_vat.html ViewDetailt_Menu.php?id=133
+RewriteRule ^nhiem_vu.html ViewDetailt_Menu.php?id=134
+############        Quy định
+RewriteRule ^qui_dinh_chung.html ViewDetailt_Menu.php?id=135
 #-------------------------------------------------------------
 
-RewriteRule ^cot-truyen ViewDetail.php?id=12
-RewriteRule ^dac-sac ViewDetail.php?id=13
-RewriteRule ^thong-tin ViewDetail.php?id=15
-RewriteRule ^he-thong ViewDetail.php?id=16
-RewriteRule ^nguoi-moi ViewDetail.php?id=17
-RewriteRule ^sieu-thi ViewDetail.php?id=18
-RewriteRule ^dang-ki ViewDetail.php?id=19
-RewriteRule ^tai-ve ViewDetail.php?id=20
-RewriteRule ^all4u ViewDetail.php?id=21
-RewriteRule ^gop-y ViewDetail.php?id=22
-RewriteRule ^quy-dinh ViewDetail.php?id=23
-RewriteRule ^nap-the ViewDetail.php?id=24
-RewriteRule ^nap-the/ ViewDetail.php?id=24
-RewriteRule ^huong-dan-tan-thu ViewDetail.php?id=25
-RewriteRule ^cac-cau-hoi-thuong-gap ViewDetail.php?id=26
-RewriteRule ^huong-dan-cai-dat ViewDetail.php?id=27
-RewriteRule ^huong-dan ViewDetail.php?id=27
+# RewriteRule ^cot-truyen.html ViewDetailt_post.php?id=12
+# RewriteRule ^dac-sac.html ViewDetailt_post.php?id=13
+# RewriteRule ^thong-tin.html ViewDetailt_post.php?id=15
+# RewriteRule ^he-thong.html ViewDetailt_post.php?id=16
+# RewriteRule ^nguoi-moi.html ViewDetailt_post.php?id=17
+# RewriteRule ^sieu-thi.html ViewDetailt_post.php?id=18
+# RewriteRule ^dang-ki.html ViewDetailt_post.php?id=19
+# RewriteRule ^tai-ve.html ViewDetailt_post.php?id=20
+# RewriteRule ^all4u.html ViewDetailt_post.php?id=21
+# RewriteRule ^gop-y.html ViewDetailt_post.php?id=22
+# RewriteRule ^quy-dinh.html ViewDetailt_post.php?id=23
+# RewriteRule ^nap-the.html ViewDetailt_post.php?id=24
+# RewriteRule ^nap-the/ ViewDetailt_post.php?id=24
+# RewriteRule ^huong-dan-tan-thu.html ViewDetailt_post.php?id=25
+# RewriteRule ^cac-cau-hoi-thuong-gap.html ViewDetailt_post.php?id=26
+# RewriteRule ^huong-dan-cai-dat.html ViewDetailt_post.php?id=27
+# RewriteRule ^huong-dan.html ViewDetailt_post.php?id=27
 
-RewriteRule ^thay-doi-mat-khau ViewDetail.php?id=101
-RewriteRule ^dang-nhap ViewDetail.php?id=102
+# RewriteRule ^thay-doi-mat-khau ViewDetailt_post.php?id=101
+# RewriteRule ^dang-nhap ViewDetailt_post.php?id=102
 
-RewriteRule ^huongdan-nap-the ViewDetail.php?id=28
-RewriteRule ^ho-tro ViewDetail.php?id=29
-RewriteRule ^gioi-thieu-so-luoc ViewDetail.php?id=50
-RewriteRule ^tao-tai-khoan ViewDetail.php?id=82
-#RewriteRule ^huong-dan-tan-thu ViewDetail.php?id=25
-RewriteRule ^@4rum index.php
+# RewriteRule ^huongdan-nap-the ViewDetailt_post.php?id=28
+# RewriteRule ^ho-tro ViewDetailt_post.php?id=29
+# RewriteRule ^gioi-thieu-so-luoc ViewDetailt_post.php?id=50
+# RewriteRule ^tao-tai-khoan ViewDetailt_post.php?id=82
+#RewriteRule ^huong-dan-tan-thu ViewDetailt_post.php?id=25
+RewriteRule ^trang_chu index.php
 
 #quest
-RewriteRule ^quest30.asp ViewDetail.php?id=84
-RewriteRule ^quest55.asp ViewDetail.php?id=85
-RewriteRule ^quest70.asp ViewDetail.php?id=86
-RewriteRule ^quest80.asp ViewDetail.php?id=87
-RewriteRule ^quest85.asp ViewDetail.php?id=88
+# RewriteRule ^quest30.asp ViewDetailt_post.php?id=84
+# RewriteRule ^quest55.asp ViewDetailt_post.php?id=85
+# RewriteRule ^quest70.asp ViewDetailt_post.php?id=86
+# RewriteRule ^quest80.asp ViewDetailt_post.php?id=87
+# RewriteRule ^quest85.asp ViewDetailt_post.php?id=88
 
-RewriteRule ^guide_inter_specitem.asp ViewDetail.php?id=96
-RewriteRule ^guide_items.asp ViewDetail.php?id=96
+# RewriteRule ^guide_inter_specitem.asp ViewDetailt_post.php?id=96
+# RewriteRule ^guide_items.asp ViewDetailt_post.php?id=96
 
 #Bellatra
-RewriteRule ^npc.asp ViewDetail.php?id=97
-RewriteRule ^stage.asp ViewDetail.php?id=98
-RewriteRule ^items.asp ViewDetail.php?id=99
-RewriteRule ^gamerules.asp ViewDetail.php?id=100
+# RewriteRule ^npc.asp ViewDetailt_post.php?id=97
+# RewriteRule ^stage.asp ViewDetailt_post.php?id=98
+# RewriteRule ^items.asp ViewDetailt_post.php?id=99
+# RewriteRule ^gamerules.asp ViewDetailt_post.php?id=100
 
 #---------------------------------------------------------------
-RewriteRule ^kinh-nghiem ViewDetail.php?id=30
-RewriteRule ^nhiem-vu ViewDetail.php?id=31
+# RewriteRule ^kinh-nghiem ViewDetailt_post.php?id=30
+# RewriteRule ^nhiem-vu ViewDetailt_post.php?id=31
 
-RewriteRule ^vu-khi ViewDetail.php?id=32
-RewriteRule ^cat=claws.asp ViewDetail.php?id=89
-RewriteRule ^cat=maces.asp ViewDetail.php?id=90
-RewriteRule ^cat=pike.asp ViewDetail.php?id=91
-RewriteRule ^cat=bows.asp ViewDetail.php?id=92
-RewriteRule ^cat=swords.asp ViewDetail.php?id=93
-RewriteRule ^cat=javelins.asp ViewDetail.php?id=94
-RewriteRule ^cat=wands-staffs.asp ViewDetail.php?id=95
+# RewriteRule ^vu-khi ViewDetailt_post.php?id=32
+# RewriteRule ^cat=claws.asp ViewDetailt_post.php?id=89
+# RewriteRule ^cat=maces.asp ViewDetailt_post.php?id=90
+# RewriteRule ^cat=pike.asp ViewDetailt_post.php?id=91
+# RewriteRule ^cat=bows.asp ViewDetailt_post.php?id=92
+# RewriteRule ^cat=swords.asp ViewDetailt_post.php?id=93
+# RewriteRule ^cat=javelins.asp ViewDetailt_post.php?id=94
+# RewriteRule ^cat=wands-staffs.asp ViewDetailt_post.php?id=95
 
-RewriteRule ^mix ViewDetail.php?id=33
-RewriteRule ^aging ViewDetail.php?id=34
-RewriteRule ^quai-vat ViewDetail.php?id=35
-RewriteRule ^blesscastle ViewDetail.php?id=36
-RewriteRule ^bellatra ViewDetail.php?id=37
-RewriteRule ^npc ViewDetail.php?id=38
-RewriteRule ^ranks ViewDetail.php?id=39
-RewriteRule ^Archer ViewDetail.php?id=40
-RewriteRule ^Fighter ViewDetail.php?id=41
-RewriteRule ^Mechanician ViewDetail.php?id=42
-RewriteRule ^Pikeman ViewDetail.php?id=43
-RewriteRule ^Atalanta ViewDetail.php?id=44
-RewriteRule ^Knight ViewDetail.php?id=45
-RewriteRule ^Magician ViewDetail.php?id=46
-RewriteRule ^Priestess ViewDetail.php?id=47
-RewriteRule ^Shaman ViewDetail.php?id=48
-RewriteRule ^Assassin ViewDetail.php?id=49
+# RewriteRule ^mix ViewDetailt_post.php?id=33
+# RewriteRule ^aging ViewDetailt_post.php?id=34
+# RewriteRule ^quai-vat ViewDetailt_post.php?id=35
+# RewriteRule ^blesscastle ViewDetailt_post.php?id=36
+# RewriteRule ^bellatra ViewDetailt_post.php?id=37
+# RewriteRule ^npc ViewDetailt_post.php?id=38
+# RewriteRule ^ranks ViewDetailt_post.php?id=39
+# RewriteRule ^Archer ViewDetailt_post.php?id=40
+# RewriteRule ^Fighter ViewDetailt_post.php?id=41
+# RewriteRule ^Mechanician ViewDetailt_post.php?id=42
+# RewriteRule ^Pikeman ViewDetailt_post.php?id=43
+# RewriteRule ^Atalanta ViewDetailt_post.php?id=44
+# RewriteRule ^Knight ViewDetailt_post.php?id=45
+# RewriteRule ^Magician ViewDetailt_post.php?id=46
+# RewriteRule ^Priestess ViewDetailt_post.php?id=47
+# RewriteRule ^Shaman ViewDetailt_post.php?id=48
+# RewriteRule ^Assassin ViewDetailt_post.php?id=49
 
 #---------------------------------------------------------------
 
-RewriteRule ^guide_party.asp ViewDetail.php?id=103
-RewriteRule ^guide_inter_monstercrystal.asp ViewDetail.php?id=103
-RewriteRule ^guide_warehouse.asp ViewDetail.php?id=103
-RewriteRule ^guide_trade.asp ViewDetail.php?id=103
-RewriteRule ^guide_inter_mix.asp ViewDetail.php?id=103
-RewriteRule ^guide_inter_age.asp ViewDetail.php?id=103
-RewriteRule ^guide_inter_wrapgate.asp ViewDetail.php?id=103
-RewriteRule ^guide_inter_rankup.asp ViewDetail.php?id=103
+# RewriteRule ^guide_party.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_inter_monstercrystal.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_warehouse.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_trade.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_inter_mix.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_inter_age.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_inter_wrapgate.asp ViewDetailt_post.php?id=103
+# RewriteRule ^guide_inter_rankup.asp ViewDetailt_post.php?id=103
 
 
 

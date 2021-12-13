@@ -290,10 +290,13 @@ include_once 'conn/connection-fetch-funny.php';
 
                      <?php
                      
-                         include 'database.php';
+                        include 'database.php';
+                        //$id=$_GET['id'];
                         $sql_get_ev="SELECT * FROM `event`";
+                        //$set_viewer = "UPDATE `event` SET views = views + 1 Where id='$id'";
                         mysql_query('SET CHARACTER SET utf8');
                         $show_event=$pdo->query($sql_get_ev);
+                        //$update_views=$pdo->query($set_viewer);
                                              
                         ?>
                                     <?php
@@ -390,21 +393,18 @@ include_once 'conn/connection-fetch-funny.php';
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeAfter($time_ago);echo'</div>
                                                             <div class="event_begin_at"><i class="fa fa-clock-o"></i> ';echo 'Bắt đầu: '.$time_beginView.' ';echo'</div>
-                                                                <div class="event_view"><i class="fa fa-eye"></i> 0</div>
+                                                                <div class="event_view"><i class="fa fa-eye"></i> '.$showall_event['views'].'</div>
                                                             </div>
                                                             <div class="product__item__text">
                                                                 <ul>
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="event-'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
-                                                    } elseif ( strtotime($today_date) >= strtotime($getStart_time) && strtotime($today_date) <= strtotime($getEnd_time) ) {
-                                                        
-                                                        
-                                                        
+                                                } elseif ( strtotime($today_date) >= strtotime($getStart_time) && strtotime($today_date) <= strtotime($getEnd_time) ) {
                                                         echo' <div class="col-lg-4 col-md-6 col-sm-6">
                                                         <div class="product__item">
                                                             <div class="product__item__event set-bg" data-setbg="'.$showall_event['img_ev'].'" style="background-image: url(&quot;';echo $getimg; echo'&quot;);">
@@ -412,18 +412,18 @@ include_once 'conn/connection-fetch-funny.php';
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeProgress($time_progress);echo'</div>
                                                             <div class="event_end_at"><i class="fa fa-clock-o"></i> ';echo 'kết thúc: '.$time_endView.' ';echo'</div>  
-                                                            <div class="event_view"><i class="fa fa-eye"></i> 0</div>
+                                                            <div class="event_view"><i class="fa fa-eye"></i> '.$showall_event['views'].'</div>
                                                             </div>
                                                             <div class="product__item__text">
                                                                 <ul>
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="event-'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
-                                                    } 
+                                                } 
                                                     
                                                     else {
                                                         
@@ -433,20 +433,18 @@ include_once 'conn/connection-fetch-funny.php';
                                                             <div class="ep_complete">Đã kết thúc</div>
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeAgo($time_ago);echo'</div>
-                                                                <div class="event_view"><i class="fa fa-eye"></i> 0</div>
+                                                                <div class="event_view"><i class="fa fa-eye"></i> '.$showall_event['views'].'</div>
                                                             </div>
                                                             <div class="product__item__text">
                                                                 <ul>
                                                                 <!-- <li>free for fun !</li> <li>Priston tale</li> -->
                                                                     
                                                                 </ul>
-                                                                <h5><a href="'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
+                                                                <h5><a href="event-'.$showall_event['id'].'-'.create_slug($showall_event['name_ev']).'">'.$showall_event['name_ev'].'</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>';
-                                                      
-                                                        
-                                                 }
+                                                }
                         //echo $showall_event['name_ev'];
                         
                                           }
@@ -454,4 +452,5 @@ include_once 'conn/connection-fetch-funny.php';
                      ?>
 
 </div>
+
 

@@ -10,3 +10,47 @@
 	bottom: 10px;
 }
 
+tong_quat.html Tổng quát
+tinh_nang.html Tính năng
+che_do_choi.html Chế độ chơi
+su_kien.html Sự kiện
+tin_tuc.html Tin tức
+bao_tri.html Bảo trì
+bat_dau_choi.html Bắt đầu chơi
+nhan_vat.html Nhân vật
+party.html Party
+mua_ban_trao_doi.html Mua bán/Trao đổi
+ket_ban.html Kết bạn
+nha_kho.html Warehouse
+giao_dien_tro_choi.html Giao diện trò chơi                                   
+dang_ki.html Đăng Kí
+tai_ve.html Tải Về
+launcher.html Launcher                                    
+mixxing.html Mixxing
+clan.html Clan
+aging.html Aging
+blessCastle.html BlessCastle
+sod.html SOD
+map.html MAP
+monster.html Monster
+xep_hang.html Xếp hạng
+nhan_vat.html Nhân vật
+nhiem_vu.html Nhiệm vụ         
+qui_dinh_chung.html Quy định chung
+quest.html Nhiệm vụ
+donate.html Donate
+
+tempkron
+archer
+mechanician
+pikeman
+fighter
+assassin
+
+morion
+priestess
+knight
+magician
+atalanta
+shaman
+

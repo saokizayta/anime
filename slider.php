@@ -75,7 +75,7 @@ if (!function_exists('create_slug')) {
                             <div class="label">TIN TỨC</div>
                                 <h2><?php echo $hienthimedia_tintuc['tieude']; ?></h2>
                                 <p><?php echo $hienthimedia_tintuc['tomtatnd']; ?></p>
-                                <a href="<?php echo create_slug($hienthimedia_tintuc['tieude']); ?>"><span>Chi tiết..</span> <i class="fa fa-angle-right"></i></a>
+                                <a href="<?php echo create_slug($hienthimedia_tintuc['tieude']); ?>-<?php echo $hienthimedia_tintuc['id']; ?>"><span>Chi tiết..</span> <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ if (!function_exists('create_slug')) {
                                 <div class="label">SỰ KIỆN</div>
                                 <h2><?php echo $hienthimedia_sukien['tieude']; ?></h2>
                                 <p><?php echo $hienthimedia_sukien['tomtatnd']; ?></p>
-                                <a href="<?php echo create_slug($hienthimedia_sukien['tieude']); ?>"><span>Chi tiết..</span> <i class="fa fa-angle-right"></i></a>
+                                <a href="<?php echo create_slug($hienthimedia_sukien['tieude']); ?>-<?php echo $hienthimedia_sukien['id'];?>"><span>Chi tiết..</span> <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ if (!function_exists('create_slug')) {
                                 <div class="label">BẢO TRÌ</div>
                                 <h2><?php echo $hienthimedia_baotri['tieude']; ?></h2>
                                 <p><?php echo $hienthimedia_baotri['tomtatnd']; ?></p>
-                                <a href="<?php echo create_slug($hienthimedia_baotri['tieude']); ?>"><span>Chi tiết..</span> <i class="fa fa-angle-right"></i></a>
+                                <a href="<?php echo create_slug($hienthimedia_baotri['tieude']); ?>-<?php echo $hienthimedia_baotri['id'];?>"><span>Chi tiết..</span> <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
