@@ -46,6 +46,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="css/characters.css" type="text/css">
 </head>
 
 <body>
@@ -58,13 +60,7 @@
     <?php include('header.php') ?>
     <!-- Header End -->
     <!-- Blog Details Section Begin -->
-    <section class="blog-details spad">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="blog__details__title">
-
-                    <?php
+    <?php
       include('connect.php');
 
       //$tableName="menu";
@@ -86,65 +82,199 @@
 
 
         {
-          //echo' <option selected value="">Click vào đây để chọn thể loại của tin</option>';
-
-                        echo'<h6>PTvui <span>- '.$row['date'].'</span></h6>
-                        <h2>'.$row['tieude'].'</h2>
-                        <!-- <div class="blog__details__social">
-                            <a href="#" class="facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
-                            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i> Pinterest</a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin-square"></i> Linkedin</a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter-square"></i> Twitter</a>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-12">
+            $get_content = $row['noidung'];
+            if ($get_content == null){
+                    echo'
                     <div class="blog__details__pic">
-                        <img src="img/ptvui_1170x600.png" alt="">
+                        <img src="img/character/no_info.png" alt="">
+                    </div>
+                    ';
+            } else {
+                echo'
+    <section class="normal-breadcrumb set-bg" data-setbg="'.$row['img_1172x564'].'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                         <h2>'.$row['tieude'].'</h2> 
+                        <!--<p>'.$row['tieude'].'</p>-->
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="blog__details__content">
-                        <div class="blog__details__text">
-                            <p>'.$row['noidung'].'</p>
-                        </div>
-                       
-                       
-                       
-                        <div class="blog__details__tags">
-                            <a href="#">Priston Tale</a>
-                            <a href="#">PTvui</a>
-                            <a href="#">PTV</a>
-                        </div>
-                        <div class="blog__details__btns">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="blog__details__btns__item">
-                                        <h5><a href="trang_chu"><span class="arrow_left"></span> Trở về</a>
-                                        </h5>
+            </div>
+        </div>
+    </section>
+                   <!-- Blog Details Section Begin -->
+                        <section class="blog-details spad">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-8">
+                                        <!--<div class="blog__details__title">
+                                            <h6>Action, Magic <span>- March 08, 2020</span></h6>
+                                            <h2>Anime for Beginners: 20 Pieces of Essential Viewing</h2>
+                                            <div class="blog__details__social">
+                                                <a href="#" class="facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                <a href="#" class="pinterest"><i class="fa fa-pinterest"></i> Pinterest</a>
+                                                <a href="#" class="linkedin"><i class="fa fa-linkedin-square"></i> Linkedin</a>
+                                                <a href="#" class="twitter"><i class="fa fa-twitter-square"></i> Twitter</a>
+                                            </div>
+                                        </div>-->
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="blog__details__btns__item next__btn">
-                                        <h5><a href="#">Bài kế <span
-                                            class="arrow_right"></span></a></h5>
+                                    <!--<div class="col-lg-12">
+                                        <div class="blog__details__pic">
+                                            <img src="img/blog/details/blog-details-pic.jpg" alt="">
+                                        </div>
+                                    </div>-->
+                                    <div class="col-lg-8">
+                                        <div class="blog__details__content">
+                                            <div class="blog__details__text">
+                                                <p>'.$row['noidung'].'</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        </section>
+                            <!-- Blog Details Section End -->
         ';
+            }
+         
 
 
 }
 ?>
+<!--Characters-->
+<div class="tempskrons" style="text-align: center;">
+        <img src="img/tempskron.png">
+        <div class="tempskron-title">Tempskron</div>
+        <div style="color: #b18276;">Power and technology</div>
+        <div class="tempskron-chars">
+
+            <a href="fighter">
+                <div class="tempskron-char">
+                    <div class="tempskron-char-gradient-botton"></div>
+                    <img class="tempskron-char-image" src="img/fighter.png">
+                    <div class="tempskron-char-text" style="">Fighter</div>
+                    <div class="char-icon">
+                        <img src="img/char_icons/fighter.gif">
+                    </div>
+                </div>
+            </a>
+
+            <a href="archer">
+                <div class="tempskron-char">
+                    <div class="tempskron-char-gradient-botton"></div>
+                    <img class="tempskron-char-image" src="img/archer.png">
+                    <div class="tempskron-char-text" style="">Archer</div>
+                    <div class="char-icon">
+                        <img src="img/char_icons/archer.gif">
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="mechanician">
+            <div class="tempskron-char">
+                <div class="tempskron-char-gradient-botton"></div>
+                <img class="tempskron-char-image" src="img/mechanician.png">
+                <div class="tempskron-char-text" style="">Mechanician</div>
+                <div class="char-icon">
+                    <img src="img/char_icons/mechanician.gif">
+                </div>
+            </div>
+            </a>
+
+            <a href="assassin">
+                <div class="tempskron-char">
+                    <div class="tempskron-char-gradient-botton"></div>
+                    <img class="tempskron-char-image" src="img/assassin.png">
+                    <div class="tempskron-char-text" style="">Assassin</div>
+                    <div class="char-icon">
+                        <img src="img/char_icons/assassin.jpg">
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="pikeman">
+                <div class="tempskron-char">
+                    <div class="tempskron-char-gradient-botton"></div>
+                    <img class="tempskron-char-image" src="img/pikeman.png">
+                    <div class="tempskron-char-text" style="">Pikeman</div>
+                    <div class="char-icon">
+                        <img src="img/char_icons/pikeman.jpg">
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="morions" style="text-align: center;">
+        <img src="img/morion.png">
+        <div class="morion-title">Morion</div>
+        <div style="color: #b18276;">Soul and magic</div>
+        <div class="morion-chars">
+
+            <a href="knight">
+            <div class="morion-char">
+                <div class="morion-char-gradient-botton"></div>
+                <img class="morion-char-image" src="img/knight.png">
+                <div class="morion-char-text" style="">Knight</div>
+                <div class="char-icon">
+                    <img src="img/char_icons/knight.gif">
+                </div>
+            </div>
+            </a>
+
+            <a href="shaman">
+            <div class="morion-char">
+                <div class="morion-char-gradient-botton"></div>
+                <img class="morion-char-image" src="img/shaman.png">
+                <div class="morion-char-text" style="">Shaman</div>
+                <div class="char-icon">
+                    <img src="img/char_icons/shaman.jpg">
+                </div>
+            </div>
+            </a>
+
+            <a href="priestess">
+            <div class="morion-char">
+                <div class="morion-char-gradient-botton"></div>
+                <img class="morion-char-image" src="img/priestess.png">
+                <div class="morion-char-text" style="">Priestess</div>
+                <div class="char-icon">
+                    <img src="img/char_icons/priestess.gif">
+                </div>
+            </div>
+            </a>
+
+            <a href="magician">
+            <div class="morion-char">
+                <div class="morion-char-gradient-botton"></div>
+                <img class="morion-char-image" src="img/magician.png">
+                <div class="morion-char-text" style="">Magician</div>
+                <div class="char-icon">
+                    <img src="img/char_icons/magician.gif">
+                </div>
+            </div>
+            </a>
+
+            <a href="atalanta">
+            <div class="morion-char">
+                <div class="morion-char-gradient-botton"></div>
+                <img class="morion-char-image" src="img/atalanta.png">
+                <div class="morion-char-text" style="">Atalanta</div>
+                <div class="char-icon">
+                    <img src="img/char_icons/atalanta.gif">
+                </div>
+            </div>
+            </a>
+
+        </div>
+    </div>
+    <!--Characters-->
+    
+
         <!-- Blog Details Section End -->
         <!-- Footer Section Begin -->
     <?php include('footer.php') ?>

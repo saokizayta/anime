@@ -88,7 +88,7 @@
         {
           //echo' <option selected value="">Click vào đây để chọn thể loại của tin</option>';
 
-                        echo'<h6>PTvui <span>- '.$row['name_ev'].'</span></h6>
+                        echo'<!--<h6>PTvui <span>- '.$row['name_ev'].'</span></h6>-->
                         <h2>'.$row['name_ev'].'</h2>
                         <!-- <div class="blog__details__social">
                             <a href="#" class="facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
@@ -99,9 +99,9 @@
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="blog__details__pic">
+                   <!-- <div class="blog__details__pic">
                         <img src="img/ptvui_1170x600.png" alt="">
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-lg-8">
                     <div class="blog__details__content">
@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="blog__details__btns__item next__btn">
-                                        <h5><a href="#">Bài kế <span
+                                        <h5><a href="">Bài kế <span
                                             class="arrow_right"></span></a></h5>
                                         </div>
                                     </div>

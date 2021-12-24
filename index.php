@@ -230,7 +230,7 @@ if (!function_exists('create_slug')) {
                             <div class="blog__item set-bg" data-setbg="img/character/png/blog_morion.png" style="background-image: url(&quot;img/blog/blog-1.jpg&quot;);">
                                 <div class="blog__item__text">
                                    
-                                    <h4><a href="morion">Morion</a></h4></p>
+                                <h4 style="color:white;">Morion</h4></p>
                                     <font style="color: white"> Soul and magic </font>
                                 </div>
                             </div>
@@ -282,7 +282,7 @@ if (!function_exists('create_slug')) {
                             <div class="blog__item set-bg" data-setbg="img/character/png/blog_tempskron.png" style="background-image: url(&quot;img/blog/blog-6.jpg&quot;);">
                                 <div class="blog__item__text">
                                     <!--<p><span class="icon_calendar"></span> 01 March 2020</p>-->
-                                    <h4><a href="tempskron">Tempskron</a></h4> </p>
+                                    <h4 style="color:white;">Tempskron</h4> </p>
                                     <font style="color: white"> Power and technology </font>
                                 </div>
                             </div>

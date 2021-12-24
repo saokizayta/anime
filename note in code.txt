@@ -41,16 +41,16 @@ quest.html Nhiệm vụ
 donate.html Donate
 
 tempkron
-archer
-mechanician
-pikeman
-fighter
-assassin
+archer 44
+mechanician 45
+pikeman 46
+fighter 47
+assassin 48s
 
 morion
-priestess
-knight
-magician
-atalanta
-shaman
+priestess 40
+knight 41
+magician 42
+atalanta 43
+shaman 49
 

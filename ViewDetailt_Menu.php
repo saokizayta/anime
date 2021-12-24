@@ -80,7 +80,15 @@
 
 
         {
-         echo'
+            $get_content = $row['noidung'];
+            if ($get_content == null){
+                    echo'
+                    <div class="blog__details__pic">
+                        <img src="img/character/no_info.png" alt="">
+                    </div>
+                    ';
+            } else {
+                echo'
     <section class="normal-breadcrumb set-bg" data-setbg="img/banned_1920x300.png">
         <div class="container">
             <div class="row">
@@ -148,6 +156,8 @@
                         </section>
                             <!-- Blog Details Section End -->
         ';
+            }
+         
 
 
 }

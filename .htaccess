@@ -57,6 +57,18 @@ RewriteRule ^nhiem_vu.html ViewDetailt_Menu.php?id=134
 ############        Quy định
 RewriteRule ^qui_dinh_chung.html ViewDetailt_Menu.php?id=135
 #-------------------------------------------------------------
+############        Character
+RewriteRule ^archer ViewDetailt_Charracter.php?id=40
+RewriteRule ^mechanician ViewDetailt_Charracter.php?id=42
+RewriteRule ^pikeman ViewDetailt_Charracter.php?id=43
+RewriteRule ^fighter ViewDetailt_Charracter.php?id=41
+RewriteRule ^assassin ViewDetailt_Charracter.php?id=49
+
+RewriteRule ^priestess ViewDetailt_Charracter.php?id=47
+RewriteRule ^knight ViewDetailt_Charracter.php?id=45
+RewriteRule ^magician ViewDetailt_Charracter.php?id=46
+RewriteRule ^atalanta ViewDetailt_Charracter.php?id=44
+RewriteRule ^shaman ViewDetailt_Charracter.php?id=48
 
 # RewriteRule ^cot-truyen.html ViewDetailt_post.php?id=12
 # RewriteRule ^dac-sac.html ViewDetailt_post.php?id=13
