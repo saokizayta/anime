@@ -721,7 +721,7 @@ if (!function_exists('create_slug')) {
 
 </body>
 
-
+<?php include('side_left.php') ?>
 
 </html>
 <script>
