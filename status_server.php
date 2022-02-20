@@ -44,6 +44,12 @@
   }
 }
 </style>
+                          <div class="section-title">
+                               <h5> <img src="img/character/png/status.png" alt="" hieght="45px" width="329px"> </h5>
+                          </div>
+                          <div class="product__sidebar__view__status set-bg"
+                            data-setbg="img/character/png/status_wall.png">
+
 <?php
 $server['host'] = "remote.myvnc.com";
 $server['port'] = "10009";
@@ -51,13 +57,9 @@ $connection = @fsockopen($server['host'], $server['port'], $ERROR_NO, $ERROR_STR
 if($connection)
 {
     fclose($connection);
-    echo'<div class="status_server"> 
-            <div class="status_server_on">Server System: <div class="heart_on"></div></i></div>
-        </div>';
+    echo'<div class="status_server">Server: <div class="heart_on"></div></div>';
 } else {
-    echo'<div class="status_server"> 
-            <div class="status_server_off">Server System: <div class="heart_off"></div></div>
-        </div>';
+    echo'<div class="status_server">Server: <div class="heart_off"></div></div>';
 }
 ?>
  
@@ -68,13 +70,9 @@ $connection = @fsockopen($server['host'], $server['port'], $ERROR_NO, $ERROR_STR
 if($connection)
 {
     fclose($connection);
-    echo'<div class="status_server"> 
-            <div class="status_server_on">Clan System: <div class="heart_on"></div> </div>
-        </div>';
+    echo'<div class="status_clan">Clan: <div class="heart_on"></div></div>';
 } else {
-    echo'<div class="status_server"> 
-            <div class="status_server_off">Clan System: <div class="heart_off"></div></div>
-        </div>';
+    echo'<div class="status_clan">Clan: <div class="heart_off"></div></div>';
 }
 ?>
 <?php
@@ -84,28 +82,45 @@ $connection = @fsockopen($server['host'], $server['port'], $ERROR_NO, $ERROR_STR
 if($connection)
 {
     fclose($connection);
-    echo'<div class="status_server"> 
-            <div class="status_server_on">Account System: <div class="heart_on"></div></div>
-        </div>';
+    echo'<div class="status_account">Account: <div class="heart_on"></div></div>';
 } else {
-    echo'<div class="status_server"> 
-            <div class="status_server_off">Account System: <div class="heart_off"></div></div>
-        </div>';
+    echo'<div class="status_account">Account: <div class="heart_off"></div></div>';
 }
 ?>
 <?php
 $server['host'] = "remote.myvnc.com";
-$server['port'] = "8080";
+$server['port'] = "8";
 $connection = @fsockopen($server['host'], $server['port'], $ERROR_NO, $ERROR_STR, (float)1.5);
 if($connection)
 {
     fclose($connection);
-    echo'<div class="status_server"> 
-            <div class="status_server_on">Update System: <div class="heart_on"></div></div>
-        </div>';
+    echo'<div class="status_update">Update: <div class="heart_on"></div></div>';
 } else {
-    echo'<div class="status_server"> 
-            <div class="status_server_off">Update System: <div class="heart_off"></div></div>
-        </div>';
+    echo'<div class="status_update">Update: <div class="heart_off"></div></div>';
 }
 ?>
+<?php
+$server['host'] = "remote.myvnc.com";
+$server['port'] = "8";
+$connection = @fsockopen($server['host'], $server['port'], $ERROR_NO, $ERROR_STR, (float)1.5);
+if($connection)
+{
+    fclose($connection);
+    echo'<div class="status_app">App: <div class="heart_on"></div></div>';
+} else {
+    echo'<div class="status_app">App: <div class="heart_off"></div></div>';
+}
+?>
+<?php
+$server['host'] = "remote.myvnc.com";
+$server['port'] = "10009";
+$connection = @fsockopen($server['host'], $server['port'], $ERROR_NO, $ERROR_STR, (float)1.5);
+if($connection)
+{
+    fclose($connection);
+    echo'<div class="status_gamemaster">GM: <div class="heart_on"></div></div>';
+} else {
+    echo'<div class="status_gamemaster">GM: <div class="heart_off"></div></div>';
+}
+?>
+</div>

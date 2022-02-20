@@ -442,7 +442,7 @@ ol {
 
 /*---------------------
   status server
------------------------*/
+-----------------------*
 .status_server {
 	font-size: 16px;
 	color: #f6f8f7;
@@ -1113,63 +1113,63 @@ ol {
 	padding: 2px 12px;
 	border-radius: 4px;
 	position: absolute;
-	left: 20px;
-	bottom: 20px;
+	right: 220px;
+	top: 20px;
 }
 .product__sidebar__view__status .status_clan {
-	font-size: 13px;
+	font-size: 20px;
 	color: #ffffff;
 	/*background: #e53637;*/
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
 	position: absolute;
-	left: 150px;
-	top: 5px;
+	right: 220px;
+	top: 55px;
 }
 .product__sidebar__view__status .status_account {
-	font-size: 13px;
+	font-size: 20px;
 	color: #ffffff;
 	/*background: #e53637;*/
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
 	position: absolute;
-	left: 150px;
-	top: 5px;
+	right: 220px;
+	top: 90px;
 }
 .product__sidebar__view__status .status_update {
-	font-size: 13px;
+	font-size: 20px;
 	color: #ffffff;
 	/*background: #e53637;*/
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
 	position: absolute;
-	left: 150px;
-	top: 5px;
+	right: 50px;
+	top: 20px;
 }
 .product__sidebar__view__status .status_app {
-	font-size: 13px;
+	font-size: 20px;
 	color: #ffffff;
 	/*background: #e53637;*/
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
 	position: absolute;
-	left: 150px;
-	top: 5px;
+	right: 50px;
+	top: 55px;
 }
 .product__sidebar__view__status .status_gamemaster {
-	font-size: 13px;
+	font-size: 20px;
 	color: #ffffff;
 	/*background: #e53637;*/
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
 	position: absolute;
-	left: 150px;
-	top: 5px;
+	right: 50px;
+	top: 90px;
 }
 
 /*start top*/

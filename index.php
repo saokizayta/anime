@@ -46,7 +46,7 @@
         <div class="container">
  
 
-        <?php include_once('status_server.php'); ?>
+        
         
             <div class="row">
                 <div class="col-lg-8">
@@ -689,18 +689,10 @@ if (!function_exists('create_slug')) {
 
 ?>
 </div>
-                            <div class="section-title">
-                               <h5> <img src="img/character/png/status.png" alt="" hieght="45px" width="329px"> </h5>
-                               </div>
-                               <div class="product__sidebar__view__status set-bg"
-                            data-setbg="img/character/png/status_wall.png">
-                            <div class="status_server">Server</div>
-                            <div class="status_clan">Clan</div>
-                            <div class="status_account">Account</div>
-                            <div class="status_update">Update</div>
-                            <div class="status_app">App</div>
-                            <div class="status_gamemaster">GM</div>
-                        </div>
+                            
+                               
+                          <?php include_once('status_server.php'); ?>
+                        
                        
                         </div>
                         
@@ -741,7 +733,8 @@ if (!function_exists('create_slug')) {
 
 </body>
 
-<?php include('status_server.php') ?>
+
+
 
 </html>
 <script>
