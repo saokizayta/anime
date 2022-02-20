@@ -441,6 +441,25 @@ ol {
 }
 
 /*---------------------
+  status server
+-----------------------*/
+.status_server {
+	font-size: 16px;
+	color: #f6f8f7;
+	display: inline;
+	}
+.status_server_on {
+	font-size: 16px;
+	color: #70F567;
+	display: inline;
+	}
+.status_server .status_server_off {
+	font-size: 16px;
+	color: #F15831;
+	display: inline;
+	}
+
+/*---------------------
   Hero
 -----------------------*/
 
@@ -1079,7 +1098,81 @@ ol {
 	bottom: 20px;
 }
 /*start top*/
+.product__sidebar__view__status {
+	/*height: 190px;*/
+	height: 140px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
 
+.product__sidebar__view__status .status_server {
+	font-size: 20px;
+	color: #ffffff;
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+.product__sidebar__view__status .status_clan {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 5px;
+}
+.product__sidebar__view__status .status_account {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 5px;
+}
+.product__sidebar__view__status .status_update {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 5px;
+}
+.product__sidebar__view__status .status_app {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 5px;
+}
+.product__sidebar__view__status .status_gamemaster {
+	font-size: 13px;
+	color: #ffffff;
+	/*background: #e53637;*/
+	display: inline-block;
+	padding: 2px 12px;
+	border-radius: 4px;
+	position: absolute;
+	left: 150px;
+	top: 5px;
+}
+
+/*start top*/
 .product__sidebar__view__item .view_char_1 {
 	font-size: 13px;
 	color: #ffffff;

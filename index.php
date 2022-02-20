@@ -41,8 +41,13 @@
     <!-- Hero Section End -->
 
     <!-- Product Section Begin -->
+    
     <section class="product spad">
         <div class="container">
+ 
+
+        <?php include_once('status_server.php'); ?>
+        
             <div class="row">
                 <div class="col-lg-8">
                     <div class="trending__product">
@@ -683,12 +688,26 @@ if (!function_exists('create_slug')) {
 	   echo '<div class="view_clan_sod_silver">Chưa có dữ liệu</div>';
 
 ?>
-
-
-                            
-                            </div>
+</div>
+                            <div class="section-title">
+                               <h5> <img src="img/character/png/status.png" alt="" hieght="45px" width="329px"> </h5>
+                               </div>
+                               <div class="product__sidebar__view__status set-bg"
+                            data-setbg="img/character/png/status_wall.png">
+                            <div class="status_server">Server</div>
+                            <div class="status_clan">Clan</div>
+                            <div class="status_account">Account</div>
+                            <div class="status_update">Update</div>
+                            <div class="status_app">App</div>
+                            <div class="status_gamemaster">GM</div>
                         </div>
+                       
+                        </div>
+                        
                      </div>
+                     </div>
+
+                     
     <?php //include('newcomment.php') ?>
     </section>
 <!-- Product Section End -->
@@ -717,11 +736,12 @@ if (!function_exists('create_slug')) {
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/2080506b97.js" crossorigin="anonymous"></script>
 
 
 </body>
 
-<?php include('side_left.php') ?>
+<?php include('status_server.php') ?>
 
 </html>
 <script>

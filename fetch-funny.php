@@ -8,7 +8,7 @@ include_once 'conn/connection-fetch-funny.php';
 ?>
 
                         <?php
-                       
+                            //date_default_timezone_set('Etc/GMT+7');
                             function timeAgo($time_ago){
                                 //date_default_timezone_set('Etc/GMT+7'); 
                             //$format = "%H:%M:%S %d-%B-%Y";
@@ -109,10 +109,12 @@ include_once 'conn/connection-fetch-funny.php';
     // $curenttime = odbc_result($q,"Date");
     // $time_ago = strtotime($curenttime);
 	while(odbc_fetch_row($q_getcharjob)){
-        date_default_timezone_set('Etc/GMT+7');
+        //date_default_timezone_set('Etc/GMT+7');
         $curenttime=odbc_result($q,"Date");
         $time_ago =strtotime($curenttime);
         $timenow = time();
+        $t=time();
+       
       
 	$i_getcharjob++;
 echo'
@@ -129,7 +131,7 @@ echo'
 	}
 }
 	if(!$i>0)
-	   echo "<center>Website đang nâng cấp hoặc chưa có thông tin.";
+	   echo "<center>Hệ thống bị gián đoạn hoặc chưa có dữ liệu.</center>";
     //    echo .odbc_result($q,"Name").
  
 ?>
@@ -392,7 +394,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                             <div class="ep_pending">Sắp diễn ra</div>
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeAfter($time_ago);echo'</div>
-                                                            <div class="event_begin_at"><i class="fa fa-clock-o"></i> ';echo 'Bắt đầu: '.$time_beginView.' ';echo'</div>
+                                                            <div class="event_begin_at"><i class="fa fa-clock-o"></i> ';echo 'Start: '.$time_beginView.' ';echo'</div>
                                                                 <div class="event_view"><i class="fa fa-eye"></i> '.$showall_event['views'].'</div>
                                                             </div>
                                                             <div class="product__item__text">
@@ -411,7 +413,7 @@ include_once 'conn/connection-fetch-funny.php';
                                                             <div class="ep_progress">Đang diễn ra</div>
                                                            
                                                             <div class="event_comment"><i class="fa fa-clock-o"></i> ';echo timeProgress($time_progress);echo'</div>
-                                                            <div class="event_end_at"><i class="fa fa-clock-o"></i> ';echo 'kết thúc: '.$time_endView.' ';echo'</div>  
+                                                            <div class="event_end_at"><i class="fa fa-clock-o"></i> ';echo 'End: '.$time_endView.' ';echo'</div>  
                                                             <div class="event_view"><i class="fa fa-eye"></i> '.$showall_event['views'].'</div>
                                                             </div>
                                                             <div class="product__item__text">
