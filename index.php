@@ -107,7 +107,7 @@ if (!function_exists('create_slug')) {
 }
                                        include 'database.php';
                                        $sql_thongbao="SELECT * FROM `pristontale` WHERE idt IN (5, 10, 15)  ORDER BY id DESC LIMIT 3";
-                                       mysql_query('SET CHARACTER SET utf8');
+                                       mysqli_query('SET CHARACTER SET utf8');
                                        date_default_timezone_set('Etc/GMT+7');
                                        $media_thongbao=$pdo->query($sql_thongbao);
                                     
@@ -243,7 +243,7 @@ if (!function_exists('create_slug')) {
                                                 <?php
                                         include 'database.php';
                                         $sql_char_morion="SELECT * FROM `pristontale` WHERE id IN (40, 41, 42, 43, 49) ORDER BY RAND() LIMIT 2";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_char_morion=$pdo->query($sql_char_morion);
                                                 ?>
                                                 <?php
@@ -268,7 +268,7 @@ if (!function_exists('create_slug')) {
                                                 <?php
                                         include 'database.php';
                                         $sql_char_tempskron="SELECT * FROM `pristontale` WHERE id IN (44, 45, 46, 47, 48) ORDER BY RAND() LIMIT 2";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_char_tempskron=$pdo->query($sql_char_tempskron);
                                                 ?>
                                                 <?php
@@ -332,7 +332,7 @@ if (!function_exists('create_slug')) {
                                                 <?php
                                         include 'database.php';
                                         $sql_system="SELECT * FROM `pristontale` WHERE id IN (20)";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_system=$pdo->query($sql_system);
                                                 ?>
                                                 <?php
@@ -352,7 +352,7 @@ if (!function_exists('create_slug')) {
                                                 <?php
                                         include 'database.php';
                                         $sql_system="SELECT * FROM `pristontale` WHERE id IN (19)";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_system=$pdo->query($sql_system);
                                                 ?>
                                                 <?php
@@ -372,7 +372,7 @@ if (!function_exists('create_slug')) {
                                                 <?php
                                         include 'database.php';
                                         $sql_system="SELECT * FROM `pristontale` WHERE id IN (31)";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_system=$pdo->query($sql_system);
                                                 ?>
                                                 <?php
@@ -392,7 +392,7 @@ if (!function_exists('create_slug')) {
                                                 <?php
                                         include 'database.php';
                                         $sql_system="SELECT * FROM `pristontale` WHERE id IN (24)";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_system=$pdo->query($sql_system);
                                                 ?>
                                                 <?php

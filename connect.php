@@ -6,7 +6,7 @@ $dbuser = "root";//$dbuser = "freev_15676079"; // $dbuser = "root";
 
 $dbpass = "";//$dbpass = "theanh"; // $dbpass = "";
 
-$dbname	= "ptvui_2021";//$dbname	= "freev_15676079_ptv"; // $dbname	= "datapt";
+$dbname	= "ptvui_2022";//$dbname	= "freev_15676079_ptv"; // $dbname	= "datapt";
 
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ("Error connecting to database");

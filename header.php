@@ -9,7 +9,7 @@
                          include 'database.php';
                          $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo' ORDER BY id DESC LIMIT 1";
                          
-                         mysql_query('SET CHARACTER SET utf8');
+                         mysqli_query('SET CHARACTER SET utf8');
                          $show_info=$pdo->query($sql_info);
                          
                     ?>                            
@@ -32,7 +32,7 @@
                                                 <?php
                                         include 'database.php';
                                         $sql_menu1="SELECT * FROM `pristontale` WHERE id IN (112, 114, 115, 137, 138, 139) ";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu1=$pdo->query($sql_menu1);
                                                 ?>
                                 <li><a href="#">Giới thiệu <span class="arrow_carrot-down"></span></a>
@@ -47,7 +47,7 @@
                                                 <?php
                                         include 'database.php';
                                         $sql_menu2="SELECT * FROM `pristontale` WHERE id IN (116, 117, 118, 119, 120, 121, 122) ";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu2=$pdo->query($sql_menu2);
                                                 ?>
                                 <li><a href="#">Mới biết chơi <span class="arrow_carrot-down"></span></a>
@@ -62,7 +62,7 @@
                                                 <?php
                                         include 'database.php';
                                         $sql_menu3="SELECT * FROM `pristontale` WHERE id IN (19, 20, 124) ";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu3=$pdo->query($sql_menu3);
                                                 ?>
                                 <li><a href="#">Chuyên nghiệp <span class="arrow_carrot-down"></span></a>
@@ -78,7 +78,7 @@
                                                 <?php
                                         include 'database.php';
                                         $sql_menu4="SELECT * FROM `pristontale` WHERE id IN (126, 127, 33, 128, 129, 130, 131, 132, 133, 134) ";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu4=$pdo->query($sql_menu4);
                                                 ?>
                                  <li><a href="#">Hệ thống <span class="arrow_carrot-down"></span></a>
@@ -94,7 +94,7 @@
                                             <?php
                                         include 'database.php';
                                         $sql_menu5="SELECT * FROM `pristontale` WHERE id IN (135) ";
-                                        mysql_query('SET CHARACTER SET utf8');
+                                        mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu5=$pdo->query($sql_menu5);
                                                 ?>
                                 <li><a href="#">Quy định <span class="arrow_carrot-down"></span></a>

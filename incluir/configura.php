@@ -15,7 +15,7 @@ die("N�o utilize caracteres especiais, espa�o, acentua��o ou s�mbolos!
 //$IP = "http://zeropt.zapto.org/ClanContent/"; 
 
 // PRISTON TALE SERVER DIRETORIO
-$rootDir = "C:/ZeroPTServer1"; 
+//$rootDir = "C:/ZeroPTServer1"; 
 
 // MUDAN�A PARA O SEU NOME DO COMPUTADOR
 $connection_string = 'DRIVER={SQL Server};SERVER=remote.myvnc.com;DATABASE=ClanDB';
