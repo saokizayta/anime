@@ -26,7 +26,7 @@ include_once 'conn/connection-fetch-funny.php';
                                 echo "$seconds seconds ago";
                             }
                             //Minutes
-                            else if($minutes <=60){
+                            else if($minutes <= 60){
                                 if($minutes==1){
                                     echo "one minute ago";
                                 }
@@ -109,7 +109,7 @@ include_once 'conn/connection-fetch-funny.php';
     // $curenttime = odbc_result($q,"Date");
     // $time_ago = strtotime($curenttime);
 	while(odbc_fetch_row($q_getcharjob)){
-        //date_default_timezone_set('Etc/GMT+7');
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
         $curenttime=odbc_result($q,"Date");
         $time_ago =strtotime($curenttime);
         $timenow = time();
@@ -211,7 +211,7 @@ include_once 'conn/connection-fetch-funny.php';
                         
                         ?>
                         <?php
-                        //date_default_timezone_set('Etc/GMT+7');
+                        date_default_timezone_set('Etc/GMT+7');
                         function timeProgress($time_progress){
                             //$format = "%H:%M:%S %d-%B-%Y";
                             
@@ -296,7 +296,7 @@ include_once 'conn/connection-fetch-funny.php';
                         //$id=$_GET['id'];
                         $sql_get_ev="SELECT * FROM `event`";
                         //$set_viewer = "UPDATE `event` SET views = views + 1 Where id='$id'";
-                        mysql_query('SET CHARACTER SET utf8');
+                        //mysqli_query('SET CHARACTER SET utf8');
                         $show_event=$pdo->query($sql_get_ev);
                         //$update_views=$pdo->query($set_viewer);
                                              

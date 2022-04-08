@@ -11,7 +11,7 @@
                          include 'database.php';
                          $sql_info="SELECT * FROM `menu_website` WHERE name = 'logo_footer' ORDER BY id DESC LIMIT 1";
                          
-                         mysql_query('SET CHARACTER SET utf8');
+                        // mysqli_query('SET CHARACTER SET utf8');
                          $show_info=$pdo->query($sql_info);
                          
                     ?>                            

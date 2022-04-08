@@ -6,7 +6,7 @@
                          $sql_tintuc="SELECT * FROM `pristontale` WHERE idt = 5 ORDER BY id DESC LIMIT 1";
                          $sql_sukien="SELECT * FROM `pristontale` WHERE idt = 10 ORDER BY id DESC LIMIT 1";
                          $sql_baotri="SELECT * FROM `pristontale` WHERE idt = 15 ORDER BY id DESC LIMIT 1";
-                         mysqli_query('SET CHARACTER SET utf8');
+                         //mysqli_query('SET CHARACTER SET utf8');
                          $media_tintuc=$pdo->query($sql_tintuc);
                          $media_sukien=$pdo->query($sql_sukien);
                          $media_baotri=$pdo->query($sql_baotri);

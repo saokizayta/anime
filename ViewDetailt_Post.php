@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Anime Template">
+    <meta name="description" content="PTvui Private Server">
     <meta name="keywords" content="Pristontale, PTvui, ptvui, ptv">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,18 +14,18 @@
       //$targetpage = "Admin-show.php";
       //$limit = 10;
       $id=$_GET['id'];
-      mysql_query("set names 'utf8'");
+      //mysqli_query("set names 'utf8'");
       $query1 = " SELECT * FROM `pristontale` where id='$id' ";
       $set_viewer = "UPDATE `pristontale` SET viewer = viewer + 1 Where id='$id'";
-      mysql_query("set names 'utf8'");
-      $result = mysql_query($query1);
-      $result1 = mysql_query($set_viewer);
+      //mysqli_query("set names 'utf8'");
+      $result = mysqli_query($conn, $query1);
+      $result1 = mysqli_query($conn, $set_viewer);
 
       ?>
       <?php
 
 
-          while($row = mysql_fetch_array($result))
+          while($row = mysqli_fetch_array($result))
 
 
         {
@@ -71,18 +71,18 @@
       //$targetpage = "Admin-show.php";
       //$limit = 10;
       $id=$_GET['id'];
-      mysql_query("set names 'utf8'");
+      //mysqli_query("set names 'utf8'");
       $query1 = " SELECT * FROM `pristontale` where id='$id' ";
       $set_viewer = "UPDATE `pristontale` SET viewer = viewer + 1 Where id='$id'";
-      mysql_query("set names 'utf8'");
-      $result = mysql_query($query1);
-      $result1 = mysql_query($set_viewer);
+      //mysqli_query("set names 'utf8'");
+      $result = mysqli_query($conn, $query1);
+      $result1 = mysqli_query($conn, $set_viewer);
 
       ?>
       <?php
 
 
-          while($row = mysql_fetch_array($result))
+          while($row = mysqli_fetch_array($result))
 
 
         {
