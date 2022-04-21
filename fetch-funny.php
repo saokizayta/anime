@@ -23,7 +23,10 @@ include_once 'conn/connection-fetch-funny.php';
                             $years 		= round($time_elapsed / 31207680 );
                             // Seconds
                             if($seconds <= 60){
-                                echo "$seconds seconds ago";
+                                echo "few seconds ago";
+                            }
+                            else if($seconds < 0){
+                                echo "few seconds ago";
                             }
                             //Minutes
                             else if($minutes <= 60){

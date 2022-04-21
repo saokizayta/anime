@@ -1897,8 +1897,10 @@ ol {
 -----------------------*/
 
 .blog {
-	padding-top: 10px;
-	padding-bottom: 9px;
+	/* padding-top: 10px;
+	padding-bottom: 9px; */
+	padding-top: 70px;
+    padding-bottom: 90px;
 }
 
 .blog__item {
@@ -1912,7 +1914,7 @@ ol {
 }
 
 .blog__item.small__item {
-	height: 285px;
+	height: 380px;
 }
 
 .blog__item.small__item .blog__item__text {
@@ -2829,8 +2831,112 @@ ol {
 	.search-model-form input {
 		width: 100%;
 	}
+	
+}
+/* Only Mobile */
+@media (max-width: 479px) {
+	.blog {
+		margin-top: -70px;
+	}
+	.blog__item.small__item {
+		margin-top: -80px;
+	}
+	.blog__item__text{
+		margin-top: -30px;
+	}
+	.header__right {
+		top: -52px;
+	}
+	.slicknav_btn {
+		top: 30px;
+	}
+	.slicknav_nav{
+		top: 85px;
+	}
+	.col-lg-3 p {
+		color: #fff;
+	}
+	.product__sidebar__view__status .status_server {
+		font-size: 15px;
+		color: #ffffff;
+		display: inline-block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		position: absolute;
+		right: 220px;
+		top: 20px;
+	}
+	.product__sidebar__view__status .status_clan {
+		font-size: 15px;
+		color: #ffffff;
+		/*background: #e53637;*/
+		display: inline-block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		position: absolute;
+		right: 220px;
+		top: 55px;
+	}
+	.product__sidebar__view__status .status_account {
+		font-size: 15px;
+		color: #ffffff;
+		/*background: #e53637;*/
+		display: inline-block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		position: absolute;
+		right: 220px;
+		top: 90px;
+	}
+	.product__sidebar__view__status .status_update {
+		font-size: 15px;
+		color: #ffffff;
+		/*background: #e53637;*/
+		display: inline-block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		position: absolute;
+		right: 50px;
+		top: 20px;
+	}
+	.product__sidebar__view__status .status_app {
+		font-size: 15px;
+		color: #ffffff;
+		/*background: #e53637;*/
+		display: inline-block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		position: absolute;
+		right: 50px;
+		top: 55px;
+	}
+	.product__sidebar__view__status .status_gamemaster {
+		font-size: 15px;
+		color: #ffffff;
+		/*background: #e53637;*/
+		display: inline-block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		position: absolute;
+		right: 50px;
+		top: 90px;
+	}
+	.blog__details__title h6 {
+		text-transform: none;
+	}
+	.blog__details__btns {
+		display: none;
+	}
+	.blog__details__tags {
+		text-transform: none;
+	}
 }
 
+@media (min-width: 999px) {
+	.blog__item.small__item {
+		margin-top: -60px;
+	}
+}
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {

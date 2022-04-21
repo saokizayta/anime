@@ -19,7 +19,6 @@
                         </a>
                     </div>
                     <!-- line run -->
-                    <!-- <div class="line"></div> -->
                     <div class="ribon"></div>
                     <!-- end line run -->
                     
@@ -120,4 +119,5 @@
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
+        
     </header>

@@ -227,6 +227,7 @@ if (!function_exists('create_slug')) {
                             ?>
                         </div> 
                     </div>
+             
         <section class="blog spad">
             <div class="row">
                 <div class="col-lg-6">
