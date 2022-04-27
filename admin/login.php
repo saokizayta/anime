@@ -4,16 +4,16 @@ header('Content-Type: text/html; charset=UTF-8');
 echo '<title>SinhVienIT.Net - dang nhap (Huong Dan tao trang dang ki/Dang Nhap)</title>';
 // Tải file mysql.php lên
 require_once("mysql.php");
-if ( $_GET['act'] == "do" )
+if ( !$_GET['act'] == "do" )
 {
 	// Dùng hàm addslashes() để tránh SQL injection, dùng hàm md5() để mã hóa password
 	$username = addslashes( $_POST['username'] );
 	$password = md5( addslashes( $_POST['password'] ) );
 	// Lấy thông tin của username đã nhập trong table members
-	$sql_query = @mysql_query("SELECT id, username, password FROM members WHERE username='{$username}'");
-	$member = @mysql_fetch_array( $sql_query );
+	$sql_query = @mysqli_query("SELECT id, username, password FROM members WHERE username='{$username}'");
+	$member = @mysqli_fetch_array( $sql_query );
 	// Nếu username này không tồn tại thì....
-	if ( @mysql_num_rows( $sql_query ) <= 0 )
+	if ( @mysqli_num_rows( $sql_query ) <= 0 )
 	{
 		print "Tên truy nhập không tồn tại. <a href='javascript:history.go(-1)'>Nhấp vào đây để quay trở lại</a>";
 		exit;
