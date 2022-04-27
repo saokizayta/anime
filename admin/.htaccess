@@ -1,0 +1,39 @@
+RewriteEngine On
+
+RewriteRule ^/thu-ngo-([a-zA-Z0-9_-]+)$ Detail.php?idmenu=$1[L]
+
+RewriteRule ^danh-muc-san-pham/([a-zA-Z0-9_-]+)$ MenuDetail.php?idmenu=$1 [L]
+
+RewriteRule ^san-pham/mua-san-pham/([a-zA-Z0-9_-]+)$ Buy.php?idao=$1 [L]
+
+#RewriteRule ^san-pham/([0-9]+)/([a-zA-Z_-]+)/([0-9]+)/$ xem.php?product=$1&type=$3
+
+#-------------------------------------------------------
+
+RewriteRule ^sub-([0-9]+).chn$ Detail.php?idmenu=$1[L]
+RewriteRule ^products-([0-9]+)$ products.php?idproducts=$1[L]
+RewriteRule ^news-([0-9]+)$ news.php?newsid=$1[L]
+
+RewriteRule ^show-menu.chn$ show-menu.php
+RewriteRule ^show-news.chn$ show-news.php
+RewriteRule ^show-products.chn$ show-products.php
+
+
+RewriteRule ^edit-news-([0-9]+)$ edit-news.php?&newsid=$1[L]
+RewriteRule ^edit-products-([0-9]+)$ edit-products.php?&id=$1[L]
+RewriteRule ^edit-menu-([0-9]+)$ edit-menu.php?&id=$1[L]
+RewriteRule ^edit-bai-([0-9]+)$ edit-bai.php?&id=$1[L]
+
+
+
+
+
+
+ErrorDocument 401 /error/401.php
+
+ErrorDocument 403 /error/403.php
+
+ErrorDocument 404 /error/404.php
+
+ErrorDocument 500 /error/500.php
+
