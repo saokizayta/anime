@@ -1,17 +1,14 @@
 <?php
 
-//$dbhost = "sql202.freevnn.com";
+$dbhost = "localhost";//$dbhost = "sql202.byetcluster.com"; // $dbhost = "localhost";
 
-//$dbuser = "freev_15676079";
+$dbuser = "root";//$dbuser = "freev_15676079"; // $dbuser = "root";
 
-//$dbpass = "theanh";
+$dbpass = "";//$dbpass = "theanh"; // $dbpass = "";
 
-//$dbname	= "freev_15676079_company";
+$dbname	= "ptvui_2022";//$dbname	= "freev_15676079_ptv"; // $dbname	= "datapt";
 
-$dbhost = "localhost";
-$dbname = "ptvui2019";
-$dbuser = "root";
-$dbpass = "";
-$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ("Error connecting to database");
-mysql_select_db($dbname);
+
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ("Error connecting to database");
+mysqli_select_db($conn, $dbname);
 ?>

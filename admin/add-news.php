@@ -6,21 +6,21 @@ echo ' <link href="editor/sample.css" rel="stylesheet" type="text/css" />
  <script src="editor/sample.js" type="text/javascript"></script>
  <script src="editor/ckeditor.js" type="text/javascript"></script>';
 require_once("mysql.php"); 
-if ( !$_SESSION['user_id'] )
-{ 
-	echo "Bạn chưa đăng nhập! <a href='login.php'>Nhấp vào đây để đăng nhập</a> hoặc <a href='register.php'>Nhấp vào đây để đăng ký</a>"; 
-}
-else
-{ 
-	$user_id = intval($_SESSION['user_id']);
-	$sql_query = @mysql_query("SELECT * FROM members WHERE id='{$user_id}'");
-	$member = @mysql_fetch_array( $sql_query ); 
-	echo "Xin chào {$member['name']} Bạn đang đăng nhập với tài khoản {$member['username']}."; 
-	echo "<br><a href='thoat.php'>Thoát ra</a><hr>";
-	if ($member['admin']!="1")  
-		echo "Bạn ko phải là admin";
-	else
-	{
+//if ( !$_SESSION['user_id'] )
+//{ 
+	//echo "Bạn chưa đăng nhập! <a href='login.php'>Nhấp vào đây để đăng nhập</a> hoặc <a href='register.php'>Nhấp vào đây để đăng ký</a>"; 
+//}
+//else
+//{ 
+	//$user_id = intval($_SESSION['user_id']);
+	//$sql_query = @mysql_query("SELECT * FROM members WHERE id='{$user_id}'");
+	//$member = @mysql_fetch_array( $sql_query ); 
+	//echo "Xin chào {$member['name']} Bạn đang đăng nhập với tài khoản {$member['username']}."; 
+	//echo "<br><a href='thoat.php'>Thoát ra</a><hr>";
+	//if ($member['admin']!="1")  
+	//	echo "Bạn ko phải là admin";
+	//else
+	//{
 		
 
 		//Noi dung cac ham, cac lenh va code danh cho admin
@@ -66,6 +66,6 @@ echo '</textarea><p>';
 		//echo '<a href="show-news.chn">[+] Sửa news ( bao gồm các mục bài viết ngoài index)</a><br><br>';
 	
 
-	}
-}
+//	}
+//}
 ?>
