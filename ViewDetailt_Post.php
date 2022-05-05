@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="uft-8">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="UTF-8">
@@ -75,6 +75,7 @@
       $query1 = " SELECT * FROM `pristontale` where id='$id' ";
       $set_viewer = "UPDATE `pristontale` SET viewer = viewer + 1 Where id='$id'";
       //mysqli_query("set names 'utf8'");
+      //mysql_set_charset('utf8');
       $result = mysqli_query($conn, $query1);
       $result1 = mysqli_query($conn, $set_viewer);
 
@@ -100,7 +101,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="blog__details__pic">
-                        <img src="img/ptvui_1170x600.png" alt="">
+                        <!--- <img src="img/ptvui_1170x600.png" alt=""> --->
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -172,6 +173,4 @@
 
     </body>
 
-    
-<!-- Mirrored from technext.github.io/anime/blog-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Oct 2021 11:58:59 GMT -->
 </html>
