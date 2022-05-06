@@ -212,7 +212,15 @@ if (!function_exists('create_slug')) {
 
                                     
                                       echo' <div class="comment"><i class="fa fa-clock-o"></i> ';echo timeAgo($time_ago);echo'</div>
-                                        <div class="view"><i class="fa fa-eye"></i> '.$hienthimedia_thongbao['viewer'].'</div>
+                                        <div class="view"><i class="fa fa-eye"></i>';
+                                        
+                                        if ($hienthimedia_thongbao['viewer'] < 1000){
+                                            echo  ' ';echo  $hienthimedia_thongbao['viewer'];
+                                        } else {
+                                            echo ' 1 K';
+                                        }
+
+                                        echo'</div>
                                     </div>
                                     <div class="product__item__text">
                                         <ul>

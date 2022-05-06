@@ -2930,6 +2930,13 @@ ol {
 	.blog__details__tags {
 		text-transform: none;
 	}
+	.blog__item.small__item {
+		display: none;
+	}
+	.product__sidebar {
+		display: none;
+	}
+
 }
 
 @media (min-width: 999px) {

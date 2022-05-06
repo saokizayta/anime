@@ -297,7 +297,7 @@ include_once 'conn/connection-fetch-funny.php';
                      
                         include 'database.php';
                         //$id=$_GET['id'];
-                        $sql_get_ev="SELECT * FROM `event`";
+                        $sql_get_ev="SELECT * FROM `event` LIMIT 3";
                         //$set_viewer = "UPDATE `event` SET views = views + 1 Where id='$id'";
                         //mysqli_query('SET CHARACTER SET utf8');
                         $show_event=$pdo->query($sql_get_ev);
