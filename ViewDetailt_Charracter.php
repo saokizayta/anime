@@ -91,19 +91,39 @@
                     ';
             } else {
                 echo'
-    <section class="normal-breadcrumb set-bg" data-setbg="'.$row['img_1172x564'].'">
+    <!---<section class="normal-breadcrumb set-bg" data-setbg="'.$row['img_1172x564'].'">--->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="normal__breadcrumb__text">
-                         <h2>'.$row['tieude'].'</h2> 
-                        <!--<p>'.$row['tieude'].'</p>-->
+                        <!--- <h2>'.$row['tieude'].'</h2> --->
+                        <!--<p>'.$row['noidung'].'</p>-->
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-                   <!-- Blog Details Section Begin -->
+    </section>';
+                    echo'<!--------------------------->';
+                        echo '<div class="header-character header-'.$row['img_230x325'].'">
+                        <div class="char-page-navigation">
+                            <!-- <div id="overview">Overview</div> <div class="nav-spacer" style="letter-spacing: -2px;">--</div>
+                            <div id="mechanics">Mechanics</div> <div class="nav-spacer" style="letter-spacing: -2px;">--</div>
+                            <div id="skills">Skills</div> <div class="nav-spacer" style="letter-spacing: -2px;">--</div>
+                            <div id="our-chars">Our Heroes</div> -->
+                        </div>
+                
+                        <div class="overview-section">
+                            <!-- <div class="hero-list"><a href="characters.php">Hero List</a></div> -->
+                            <div class="char-title">'.$row['tieude'].'</div>
+                            <div class="char-sub-title">'.$row['tomtatnd'].'</div>
+                            <div class="char-description">
+                            '.$row['noidung'].'
+                            </div>
+                
+                         </div>
+                </div>';
+                    echo'<!--------------------------->';
+               echo'    <!-- Blog Details Section Begin -->
                         <section class="blog-details spad">
                             <div class="container">
                                 <div class="row d-flex justify-content-center">
@@ -126,8 +146,9 @@
                                     </div>-->
                                     <div class="col-lg-8">
                                         <div class="blog__details__content">
-                                            <div class="blog__details__text">
-                                                <p>'.$row['noidung'].'</p>
+                                            <div class="blog__details__text">';
+                                          
+                                               echo' <!---<p>'.$row['noidung'].'</p>--->
                                             </div>
                                         </div>
                                     </div>
