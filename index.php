@@ -631,7 +631,7 @@ if (!function_exists('create_slug')) {
                    
                     $IP = "http://ptvui.ddns.net:8/anImage/";
                     $connection = odbc_connect( $connection_string, $user, $pass );
-                    $query2 = "SELECT TOP 1 * FROM [ClanDB].[dbo].[CL] WHERE IDX = $ClanID";
+                    $query2 = "SELECT TOP 1 * FROM [ClanDB].[dbo].[CL] WHERE MIconCnt = $ClanID";
                     $q2 = odbc_exec($connection, $query2);
                     $qt2 = odbc_do($connection, $query2);
                     while(odbc_fetch_row($qt2)){
