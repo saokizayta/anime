@@ -30,7 +30,7 @@
                                 <!--<li class="active"><a href="index-2.html">Trang Chủ</a></li>-->
                                                 <?php
                                         include 'database.php';
-                                        $sql_menu1="SELECT * FROM `pristontale` WHERE id IN (112, 114, 115, 137, 138, 139) ";
+                                        $sql_menu1="SELECT * FROM `pristontale_posts` WHERE id IN (112, 114, 115, 137, 138, 139) ";
                                        // mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu1=$pdo->query($sql_menu1);
                                                 ?>
@@ -45,7 +45,7 @@
                                 </li>
                                                 <?php
                                         include 'database.php';
-                                        $sql_menu2="SELECT * FROM `pristontale` WHERE id IN (116, 117, 118, 119, 120, 121, 122) ";
+                                        $sql_menu2="SELECT * FROM `pristontale_posts` WHERE id IN (116, 117, 118, 119, 120, 121, 122) ";
                                         //mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu2=$pdo->query($sql_menu2);
                                                 ?>
@@ -60,7 +60,7 @@
                                 </li>
                                                 <?php
                                         include 'database.php';
-                                        $sql_menu3="SELECT * FROM `pristontale` WHERE id IN (19, 20, 124) ";
+                                        $sql_menu3="SELECT * FROM `pristontale_posts` WHERE id IN (19, 20, 124) ";
                                        // mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu3=$pdo->query($sql_menu3);
                                                 ?>
@@ -76,7 +76,7 @@
                                 </li>
                                                 <?php
                                         include 'database.php';
-                                        $sql_menu4="SELECT * FROM `pristontale` WHERE id IN (126, 127, 33, 128, 129, 130, 131, 132, 133, 134) ";
+                                        $sql_menu4="SELECT * FROM `pristontale_posts` WHERE id IN (126, 127, 33, 128, 129, 130, 131, 132, 133, 134) ";
                                         //mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu4=$pdo->query($sql_menu4);
                                                 ?>
@@ -92,7 +92,7 @@
                                 </li>
                                             <?php
                                         include 'database.php';
-                                        $sql_menu5="SELECT * FROM `pristontale` WHERE id IN (135) ";
+                                        $sql_menu5="SELECT * FROM `pristontale_posts` WHERE id IN (135) ";
                                        // mysqli_query('SET CHARACTER SET utf8');
                                         $show_menu5=$pdo->query($sql_menu5);
                                                 ?>

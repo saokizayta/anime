@@ -15,8 +15,8 @@
       //$limit = 10;
       $id=$_GET['id'];
       //mysqli_query("set names 'utf8'");
-      $query1 = " SELECT * FROM `pristontale` where id='$id' ";
-      $set_viewer = "UPDATE `pristontale` SET viewer = viewer + 1 Where id='$id'";
+      $query1 = " SELECT * FROM `pristontale_posts` where id='$id' ";
+      $set_viewer = "UPDATE `pristontale_posts` SET viewer = viewer + 1 Where id='$id'";
       //mysqli_query("set names 'utf8'");
       $result = mysqli_query($conn, $query1);
       $result1 = mysqli_query($conn, $set_viewer);
@@ -66,8 +66,8 @@
       //$limit = 10;
       $id=$_GET['id'];
       //mysqli_query("set names 'utf8'");
-      $query1 = " SELECT * FROM `pristontale` where id='$id' ";
-      $set_viewer = "UPDATE `pristontale` SET viewer = viewer + 1 Where id='$id'";
+      $query1 = " SELECT * FROM `pristontale_posts` where id='$id' ";
+      $set_viewer = "UPDATE `pristontale_posts` SET viewer = viewer + 1 Where id='$id'";
      // mysqli_query("set names 'utf8'");
       $result = mysqli_query($conn, $query1);
       $result1 = mysqli_query($conn, $set_viewer);
